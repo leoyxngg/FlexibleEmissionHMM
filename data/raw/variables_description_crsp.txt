@@ -1,0 +1,30 @@
+https://wrds-www.wharton.upenn.edu/pages/get-data/center-research-security-prices-crsp/annual-update/index-version-2/daily-index-and-portfolios-on-sp-500/
+
+
+Variable    Name	Type	   Description
+indfam	    Int	    (indfam)    INDFAM - CRSP Unique Index Family Number
+indfamtype	Char	(indfamtype) Index Family Type
+indnm	    Char	(indnm)     Index Name
+indbegdt	Date	(indbegdt)  Beginning Of Data for the INDNO
+indenddt	Date	(indenddt)  End Of Data for the INDNO
+baselvl	    Decimal	(baselvl)   Index Base Level
+basedt	    Date	(basedt)    Index Base Date
+freqavail	Char	(freqavail) Index Frequency Availability
+weighttype	Char	(weighttype) Index Weighting Type
+cntvaltype	Char	(cntvaltype) Index Count and Value Types
+portnum	    Int	    (portnum)   Portfolio Number
+indno	    Int	    (indno)     INDNO
+yyyymmdd	Int	    (yyyymmdd)  YYYYMMDD - Daily Calendar Period Key
+dlycaldt	Date	(dlycaldt)  Daily Calendar Date
+dlytotret	Decimal	(dlytotret) Daily Total Return on Index
+dlytotind	Decimal	(dlytotind) Daily Index Level from Index Total Return
+dlyprcret	Decimal	(dlyprcret) Daily Price Return on Index
+dlyprcind	Decimal	(dlyprcind) Daily Price Level from Index Price Return
+dlyincret	Decimal	(dlyincret) Daily Income Return on Index
+dlyincind	Decimal	(dlyincind) Daily Index Level from Index Income Return
+dlyusdcnt	Int	    (dlyusdcnt) Used Count on the DlyCalDt
+dlyusdval	Decimal	(dlyusdval) Used Value on DlyCalDt
+dlytotcnt	Int	    (dlytotcnt) Index Total Count on DlyCalDt
+dlytotval	Decimal	(dlytotval) Index Total Capitalization Value on DlyCalDt
+dlyeligcnt	Int	    (dlyeligcnt)Index Eligible Count on DlyCalDt
+dlywgtamt	Decimal	(dlywgtamt) Index Weight Amount on DlyCalDt

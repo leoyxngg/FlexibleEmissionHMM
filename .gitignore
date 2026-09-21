@@ -1,2 +1,6 @@
 .DS_Store
+
 data/raw/*.csv
+data/processed/*.csv
+!data/raw/1000502_19251231_to_20251231.csv
+!data/processed/sp500_index_price.csv
