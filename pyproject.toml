@@ -1,0 +1,22 @@
+[project]
+name = "flexible_emission_hmm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Benjamin Yu Sheng Chang", email = "benji.chang@mail.utoronto.ca" },
+    { name = "Leo Yang", email = "ysleo.yang@mail.utoronto.ca" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib>=3.10.9",
+    "numpy>=2.2.6",
+    "pandas>=2.3.3",
+]
+
+[project.scripts]
+flexibleemissionhmm = "flexibleemissionhmm:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
