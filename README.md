@@ -15,4 +15,4 @@ The raw data can be downloaded from CRSP https://wrds-www.wharton.upenn.edu/page
 
 ### Dependency Manager
 
-We are using [[uv]](https://docs.astral.sh/uv) for the project. Please follow the installation guide in the doc 
+We are using [[uv]](https://docs.astral.sh/uv) for the project. Please follow the installation guide in the doc.
