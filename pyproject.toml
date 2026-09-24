@@ -25,3 +25,8 @@ build-backend = "uv_build"
 
 [tool.uv.build-backend]
 module-name = ["flexible_emission_hmm", "synthetic_data_generation"]
+
+[dependency-groups]
+dev = [
+    "hmmlearn==0.3.3",
+]
