@@ -11,7 +11,7 @@ The raw data can be downloaded from CRSP https://wrds-www.wharton.upenn.edu/page
 
 [X] Preprocessing raw data for the model
 
-[X] Simulate labeled GBM paths with scheduled drift and volatility changes
+[X] Simulate labeled GBM paths with scheduled drift and volatility changes [[Example]](https://www.gregorygundersen.com/blog/2024/04/13/simulating-gbm/)
 
 ### Dependency Manager
 
