@@ -1,5 +1,4 @@
 .DS_Store
-data/synthetic/*
 !data/synthetic/.gitkeep
 data/raw/*.csv
 data/processed/*.csv
