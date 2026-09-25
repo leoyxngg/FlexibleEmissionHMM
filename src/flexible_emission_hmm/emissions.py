@@ -38,13 +38,12 @@ class EmissionModel(ABC):
 
 
 class GaussianEmission(EmissionModel):
-    """
-    - n_states: number of states
-    - min_variance: bounds covariance eigenvalues, keeping densities defined for
-    constant or collinear observations
-    """
-
     def __init__(self, n_states, min_variance=1e-6, random_state=None):
+        """
+            - n_states: number of states
+            - min_variance: bounds covariance eigenvalues, keeping densities defined for
+            constant or collinear observations
+            """
         super().__init__(n_states)
         if not np.isfinite(min_variance) or min_variance <= 0:
             raise ValueError("min_variance must be finite and positive")

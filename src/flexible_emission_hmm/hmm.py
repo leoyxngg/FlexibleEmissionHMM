@@ -1,7 +1,4 @@
-"""Public HMM API, composed from interchangeable emissions, inference, and training."""
-
 import numpy as np
-
 from .validation import as_sequence
 from .emissions import EmissionModel
 from .inference import ExactInference, InferenceEngine

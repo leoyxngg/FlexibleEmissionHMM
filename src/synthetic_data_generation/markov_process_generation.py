@@ -11,19 +11,21 @@ class MarkovProcessDataGenerator(ABC):
     - trans_matrix: the transitional matrix for the Markov chain
     - data_count: the number of data points to be generated
     """
-    def __init__(self, emission_params, states, initial_probs, trans_matrix, data_count):
+    def __init__(self, emission_params, states, initial_probs, trans_matrix, data_count,
+                 random_state=None):
         self.emission_params = emission_params
         self.states = states
         self.initial_probs = initial_probs
         self.trans_matrix = trans_matrix
         self.data_count = data_count
+        self.rng = np.random if random_state is None else np.random.default_rng(random_state)
 
     def sample_categorical(self, curr_state=0, init=False):
         if not init:
             trans_probs = self.trans_matrix[curr_state]
-            sample_state = np.random.choice(self.states,p=trans_probs)
+            sample_state = self.rng.choice(self.states,p=trans_probs)
             return sample_state
-        return np.random.choice(self.states,p=self.initial_probs)
+        return self.rng.choice(self.states,p=self.initial_probs)
 
     @abstractmethod
     def sample_dist(self, parameters):
@@ -49,15 +51,11 @@ class MarkovProcessDataGenerator(ABC):
             writer.writerows(rows)
 
 class GaussianEmissionGenerator(MarkovProcessDataGenerator):
-    def __init__(self, emission_params, states, initial_probs, trans_matrix, data_count):
-        super().__init__(emission_params, states, initial_probs, trans_matrix, data_count)
+    def __init__(self, emission_params, states, initial_probs, trans_matrix, data_count,
+                 random_state=None):
+        super().__init__(emission_params, states, initial_probs, trans_matrix, data_count,
+                         random_state=random_state)
 
     def sample_dist(self, parameters):
         mean, std = parameters
-        return np.random.normal(loc=mean,scale=std)
-
-    
-
-
-
-        
+        return self.rng.normal(loc=mean,scale=std)
