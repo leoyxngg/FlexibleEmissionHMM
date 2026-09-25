@@ -11,7 +11,7 @@ The raw data can be downloaded from CRSP https://wrds-www.wharton.upenn.edu/page
 
 [X] Preprocessing raw data for the model
 
-[ ] Simulate paths with Geometric Brownian Motion [[Example]](https://www.gregory.gundersen.com/blog/2024/04/13/simulating=gbm/)
+[ ] Simulate paths with Geometric Brownian Motion [[Example]](https://www.gregorygundersen.com/blog/2024/04/13/simulating-gbm/)
 
 ### Dependency Manager
 
