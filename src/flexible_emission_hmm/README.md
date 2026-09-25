@@ -29,8 +29,7 @@ print("Converged:", model.trainer.converged)
 print("Training updates:", model.trainer.n_iter)
 ```
 
-`history` contains the initial training log likelihood and one value after each
-update. `converged` means the absolute change in total log likelihood reached
+`converged` means the absolute change in total log likelihood reached
 `tol`; fitting can also stop at `max_iter`. Every `fit()` starts fresh.
 
 #### 2. Check the inferred sequence and probabilities
