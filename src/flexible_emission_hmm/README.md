@@ -47,4 +47,3 @@ for k in range(model.n_states):
 print("First 50 inferred regimes:", inferred_states[:50])
 print(results.head(20).to_string(index=False))
 ```
-Note that because state numbers are arbitrary (i.e. HMM learns distributions, it does not know the names or numbers we assigned to the true regimes): learned state 0 may correspond to generating regime 2. Use the emission parameters and the cross-tabulation to understand the correspondence before comparing labels or calculating accuracy.

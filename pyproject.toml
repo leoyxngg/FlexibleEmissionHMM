@@ -15,6 +15,8 @@ dependencies = [
     "numpy>=2.2.6",
     "pandas>=2.3.3",
     "polars>=1.44.2",
+    "scipy>=1.15.3",
+    "scikit-learn>=1.7.2",
 ]
 
 [project.scripts]
@@ -25,7 +27,7 @@ requires = ["uv_build>=0.12.17,<0.13.0"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
-module-name = ["flexible_emission_hmm", "synthetic_data_generation"]
+module-name = ["flexible_emission_hmm", "synthetic_data_generation", "model_evaluation"]
 
 [dependency-groups]
 dev = [
