@@ -11,6 +11,7 @@ class InferenceResult:
     log_likelihood: float
     responsibilities: np.ndarray  # (T, K): posterior state probabilities
     transition_counts: np.ndarray  # (K, K): summed posterior transition counts
+    log_responsibilities: np.ndarray | None = None  # (T, K), before exponentiation
 
 
 @dataclass

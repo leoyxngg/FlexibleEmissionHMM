@@ -7,6 +7,8 @@ from sklearn.metrics import adjusted_rand_score, normalized_mutual_info_score
 from flexible_emission_hmm.parameters import EvaluationResult
 from flexible_emission_hmm.validation import as_sequence
 
+STATE_LOG_LOSS_FLOOR = np.finfo(float).eps
+
 
 def _labels(values, n_states):
     labels = np.asarray(values)
@@ -50,6 +52,29 @@ def _probabilities(values, n_states, *, square=False):
         shape = "(K, K)" if square else "(T, K)"
         raise ValueError(f"Probabilities must have shape {shape}, be finite, nonnegative, and row-normalized")
     return values
+
+
+def state_log_loss_metrics(probabilities, true, *, floor=STATE_LOG_LOSS_FLOOR):
+    """Capped log loss and tail diagnostics for already aligned posteriors.
+
+    The default restores the original float64 epsilon floor (about 36.04
+    nats per observation). Zero probabilities include numerical underflow.
+    """
+    probabilities = np.asarray(probabilities, dtype=float)
+    if probabilities.ndim != 2 or probabilities.shape[1] == 0:
+        raise ValueError("Probabilities must have shape (T, K) with K > 0")
+    probabilities = _probabilities(probabilities, probabilities.shape[1])
+    true = _labels(true, probabilities.shape[1])
+    if len(true) != len(probabilities):
+        raise ValueError("True labels must match the number of posterior rows")
+    if not np.isfinite(floor) or not 0 < floor < 1:
+        raise ValueError("The probability floor must be finite and between 0 and 1")
+    true_probabilities = probabilities[np.arange(len(true)), true]
+    return {
+        "state_log_loss": float(-np.log(np.clip(true_probabilities, floor, 1)).mean()),
+        "state_log_loss_capped_fraction": float(np.mean(true_probabilities < floor)),
+        "state_zero_probability_fraction": float(np.mean(true_probabilities == 0)),
+    }
 
 
 class StateAlignment:
@@ -170,15 +195,12 @@ class SyntheticEvaluator:
         truth = np.concatenate(labels)
         hard = np.concatenate(predicted)
         soft = np.concatenate(probabilities)
-        true_probabilities = soft[np.arange(len(truth)), truth]
-        # Use a documented numerical floor only inside the logarithm.
-        log_loss = -np.log(np.clip(true_probabilities, np.finfo(float).eps, 1)).mean()
         one_hot = np.eye(model.n_states)[truth]
         metrics = {
             "ari": float(adjusted_rand_score(truth, hard)),
             "nmi": float(normalized_mutual_info_score(truth, hard, average_method="arithmetic")),
             "aligned_accuracy": float(np.mean(np.concatenate(aligned_states) == truth)),
-            "state_log_loss": float(log_loss),
+            **state_log_loss_metrics(soft, truth),
             "state_brier_score": float(np.mean(np.sum((soft - one_hot) ** 2, axis=1))),
             "log_likelihood_per_observation": float(
                 sum(result.log_likelihood for result in inferred) / len(truth)

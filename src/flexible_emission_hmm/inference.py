@@ -70,7 +70,10 @@ class ExactInference(InferenceEngine):
                 alpha[t, :, None] + log_transitions + emissions[t + 1] + beta[t + 1]
             )
             counts += np.exp(log_xi - np.logaddexp.reduce(log_xi.ravel()))
-        return InferenceResult(log_likelihood, responsibilities, counts)
+        return InferenceResult(
+            log_likelihood, responsibilities, counts,
+            log_responsibilities=log_gamma,
+        )
 
     def decode(self, states, log_emissions):
         log_start, log_transitions, emissions = self.prepare(states, log_emissions)
