@@ -21,6 +21,7 @@ class HMM:
         self.states = StateParameters(np.full(K, 1 / K), np.full((K, K), 1 / K))
         self.history = []
         self.fitted = False
+        self.fit_version = 0
 
     def fit(self, X):
         """Fit one NumPy array (T, D)
@@ -35,6 +36,7 @@ class HMM:
         if any(sequence.shape[1] != D for sequence in sequences):
             raise ValueError("All sequences must have the same number of features")
         self.fitted = False
+        self.fit_version += 1
         self.history = []
         self.history = self.trainer.fit(self.states, self.emission, self.inference, sequences)
         self.fitted = True

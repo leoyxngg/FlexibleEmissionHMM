@@ -6,3 +6,4 @@ data/processed/*.csv
 !data/processed/sp500_index_price.csv
 __pycache__/
 *.py[cod]
+data/synthetic/gaussian_synthetic_experiments
