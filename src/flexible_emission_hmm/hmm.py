@@ -51,6 +51,10 @@ class HMM:
         """Return likelihood, posterior state probabilities, and transition counts."""
         return self.inference.infer(self.states, self.log_emissions(X))
 
+    def filter(self, X, initial_prior=None):
+        """Return causal state priors, filtered probabilities, and log scores."""
+        return self.inference.filter(self.states, self.log_emissions(X), initial_prior)
+
     def predict_proba(self, X):
         """Return posterior state probabilities shaped (T, K)."""
         return self.posterior(X).responsibilities

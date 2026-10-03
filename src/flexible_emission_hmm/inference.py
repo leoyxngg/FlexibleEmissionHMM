@@ -41,6 +41,34 @@ class ExactInference(InferenceEngine):
         with np.errstate(divide="ignore"):
             return np.log(start), np.log(transitions), emissions
 
+    def filter(self, states, log_emissions, initial_prior=None):
+        """Return one-step priors, filtered states, and predictive log densities.
+
+        `initial_prior` is the state distribution before the first observation.
+        Each row of `predicted` is available before its corresponding observation.
+        """
+        log_start, _, emissions = self.prepare(states, log_emissions)
+        prior = np.exp(log_start) if initial_prior is None else np.asarray(initial_prior, dtype=float)
+        if (
+            prior.shape != (states.start.size,)
+            or not np.isfinite(prior).all()
+            or (prior < 0).any()
+            or not np.isclose(prior.sum(), 1)
+        ):
+            raise ValueError("initial_prior must be a normalized state distribution")
+        predicted = np.empty_like(emissions)
+        filtered = np.empty_like(emissions)
+        log_predictive = np.empty(len(emissions))
+        for index, log_density in enumerate(emissions):
+            predicted[index] = prior
+            log_joint = np.log(prior, where=prior > 0, out=np.full_like(prior, -np.inf)) + log_density
+            log_predictive[index] = np.logaddexp.reduce(log_joint)
+            if not np.isfinite(log_predictive[index]):
+                raise ValueError("An observation has zero predictive probability")
+            filtered[index] = np.exp(log_joint - log_predictive[index])
+            prior = filtered[index] @ states.transitions
+        return predicted, filtered, log_predictive
+
     def infer(self, states, log_emissions):
         log_start, log_transitions, emissions = self.prepare(states, log_emissions)
         T, K = emissions.shape
