@@ -1,0 +1,144 @@
+{
+  "instrument": "S&P 500 price index",
+  "return": "daily log return",
+  "windows": [
+    10,
+    20,
+    60
+  ],
+  "feature_construction": "prior-window volatility rank / 2 + reversed prior-window mean rank / 2",
+  "cut_selection": "training-only grouped Gaussian likelihood gain, 15\u201385% score quantiles, 15% minimum group",
+  "validation_fit_years": [
+    1990,
+    1997
+  ],
+  "validation_years": [
+    1998,
+    1999
+  ],
+  "final_fit_years": [
+    1990,
+    1999
+  ],
+  "evaluation_year": 2000,
+  "selected_window_by_validation": 60,
+  "max_iter": 120,
+  "tol": 0.001,
+  "min_variance": 1e-05,
+  "models": {
+    "10": {
+      "selected_score_cut": 0.6915189873417723,
+      "center": 0.0005636498360787833,
+      "scale": 0.008886903575719364,
+      "start_probabilities": [
+        1.597132177517632e-85,
+        1.0
+      ],
+      "transition_matrix": [
+        [
+          0.9858748741760583,
+          0.014125125823941664
+        ],
+        [
+          0.024471979455639,
+          0.9755280205443609
+        ]
+      ],
+      "fitted_means_z": [
+        0.016543091282965657,
+        -0.027477778582194096
+      ],
+      "fitted_variances_z": [
+        0.4393143418243293,
+        1.9300792490384036
+      ],
+      "last_training_filtered": [
+        0.9729468124585415,
+        0.02705318754145848
+      ],
+      "first_test_predicted": [
+        0.9598658613622858,
+        0.04013413863771423
+      ],
+      "training_log_likelihood_z": -3343.0313350779697,
+      "converged": true,
+      "em_updates": 56
+    },
+    "20": {
+      "selected_score_cut": 0.6953856803797469,
+      "center": 0.0005636498360787833,
+      "scale": 0.008886903575719364,
+      "start_probabilities": [
+        3.116637686584622e-85,
+        1.0
+      ],
+      "transition_matrix": [
+        [
+          0.9858780167904051,
+          0.014121983209594912
+        ],
+        [
+          0.024464825290228816,
+          0.9755351747097712
+        ]
+      ],
+      "fitted_means_z": [
+        0.016539098373291775,
+        -0.02746894017588882
+      ],
+      "fitted_variances_z": [
+        0.4393116764314921,
+        1.9300096239880884
+      ],
+      "last_training_filtered": [
+        0.972944233034,
+        0.027055766965999994
+      ],
+      "first_test_predicted": [
+        0.959866245523138,
+        0.04013375447686201
+      ],
+      "training_log_likelihood_z": -3343.0312867026946,
+      "converged": true,
+      "em_updates": 56
+    },
+    "60": {
+      "selected_score_cut": 0.6584375000000001,
+      "center": 0.0005636498360787833,
+      "scale": 0.008886903575719364,
+      "start_probabilities": [
+        2.2684580124106806e-85,
+        1.0
+      ],
+      "transition_matrix": [
+        [
+          0.9858670902326236,
+          0.01413290976737627
+        ],
+        [
+          0.024489785850301073,
+          0.975510214149699
+        ]
+      ],
+      "fitted_means_z": [
+        0.01655301235484055,
+        -0.02749982059491906
+      ],
+      "fitted_variances_z": [
+        0.43932142277948294,
+        1.9302540764660097
+      ],
+      "last_training_filtered": [
+        0.9729533529160068,
+        0.027046647083993236
+      ],
+      "first_test_predicted": [
+        0.9598650575664343,
+        0.0401349424335657
+      ],
+      "training_log_likelihood_z": -3343.0314587122652,
+      "converged": true,
+      "em_updates": 56
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "run_id": "cdf24bec574ed846",
+  "saved_at_utc": "2026-10-02T20:30:34.648329+00:00",
+  "data_path": "data/processed/sp500_index_price.csv",
+  "data_sha256": "429b40637d430041bac5aba235a8fdd5681861ff8581657d814a11d84606f1dc",
+  "source_sha256": "da6da45d615d8f96eb8a0cb11301dad8a94d218e9cc52c4adad7216125b4b126",
+  "settings": {
+    "first_year": 1990,
+    "last_year": 2015,
+    "training_years": 10,
+    "n_starts": 10,
+    "master_seed": 42,
+    "max_iter": 300,
+    "cash_return_assumption": 0.0,
+    "cost_bps": [
+      1,
+      5,
+      10
+    ],
+    "instrument": "S&P 500 price index"
+  },
+  "stage": "development",
+  "final_period_used": false
+}

@@ -1,0 +1,55 @@
+{
+  "data_path": "data/processed/sp500_index_price.csv",
+  "instrument": "S&P 500 price index",
+  "return": "daily log return",
+  "training_years": [
+    1990,
+    1999
+  ],
+  "evaluation_year": 2000,
+  "train_days": 2528,
+  "evaluation_days": 252,
+  "training_mean": 0.0005636498360787833,
+  "training_scale": 0.008886903575719364,
+  "start_probabilities": [
+    1.623458277308368e-138,
+    1.0
+  ],
+  "transition_matrix": [
+    [
+      0.9858930712006058,
+      0.01410692879939428
+    ],
+    [
+      0.024425170066304982,
+      0.975574829933695
+    ]
+  ],
+  "fitted_means_z": [
+    0.01651778607277965,
+    -0.027416853057538156
+  ],
+  "fitted_variances_z": [
+    0.4392677071170532,
+    1.9295203557692784
+  ],
+  "last_train_filtered_probabilities": [
+    0.9729208245392842,
+    0.027079175460715817
+  ],
+  "first_test_predicted_probabilities": [
+    0.9598573132059439,
+    0.04014268679405618
+  ],
+  "selected_cut_z": 0.510120557044166,
+  "selected_cut_abs_log_return_pct": 0.4533392202443753,
+  "information_gain_nats": 1203.964789294159,
+  "max_iter": 120,
+  "tol": 0.001,
+  "min_variance": 1e-05,
+  "em_updates": 59,
+  "converged_by_tolerance": true,
+  "training_log_likelihood_standardized": -3343.031025684623,
+  "pit_ks_distance_2000": 0.08189520735269107,
+  "cdf_area_distance_pp_2000": 0.2072213192797431
+}
