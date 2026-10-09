@@ -1,0 +1,23 @@
+% References for the Flexible Emission HMM project.
+% Add one entry per paper; cite keys as @key in LaTeX, e.g. \cite{wang2020regime}.
+
+@article{wang2020regime,
+  author   = {Wang, Matthew and Lin, Yi-Hong and Mikhelson, Ilya},
+  title    = {Regime-Switching Factor Investing with Hidden Markov Models},
+  journal  = {Journal of Risk and Financial Management},
+  year     = {2020},
+  volume   = {13},
+  number   = {12},
+  pages    = {311},
+  publisher = {MDPI},
+  doi      = {10.3390/jrfm13120311},
+  url      = {https://www.mdpi.com/1911-8074/13/12/311},
+  keywords = {hmm, regime-switching, factor-investing, benchmark},
+  note     = {3-state Gaussian HMM (hmmlearn, full covariance, EM max_iter=75) on SPY
+              daily return + 10-day MA-deviation volatility; trained 2007-01 to
+              2017-09, OOS 2017-09 to 2020-04; daily sliding-window retrain on the
+              most recent 2707 days; rotates between six factor models by
+              regime-conditional Sharpe; evaluated with Sharpe, information ratio,
+              Treynor, Treynor-Mazuy, max drawdown, and French-library factor
+              regressions. Local PDF: jrfm-13-00311-v2.pdf.}
+}
