@@ -7,3 +7,4 @@ data/processed/*.csv
 __pycache__/
 *.py[cod]
 data/synthetic/gaussian_synthetic_experiments
+data/synthetic/gmm_synthetic_experiments

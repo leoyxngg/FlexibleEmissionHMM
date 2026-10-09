@@ -1,4 +1,4 @@
-from .emissions import EmissionModel, GaussianEmission
+from .emissions import EmissionModel, GaussianEmission, GaussianMixtureEmission
 from .hmm import HMM
 from .inference import ExactInference, InferenceEngine
 from .parameters import EvaluationResult, InferenceResult, StateParameters
@@ -8,6 +8,7 @@ __all__ = [
     "HMM",
     "EmissionModel",
     "GaussianEmission",
+    "GaussianMixtureEmission",
     "InferenceEngine",
     "ExactInference",
     "Trainer",
