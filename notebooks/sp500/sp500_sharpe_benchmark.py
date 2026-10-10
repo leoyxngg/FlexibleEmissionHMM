@@ -1,210 +1,296 @@
-"""Sharpe benchmark of S&P 500 regime switches: HMM signals vs market strategies."""
+"""Development-selected regime co-rotation and held-out S&P 500 benchmarks."""
 
+import argparse
 import logging
 import sys
 from pathlib import Path
+from time import perf_counter
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from hmmlearn.hmm import GaussianHMM
 
-project_root = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(project_root / "src"))
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(PROJECT_ROOT / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from model_evaluation.market_strategy import (  # noqa: E402  (needs path setup)
-    apply_weights,
-    buy_and_hold,
+from sp500_regime_algorithm_matrix import (  # noqa: E402
+    COST_BPS,
+    DATA_PATH,
+    REGIMES,
+    TRAIN_END,
+    TRAIN_START,
+    build_features,
+    causal_regimes,
+    fit_hmmlearn,
+    fit_ml,
+    name_regimes,
+    sharpe_matrix,
+    strategy_weights,
+)
+from model_evaluation.market_strategy import (  # noqa: E402
     compare_strategies,
-    hmmlearn_causal_probabilities,
-    moving_average_timing,
     plot_equity_curves,
-    plot_regime_overlay,
-    regime_probability_scaled,
-    regime_threshold,
-    volatility_target,
 )
 
-DATA_PATH = project_root / "data/processed/sp500_index_price.csv"
-MAX_ITER, TOL = 120, 1e-3
-MIN_COVAR = 1e-5
-"""Floor on per-state variances; mirrors the local package's ``MIN_VARIANCE``."""
+DEV_START, DEV_END = "1998-01-01", "2001-12-31"
+TEST_START, TEST_END = "2002-01-01", "2004-12-31"
+MIN_REGIME_DAYS = 20
+"""Minimum development observations for selection; small samples remain noisy."""
 
-N_STATES = 3
-VOLATILITY_DAYS, MOMENTUM_DAYS = 60, 20
-N_RESTARTS = 10
-"""Baum-Welch is non-convex; keep the best-likelihood of 10 seeds."""
-
-COST_BPS = 5.0
-"""Transaction cost in basis points per unit of strategy turnover."""
-
-data = pd.read_csv(DATA_PATH, parse_dates=["YYYYMMDD"]).sort_values("YYYYMMDD")
-prices = data.set_index("YYYYMMDD")["DlyPrcInd"]
-returns = np.log(prices).diff().dropna().rename("r_t")
-
-training = returns.loc["1988":"1997"]     # 10 training years, 1998 excluded
-validation = returns.loc["1998":"1999"]   # avoid 2000 for now
-test = returns.loc["2001"]
-
-if any(series.empty for series in (validation, training, test)):
-    raise ValueError("A requested period is empty")
-if (len(training.index.year.unique()) != 10
-        or test.index.year.unique().tolist() != [2001]):
-    raise ValueError("Expected ten training years and 2001 evaluation")
-
-## Features: r_t, sigma_t, m_t
-
-transformed = pd.concat(
-    [
-        returns.rename("r_t"),
-        returns.rolling(VOLATILITY_DAYS, min_periods=VOLATILITY_DAYS)
-        .std(ddof=1)
-        .rename("sigma_t"),
-        returns.rolling(MOMENTUM_DAYS, min_periods=MOMENTUM_DAYS)
-        .mean()
-        .rename("m_t"),
-    ],
-    axis=1,
-)
-
-transformed_train = transformed.loc[training.index]
-
-print(f"Validation: {len(validation)} days")
-print(f"Full training: {len(training)} days; held-out 2001: {len(test)} days")
-
-logging.getLogger("hmmlearn").setLevel(logging.ERROR)  # drop per-restart noise
+FALLBACK_STRATEGY = "buy_and_hold"
+"""Use a fixed passive fallback if a development regime cannot be scored."""
 
 
-def fit_hmmlearn(X: np.ndarray, n_states: int) -> GaussianHMM:
-    """Fit a Gaussian HMM over N_RESTARTS seeds, keeping the best likelihood.
+## Development selection and executable co-rotation
 
-    Restarts where EM starves a state produce NaN parameters in hmmlearn
-    (0/0 in the M-step); ``score()`` then raises, so those seeds are skipped.
+
+def split_returns(returns):
+    """Split returns into complete, disjoint training, development, and test years.
 
     Args:
-        X: Feature matrix, one row per day: ``[r_t, sigma_t, m_t]``.
-        n_states: Number of hidden states.
+        returns: Daily returns with unique, increasing dates.
 
     Returns:
-        The fitted model with the highest total log-likelihood.
-
-    Raises:
-        RuntimeError: Every restart collapsed to NaN parameters.
+        A dictionary of training, development, and test return series.
     """
-    best, best_score = None, -np.inf
-    for seed in range(N_RESTARTS):
-        model = GaussianHMM(
-            n_components=n_states,
-            covariance_type="full",
-            min_covar=MIN_COVAR,
-            n_iter=MAX_ITER,
-            tol=TOL,
-            random_state=seed,
-        )
-        try:
-            model.fit(X)
-            score = model.score(X)
-        except ValueError:  # NaN/inf parameters from a collapsed state
-            continue
-        if np.isfinite(score) and score > best_score:
-            best, best_score = model, score
-    if best is None:
-        raise RuntimeError(
-            f"All {N_RESTARTS} restarts collapsed for n_states={n_states}"
-        )
-    return best
-
-
-X_train = transformed_train.to_numpy()   # (T, 3): r_t, sigma_t, m_t
-model = fit_hmmlearn(X_train, N_STATES)
-
-fitted = pd.DataFrame(
-    {
-        "mean_r": model.means_[:, 0],
-        "sd_r": np.sqrt(model.covars_[:, 0, 0]),
-        "mean_sigma": model.means_[:, 1],
+    if not returns.index.is_unique or not returns.index.is_monotonic_increasing:
+        raise ValueError("Return dates must be unique and increasing")
+    bounds = {
+        "training": (TRAIN_START, TRAIN_END),
+        "development": (DEV_START, DEV_END),
+        "test": (TEST_START, TEST_END),
     }
-)
-high_state = int(fitted["sd_r"].idxmax())  # state with the fatter return distribution
-print(fitted.round(4))
-print(np.round(model.transmat_, 3))
-print(
-    f"converged={model.monitor_.converged} "
-    f"in {len(model.monitor_.history) - 1} EM iterations"
-)
+    splits = {}
+    previous_end = None
+    for name, (start, end) in bounds.items():
+        split = returns.loc[start:end]
+        expected_years = list(range(pd.Timestamp(start).year, pd.Timestamp(end).year + 1))
+        if split.empty or split.index.year.unique().tolist() != expected_years:
+            raise ValueError(f"Missing requested years in {name}: {start} to {end}")
+        if previous_end is not None and split.index[0] <= previous_end:
+            raise ValueError("Training, development, and test dates must not overlap")
+        splits[name] = split
+        previous_end = split.index[-1]
+    return splits
 
-## Model selection: AIC / BIC from the HMM itself (lower is better)
 
-selection = []
-for k in (2, N_STATES):
-    fitted_k = fit_hmmlearn(X_train, k)
-    n_params = sum(fitted_k._get_n_fit_scalars_per_param().values())
-    selection.append(
-        {
-            "n_states": k,
-            "logL/day (train)": fitted_k.score(X_train) / len(X_train),
-            "n_params": n_params,
-            "AIC (train)": fitted_k.aic(X_train),
-            "BIC (train)": fitted_k.bic(X_train),
-        }
+def select_rotation(development_table, counts):
+    """Choose each regime's maximum finite development Sharpe without test input.
+
+    Args:
+        development_table: Strategies by regime, plus a ``dev_all`` column.
+        counts: Number of development observations in each regime.
+
+    Returns:
+        Frozen regime-to-strategy map and the best whole-development strategy.
+        Ties follow table row order; unscorable regimes use buy and hold.
+    """
+    if FALLBACK_STRATEGY not in development_table.index:
+        raise ValueError("Development candidates must include the fallback")
+    rotation = {}
+    for regime in REGIMES:
+        scores = development_table[regime].replace([np.inf, -np.inf], np.nan).dropna()
+        rotation[regime] = (
+            scores.idxmax()
+            if counts[regime] >= MIN_REGIME_DAYS and not scores.empty
+            else FALLBACK_STRATEGY
+        )
+    overall = development_table["dev_all"].replace([np.inf, -np.inf], np.nan).dropna()
+    best_single = overall.idxmax() if not overall.empty else FALLBACK_STRATEGY
+    return rotation, best_single
+
+
+def co_rotation_weights(weights, labels, rotation):
+    """Select the mapped strategy's actual exposure before charging turnover.
+
+    Args:
+        weights: Causal candidate positions on identical dates.
+        labels: Pre-trade regime labels, using only earlier observations.
+        rotation: Fixed development-selected regime-to-strategy mapping.
+
+    Returns:
+        One combined position series, not a splice of candidate net returns.
+    """
+    if not weights.index.equals(labels.index):
+        raise ValueError("Candidate positions and regimes must have identical dates")
+    chosen = labels.map(rotation)
+    if chosen.isna().any() or not chosen.isin(weights.columns).all():
+        raise ValueError("Every regime must map to an available strategy")
+    positions = pd.Series(0.0, index=weights.index, name="co_rotation")
+    for name in chosen.unique():
+        mask = chosen == name
+        positions.loc[mask] = weights.loc[mask, name]
+    if not np.isfinite(positions).all():
+        raise ValueError("Selected positions must be finite")
+    return positions
+
+
+## Frozen-model benchmark
+
+
+def run_benchmark(prices, progress=False):
+    """Fit on training, select on development, and evaluate once on test.
+
+    Args:
+        prices: Existing SPX closes including pre-training rolling history.
+        progress: Print flushed stage messages when true.
+
+    Returns:
+        Development selection evidence, test positions and PnL, regime Sharpes,
+        and whole-test performance summaries. All test portfolios start in cash.
+    """
+    started = perf_counter()
+
+    def report(message):
+        if progress:
+            print(f"[{perf_counter() - started:.1f}s] {message}", flush=True)
+
+    prices = prices.loc[:TEST_END]
+    returns, emissions, ml_features = build_features(prices)
+    splits = split_returns(returns)
+    report("Fitting HMM on 1988-1997 (10 restarts)...")
+    model = fit_hmmlearn(emissions.loc[TRAIN_START:TRAIN_END].to_numpy())
+    names, moments = name_regimes(model)
+    report("Fitting supervised models on 1988-1997...")
+    fitted_ml = fit_ml(ml_features, returns)
+
+    # Selection receives only development returns, positions, and causal labels.
+    development = splits["development"]
+    report("Selecting regime strategies on development: 1998-2001...")
+    dev_labels, _ = causal_regimes(model, emissions, development.index, names)
+    dev_weights = strategy_weights(prices, development.index, fitted_ml)
+    dev_table, dev_counts, _ = sharpe_matrix(development, dev_weights, dev_labels)
+    dev_table = dev_table.rename(columns={"test_all": "dev_all"})
+    dev_counts = dev_counts.rename(index={"test_all": "dev_all"})
+    rotation, best_single = select_rotation(dev_table, dev_counts)
+
+    # Continue filtering through development; neither models nor map are refitted.
+    test = splits["test"]
+    report("Evaluating frozen co-rotation and baselines on test: 2002-2004...")
+    test_labels, _ = causal_regimes(model, emissions, test.index, names)
+    test_weights = strategy_weights(prices, test.index, fitted_ml)
+    test_weights["dev_best_single"] = test_weights[best_single]
+    test_weights["co_rotation"] = co_rotation_weights(
+        test_weights, test_labels, rotation,
     )
-selection = pd.DataFrame(selection).set_index("n_states")
-print(selection.round(3))
+    # Charge costs once on each actual portfolio, including initial entry and
+    # changes caused by switching strategies. Identical exposures cost nothing.
+    test_table, test_counts, test_pnl = sharpe_matrix(test, test_weights, test_labels)
+    summary = compare_strategies(
+        {name: test_pnl[name] for name in test_pnl},
+        {name: test_weights[name] for name in test_weights},
+    )
+    report("Benchmark calculations complete.")
+    return {
+        "prices": prices,
+        "splits": splits,
+        "moments": moments,
+        "development_table": dev_table,
+        "development_counts": dev_counts,
+        "development_labels": dev_labels,
+        "rotation": rotation,
+        "best_single": best_single,
+        "test_labels": test_labels,
+        "test_weights": test_weights,
+        "test_pnl": test_pnl,
+        "test_table": test_table,
+        "test_counts": test_counts,
+        "summary": summary,
+    }
 
-## Held-out likelihood vs an iid-Gaussian baseline fitted on train only
 
-rows = []
-mu0, sd0 = training.mean(), training.std(ddof=1)
-for name, split in [("train", training), ("val", validation), ("test", test)]:
-    X = transformed.loc[split.index].to_numpy()
-    hmm_nll = -model.score(X) / len(X)  # score() is total log-likelihood
-    gauss_nll = (
-        0.5 * np.log(2 * np.pi * sd0**2) + 0.5 * ((split - mu0) / sd0) ** 2
-    ).mean()
-    rows.append({"split": name, "HMM NLL/day": hmm_nll, "Gaussian NLL/day": gauss_nll})
-metrics = pd.DataFrame(rows).set_index("split")
-print(metrics.round(5))
+def max_drawdown(pnl):
+    """Return the worst peak-to-trough loss from the initial $1 peak.
 
-## Strategy benchmark: zero-signal baselines vs HMM-signal strategies
+    Args:
+        pnl: Daily log PnL of one causal portfolio.
 
-# CAUSALITY: signals are one-step-ahead probabilities, never smoothed
-# predict_proba - the position for day t uses data through t-1 only.
-# Window is contiguous 1998-2001; 2000 stays in as crash stress (rolling
-# features need continuity; the likelihood sections keep val/test separate).
-evaluation = returns.loc["1998":"2001"]
-proba_causal = hmmlearn_causal_probabilities(
-    model, transformed.loc[evaluation.index].to_numpy()
-)
-p_high = pd.Series(proba_causal[:, high_state], index=evaluation.index)
+    Returns:
+        Max drawdown as a negative fraction; losses from day one count
+        against the starting $1, unlike the package's ``drawdown``.
+    """
+    equity = np.exp(pnl.astype(float).cumsum())
+    return float((equity / np.maximum(1.0, equity.cummax()) - 1.0).min())
 
-weights = {
-    "buy_and_hold": buy_and_hold(evaluation),
-    "vol_target_60": volatility_target(evaluation, days=60, target_volatility=0.15),
-    "ma_50_200": moving_average_timing(
-        prices.loc[evaluation.index], fast=50, slow=200
-    ),
-    "regime_cut": regime_threshold(p_high, high_exposure=0.3, low_exposure=1.0),
-    "regime_scaled": regime_probability_scaled(
-        p_high, high_exposure=0.3, low_exposure=1.0
-    ),
-}
-results = {
-    name: apply_weights(evaluation, w, cost_bps=COST_BPS)
-    for name, w in weights.items()
-}
-print(
-    f"\nStrategy benchmark {evaluation.index[0].date()} .. "
-    f"{evaluation.index[-1].date()} "
-    f"(frozen 1988-1997 fit, causal signals, {COST_BPS:.0f} bps per turnover):"
-)
-print(compare_strategies(results, weights).round(3).to_string())
 
-plot_equity_curves(results, title="Growth of $1, 1998-2001 (frozen 1988-1997 fit)")
-plot_regime_overlay(
-    prices.loc[evaluation.index],
-    weights["regime_cut"],
-    p_high,
-    title=f"Causal P(state {high_state} = high vol) and regime-cut exposure",
-)
-plt.show()
+def plot_regime_shading(prices, labels, title):
+    """Plot causal regime shading over prices, matching the matrix notebook."""
+    fig, ax = plt.subplots(figsize=(11, 4.5))
+    ax.plot(prices.loc[labels.index], color="black", label="S&P 500")
+    shading = {"bear": "crimson", "sideways": "goldenrod", "bull": "seagreen"}
+    for regime, color in shading.items():
+        ax.fill_between(
+            labels.index, 0, 1, where=(labels == regime).values,
+            transform=ax.get_xaxis_transform(), color=color, alpha=0.18,
+            label=regime,
+        )
+    ax.legend(loc="upper left")
+    ax.set(title=title)
+    fig.tight_layout()
 
+
+def plot_benchmark(result):
+    """Plot dev and test regimes, equity, and Sharpe for co-rotation and baselines."""
+    plot_regime_shading(result["prices"], result["development_labels"],
+                        "One-step-ahead HMM regimes, 1998-2001")
+    plot_regime_shading(result["prices"], result["test_labels"],
+                        "One-step-ahead HMM regimes, 2002-2004")
+    plot_equity_curves(
+        {name: result["test_pnl"][name] for name in result["test_pnl"]},
+        title="Held-out growth of $1, 2002-2004 (5 bps turnover costs)",
+    )
+    summary = result["summary"].sort_values("sharpe")
+    colors = ["darkorange" if name == "co_rotation" else "steelblue"
+              for name in summary.index]
+    fig, ax = plt.subplots(figsize=(9, 5))
+    ax.barh(summary.index, summary["sharpe"], color=colors)
+    ax.axvline(0, color="black", linewidth=0.8)
+    ax.set(title="Held-out Sharpe, 2002-2004", xlabel="Annualized Sharpe")
+    fig.tight_layout()
+
+
+def main(show=True):
+    """Print development selection and final test results, then optionally plot."""
+    logging.getLogger("hmmlearn").setLevel(logging.ERROR)
+    data = pd.read_csv(DATA_PATH, parse_dates=["YYYYMMDD"])
+    prices = data.set_index("YYYYMMDD")["DlyPrcInd"].sort_index()
+    result = run_benchmark(prices, progress=True)
+    print("\nTraining: 1988-1997 | Development: 1998-2001 | Test: 2002-2004")
+    print("\nTraining moments and heuristic regime names:\n", result["moments"])
+    print("\nDevelopment day counts:\n", result["development_counts"].to_string())
+    print("\nDevelopment selection Sharpes:\n",
+          result["development_table"].round(3).to_string())
+    print("\nFrozen co-rotation map:", result["rotation"])
+    print("Development-selected single strategy:", result["best_single"])
+    print("Selection: maximum finite net Sharpe; ties use candidate order;")
+    print(f"fewer than {MIN_REGIME_DAYS} regime days or no valid score -> buy_and_hold.")
+    print("\nTest day counts:\n", result["test_counts"].to_string())
+    print("\nFinal test Sharpe matrix:\n", result["test_table"].round(3).to_string())
+    summary = result["summary"]
+    # Display-only correction: peak includes the initial $1; selection untouched.
+    summary["max_drawdown"] = [
+        max_drawdown(result["test_pnl"][name]) for name in summary.index
+    ]
+    columns = ["sharpe", "max_drawdown", "ann_return", "ann_volatility", "exposure"]
+    print("\nFinal test performance:\n", summary[columns].round(3).to_string())
+    print(f"\nCosts: {COST_BPS:g} bps per unit of actual portfolio turnover.")
+    print("max_drawdown: worst peak-to-trough loss from the initial $1 peak.")
+    print("All test portfolios start from cash; rolling/filter history is retained.")
+    print("Signals use t-1 closes; same-close fills are idealized. Approximate log")
+    print("PnL; cash rate is zero; financing and borrow costs are omitted.")
+    print("Development winners are selection results, not independent evidence.")
+    print("Test results must not be used to retune this map or select new features.")
+    if show:
+        plot_benchmark(result)
+        print("Calculations finished. Close all plot windows to exit.", flush=True)
+        plt.show()
+    return result
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--no-show", action="store_true", help="Run without plot windows")
+    # ``parse_known_args`` tolerates ipykernel's injected ``-f``/``--f`` flag.
+    args, _ = parser.parse_known_args()
+    main(show=not args.no_show)
