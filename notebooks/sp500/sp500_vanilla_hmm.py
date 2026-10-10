@@ -15,7 +15,7 @@ import numpy as np
 import pandas as pd
 from hmmlearn.hmm import GaussianHMM
 
-project_root = Path(__file__).resolve().parents[1]
+project_root = Path(__file__).resolve().parents[2]
 DATA_PATH = project_root / "data/processed/sp500_index_price.csv"
 MAX_ITER, TOL, MIN_COVAR = 120, 1e-3, 1e-5   # MIN_COVAR mirrors MIN_VARIANCE
 N_STATES = 3
