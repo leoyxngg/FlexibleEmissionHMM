@@ -7,12 +7,6 @@ This project is aimed to study HMM model with different family of emission distr
 ### Data Source
 The raw data can be downloaded from CRSP https://wrds-www.wharton.upenn.edu/pages/get-data/center-research-security-prices-crsp/annual-update/index-version-2/daily-index-and-portfolios-on-sp-500/ by selecting every index and the desire range
 
-### Progress
-
-[X] Preprocessing raw data for the model
-
-[X] Simulate labeled GBM paths with scheduled drift and volatility changes [[Example]](https://www.gregorygundersen.com/blog/2024/04/13/simulating-gbm/)
-
 ### Dependency Manager
 
 We are using [[uv]](https://docs.astral.sh/uv) for the project. Please follow the installation guide in the doc.
