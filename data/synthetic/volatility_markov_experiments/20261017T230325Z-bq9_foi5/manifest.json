@@ -1,0 +1,106 @@
+{
+  "settings": {
+    "master_seed": 31,
+    "train_sizes": [
+      20000
+    ],
+    "n_test": 5000,
+    "n_density": 10000,
+    "n_replicates": 3,
+    "n_starts": 3,
+    "n_components": 3,
+    "max_iter": 1000,
+    "tol_per_observation": 1e-06,
+    "min_variance": 1e-06,
+    "include_wide": false,
+    "quad_epsabs": 1e-09,
+    "quad_epsrel": 1e-09,
+    "quad_limit": 500,
+    "bootstrap_samples": 2000,
+    "state_stds": [
+      1.0,
+      2.0,
+      4.0
+    ],
+    "self_transition": 0.995,
+    "noise_levels": [
+      0.1,
+      0.25,
+      0.5
+    ]
+  },
+  "families": [
+    "Gaussian",
+    "Student-t",
+    "Trimodal",
+    "Skewed Gamma"
+  ],
+  "transitions": [
+    [
+      0.995,
+      0.0025000000000000022,
+      0.0025000000000000022
+    ],
+    [
+      0.0025000000000000022,
+      0.995,
+      0.0025000000000000022
+    ],
+    [
+      0.0025000000000000022,
+      0.0025000000000000022,
+      0.995
+    ]
+  ],
+  "means": [
+    0,
+    0,
+    0
+  ],
+  "stds": [
+    1.0,
+    2.0,
+    4.0
+  ],
+  "initial": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "selection": "Highest finite clean-training LL; earlier start wins ties",
+  "alignment": "Clean-training Hungarian alignment frozen across all test variants",
+  "perturbation": "Additive Gaussian noise; SD ramps linearly from zero to level * training_std across the full test path; shared base noise",
+  "comparison": "Same clean test path, labels, models, and all-condition complete pairs",
+  "wide_family": "Standardized to zero means and prescribed variances; original shape retained",
+  "kl": "Clean-target emission KL invariant to affine transformation; unchanged by test noise",
+  "noise_nll": "Likelihood under clean fitted model; a robustness score, not parameter recovery",
+  "source_hashes": {
+    "notebooks/volatility_markov_comparison.py": "6b9a346aab1d0ed59937f7b18cee3fbb707274a94f50c5ba553692e8f045f31e",
+    "notebooks/synthetic_emission_comparison.py": "7ddfbb03c48d8b7d45704be49f317b62f8d1c01232cb9eb8f447934ddb9c5726",
+    "notebooks/gmm_synthetic_experiments.ipynb": "9b83f37aabe0092e4f5743bf30ce6d45f4d9b6152ff78f3a41fac603714713b8",
+    "src/flexible_emission_hmm/__init__.py": "4badedad16619dd8e00fdb3e2571bf05d74c611f905b78ed8591500f496edb01",
+    "src/flexible_emission_hmm/emissions.py": "1cca0a9a0e050a3ab0d082c38fcc7cea6a9a1ad19dc1ce39e00265d1c1651e26",
+    "src/flexible_emission_hmm/feature.py": "de29a7d7e43bf1993bd3750ae18897925e931ee1d9fbc1371949d16636229391",
+    "src/flexible_emission_hmm/hmm.py": "3190c1195a4cbff298604a0151bb65b68b90b1f964c254161157855dd51bfae2",
+    "src/flexible_emission_hmm/inference.py": "cf1eb9515dfc89e2684f13f575ab0ab9c13c0e3991ed4169e5f45a75c0596eb1",
+    "src/flexible_emission_hmm/parameters.py": "8227875dc42d0b87ac7ea115ce0cff789a074dfb339e089d2aae127cb35b20dd",
+    "src/flexible_emission_hmm/training.py": "5ba6c0f798d6671709909d8b2d54a6c729fb461415ad1f67f64663c3cd439c23",
+    "src/flexible_emission_hmm/validation.py": "4c412834767dd97dd5455f2e70360ec362ae1a8ace8f60bfbce7219bd01d30a1",
+    "src/model_evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/model_evaluation/market_strategy/__init__.py": "b3c2d3e7d187a9f1525c167c2f279496912c9d58957dc0f8252eb9bf6051b14b",
+    "src/model_evaluation/market_strategy/evaluation.py": "0eb3b088e0bd712ffa63fdeab0ca8add37610b82d471187f35e6cc3c2010b268",
+    "src/model_evaluation/market_strategy/models.py": "25baa30cd98f988a33c896b94ef457e4fee04e70e49767b502d4990be8972088",
+    "src/model_evaluation/market_strategy/signals.py": "7f9a048bb4a246dfcbbeab65ee2818046de288dcfa98290e2726dff9d9380205",
+    "src/model_evaluation/market_strategy/strategies.py": "f69560d6c4563d02ad49fdc4bfd15d1b19b97ed0bb00d16b44c32c9cb5fb8c8b",
+    "src/model_evaluation/real_data.py": "da6da45d615d8f96eb8a0cb11301dad8a94d218e9cc52c4adad7216125b4b126",
+    "src/model_evaluation/synthetic/__init__.py": "f010385a37bb38d33c3246b001d09c60fe06a35b71695a219224f9e511a44aae",
+    "src/model_evaluation/synthetic/state_alignment.py": "3f81ddf8532949043d3465bb1726c5d8dd805e5446920b2de32b16ff11e91541",
+    "src/synthetic_data_generation/__init__.py": "a5da105f019477429023611fce8bb9ffddf70f8ad239ace2e310da033190ace8",
+    "src/synthetic_data_generation/geometric_brownian_motion.py": "e3b13d8794c385e6b5e84987ecebb5cda0f90b425fc48706d1bc4746a451ee4d",
+    "src/synthetic_data_generation/markov_process_generation.py": "8a27745212367b98f5f768ca729b31ac1522574535183c7d1411ce5e3b195d6e"
+  },
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3"
+  }
+}

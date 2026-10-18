@@ -1,0 +1,9 @@
+family,n_train,model,starts,failures,converged_starts,total_fit_seconds
+Gaussian,20000,GMM HMM,9,0,9,191.9558950419305
+Gaussian,20000,Gaussian HMM,9,0,9,148.19542037404608
+Skewed Gamma,20000,GMM HMM,9,0,9,548.58135295799
+Skewed Gamma,20000,Gaussian HMM,9,0,9,179.75668654195033
+Student-t,20000,GMM HMM,9,0,9,673.0315489593195
+Student-t,20000,Gaussian HMM,9,0,9,103.58401029091328
+Trimodal,20000,GMM HMM,9,0,9,307.83654879091773
+Trimodal,20000,Gaussian HMM,9,0,9,170.8538653338328

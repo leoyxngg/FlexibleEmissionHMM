@@ -1,0 +1,8642 @@
+[
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1670
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 12
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1523
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 9
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 12
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 28
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1745
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1670
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 12
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1523
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 9
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 12
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 28
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1745
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1591
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 76
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 4
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 11
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1508
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 25
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 9
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 32
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1744
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1403
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 261
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 7
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 7
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1458
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 79
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 9
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 24
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1752
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1669
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 1
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 11
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1524
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 9
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 12
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 28
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1745
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1668
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 3
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 11
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1524
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 9
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 12
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 30
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1743
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1591
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 76
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 4
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 11
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1508
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 25
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 9
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 32
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1744
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1357
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 309
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 5
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 7
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1465
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 72
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 9
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 24
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1752
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 886
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 18
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 35
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2121
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 20
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 1
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 2
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1911
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 882
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 22
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 52
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2072
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 52
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 1
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 2
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1911
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 867
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 37
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 31
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2092
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 53
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 4
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1910
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 669
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 235
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 3
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2098
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 75
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 3
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1911
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 886
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 18
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 35
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2089
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 52
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 1
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 2
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1911
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 882
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 22
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 33
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2090
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 53
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 4
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1910
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 867
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 37
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 31
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2092
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 53
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 4
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1910
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 669
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 235
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 3
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2098
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 75
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 3
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1911
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1370
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 5
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 15
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 59
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1598
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 23
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 22
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 11
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1897
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1370
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 5
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 15
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 55
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1598
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 27
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 22
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 11
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1897
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1367
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 8
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 15
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 31
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1610
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 39
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 22
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 11
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1897
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 728
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 646
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 16
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 13
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1634
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 33
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 13
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 34
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1883
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1370
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 5
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 15
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 59
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1598
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 23
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 22
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 11
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1897
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1370
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 5
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 15
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 37
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1616
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 27
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 22
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 11
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1897
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1310
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 65
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 15
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 30
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1611
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 39
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 22
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 11
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1897
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 728
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 646
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 16
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 13
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1632
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 35
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 13
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 34
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1883
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1561
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 6
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 104
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 644
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 21
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 879
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 36
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 164
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1585
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1562
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 6
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 103
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 669
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 21
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 854
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 37
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 165
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1583
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1508
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 6
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 157
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 584
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 21
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 939
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 23
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 163
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1599
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1266
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 7
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 398
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 438
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 22
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 1084
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 30
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 167
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1588
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1664
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 0
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 7
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 98
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1367
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 79
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 11
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 60
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1714
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1663
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 0
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 8
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 92
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1366
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 86
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 11
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 63
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1711
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1386
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 278
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 7
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 91
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1373
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 80
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 11
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 55
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1719
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 732
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 869
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 70
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 89
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1197
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 258
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 12
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 41
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1732
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 848
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 2
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 60
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 989
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 26
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 1161
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 85
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 120
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1709
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 849
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 2
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 59
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 1015
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 26
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 1135
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 82
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 121
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1711
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 845
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 2
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 63
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 874
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 27
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 1275
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 82
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 124
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1708
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 707
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 3
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 200
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 574
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 29
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 1573
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 55
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 129
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1730
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 872
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 27
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 11
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 10
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2142
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 24
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 75
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1839
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 861
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 27
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 22
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 10
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2140
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 26
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 69
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1845
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 750
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 140
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 20
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 1
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2152
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 23
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 82
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1832
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 438
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 464
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 8
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 1
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1600
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 575
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 51
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1863
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1267
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 6
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 117
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 634
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 15
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 1031
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 28
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 137
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1765
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1260
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 5
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 125
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 606
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 15
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 1059
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 28
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 136
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1766
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1205
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 5
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 180
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 568
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 16
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 1096
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 29
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 139
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1762
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 757
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 4
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 629
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 439
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 20
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 1221
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 18
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 144
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1768
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1354
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 13
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 23
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 129
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1431
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 120
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 15
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 17
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1898
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1354
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 13
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 23
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 175
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1355
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 150
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 15
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 15
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1900
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 974
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 396
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 20
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 126
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1428
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 126
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 10
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 36
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1884
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 469
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 805
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 116
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 82
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1465
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 133
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 5
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 39
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1886
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1671
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 1
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1543
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 557
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 42
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1186
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1671
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1539
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 3
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 556
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 44
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1185
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1671
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1539
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 3
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 553
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 48
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1184
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1671
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 11
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1499
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 34
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 544
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 36
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1205
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1670
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1542
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 683
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 33
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1069
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1670
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1542
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 681
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 34
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1070
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1670
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1542
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 685
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 39
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1061
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1670
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 15
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1509
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 20
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 680
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 49
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1056
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 904
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 8
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2150
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 18
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 623
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 18
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1273
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 904
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 8
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2150
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 18
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 624
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 16
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1274
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 904
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 10
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2142
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 24
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 615
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 15
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1284
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 904
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 13
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2130
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 33
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 593
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 11
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1310
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 441
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 463
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 841
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1321
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 14
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 4
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 10
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1900
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 440
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 464
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 861
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1303
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 12
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 5
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 10
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1899
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 436
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 468
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 909
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1255
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 12
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 5
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 10
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1899
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 412
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 490
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 8
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 863
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1053
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 260
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 11
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 17
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1886
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1389
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 210
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1365
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 105
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 1323
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 605
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1388
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 164
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1408
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 108
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 1326
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 602
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1388
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 168
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1408
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 104
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 1328
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 600
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1323
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 66
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 1
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 76
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1485
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 119
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 1346
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 582
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1387
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 1
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 11
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1153
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 516
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 62
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1866
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1387
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 9
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1144
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 527
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 70
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1858
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1285
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 56
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 49
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 23
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1069
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 588
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 103
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1825
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 841
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 254
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 295
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 10
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 930
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 740
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 2
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 134
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1794
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 96
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1569
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 212
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1138
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 194
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 13
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1772
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 97
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1568
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 205
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1112
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 227
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 12
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1773
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 99
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1566
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 194
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1019
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 331
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 12
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1773
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 119
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1543
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 9
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 131
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 724
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 689
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 12
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1773
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1660
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 7
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 4
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 17
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1524
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 3
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 4
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 45
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1736
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1660
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 7
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 4
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 16
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1525
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 3
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 4
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 31
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1750
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1620
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 44
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 7
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 13
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1524
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 7
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 3
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 31
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1751
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1179
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 480
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 12
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 13
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1279
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 252
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 8
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 24
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1753
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 843
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 42
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 25
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 19
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2153
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 4
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 1
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 56
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1857
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 825
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 60
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 25
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 9
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2163
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 4
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 65
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1849
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 823
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 60
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 27
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 9
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2144
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 23
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 53
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1861
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 726
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 174
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 10
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 9
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2101
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 66
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 35
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1879
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 900
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 1
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 9
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 7
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2164
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 5
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 1
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 18
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1895
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 883
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 18
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 9
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 4
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2162
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 10
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 12
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1902
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 855
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 46
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 9
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 4
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2159
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 13
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 9
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1905
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 674
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 230
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 6
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 4
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 2154
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 18
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 0
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 6
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1908
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1357
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 14
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 19
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 40
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1605
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 35
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 7
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 33
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1890
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1336
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 35
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 19
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 40
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1605
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 35
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 8
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 33
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1889
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1283
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 88
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 19
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 28
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1570
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 82
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 8
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 33
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1889
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 948
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 423
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 19
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 16
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 1584
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 80
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 6
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 39
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 1885
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1388
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 2
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 0
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 402
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 743
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 535
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 11
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 995
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 924
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1386
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 3
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 1
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 400
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 745
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 535
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 10
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 993
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 927
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1381
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 6
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 3
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 372
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 759
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 549
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 11
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 993
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 926
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 0,
+    "count": 1289
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 1,
+    "count": 59
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 0,
+    "predicted_state": 2,
+    "count": 42
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 0,
+    "count": 334
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 1,
+    "count": 788
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 1,
+    "predicted_state": 2,
+    "count": 558
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 0,
+    "count": 7
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 1,
+    "count": 1012
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "true_state": 2,
+    "predicted_state": 2,
+    "count": 911
+  }
+]

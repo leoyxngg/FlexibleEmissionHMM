@@ -1,0 +1,770 @@
+[
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "file": "prediction_00000.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00001.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00002.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00003.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "file": "prediction_00004.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00005.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00006.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00007.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "file": "prediction_00008.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00009.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00010.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00011.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "file": "prediction_00012.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00013.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00014.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00015.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "file": "prediction_00016.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00017.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00018.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00019.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "file": "prediction_00020.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00021.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00022.npz"
+  },
+  {
+    "family": "Gaussian",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00023.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "file": "prediction_00024.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00025.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00026.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00027.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "file": "prediction_00028.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00029.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00030.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00031.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "file": "prediction_00032.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00033.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00034.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00035.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "file": "prediction_00036.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00037.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00038.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00039.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "file": "prediction_00040.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00041.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00042.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00043.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "file": "prediction_00044.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00045.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00046.npz"
+  },
+  {
+    "family": "Student-t",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00047.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "file": "prediction_00048.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00049.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00050.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00051.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "file": "prediction_00052.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00053.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00054.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00055.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "file": "prediction_00056.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00057.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00058.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00059.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "file": "prediction_00060.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00061.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00062.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00063.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "file": "prediction_00064.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00065.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00066.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00067.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "file": "prediction_00068.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00069.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00070.npz"
+  },
+  {
+    "family": "Trimodal",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00071.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "file": "prediction_00072.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00073.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00074.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00075.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "file": "prediction_00076.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00077.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00078.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 0,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00079.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "file": "prediction_00080.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00081.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00082.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00083.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "file": "prediction_00084.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00085.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00086.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 1,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00087.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "clean",
+    "file": "prediction_00088.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00089.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00090.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "Gaussian HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00091.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "clean",
+    "file": "prediction_00092.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.1",
+    "file": "prediction_00093.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.25",
+    "file": "prediction_00094.npz"
+  },
+  {
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "replicate": 2,
+    "model": "GMM HMM",
+    "condition": "noise_0.5",
+    "file": "prediction_00095.npz"
+  }
+]

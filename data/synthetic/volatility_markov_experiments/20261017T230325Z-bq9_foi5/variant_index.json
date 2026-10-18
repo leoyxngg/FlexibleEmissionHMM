@@ -1,0 +1,74 @@
+[
+  {
+    "replicate": 0,
+    "family": "Gaussian",
+    "n_train": 20000,
+    "file": "test_variants_0000.npz"
+  },
+  {
+    "replicate": 1,
+    "family": "Gaussian",
+    "n_train": 20000,
+    "file": "test_variants_0001.npz"
+  },
+  {
+    "replicate": 2,
+    "family": "Gaussian",
+    "n_train": 20000,
+    "file": "test_variants_0002.npz"
+  },
+  {
+    "replicate": 0,
+    "family": "Student-t",
+    "n_train": 20000,
+    "file": "test_variants_0003.npz"
+  },
+  {
+    "replicate": 1,
+    "family": "Student-t",
+    "n_train": 20000,
+    "file": "test_variants_0004.npz"
+  },
+  {
+    "replicate": 2,
+    "family": "Student-t",
+    "n_train": 20000,
+    "file": "test_variants_0005.npz"
+  },
+  {
+    "replicate": 0,
+    "family": "Trimodal",
+    "n_train": 20000,
+    "file": "test_variants_0006.npz"
+  },
+  {
+    "replicate": 1,
+    "family": "Trimodal",
+    "n_train": 20000,
+    "file": "test_variants_0007.npz"
+  },
+  {
+    "replicate": 2,
+    "family": "Trimodal",
+    "n_train": 20000,
+    "file": "test_variants_0008.npz"
+  },
+  {
+    "replicate": 0,
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "file": "test_variants_0009.npz"
+  },
+  {
+    "replicate": 1,
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "file": "test_variants_0010.npz"
+  },
+  {
+    "replicate": 2,
+    "family": "Skewed Gamma",
+    "n_train": 20000,
+    "file": "test_variants_0011.npz"
+  }
+]

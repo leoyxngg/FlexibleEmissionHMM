@@ -1,0 +1,62 @@
+[
+  {
+    "replicate": 0,
+    "family": "Gaussian",
+    "file": "dataset_0000.npz"
+  },
+  {
+    "replicate": 0,
+    "family": "Student-t",
+    "file": "dataset_0001.npz"
+  },
+  {
+    "replicate": 0,
+    "family": "Trimodal",
+    "file": "dataset_0002.npz"
+  },
+  {
+    "replicate": 0,
+    "family": "Skewed Gamma",
+    "file": "dataset_0003.npz"
+  },
+  {
+    "replicate": 1,
+    "family": "Gaussian",
+    "file": "dataset_0004.npz"
+  },
+  {
+    "replicate": 1,
+    "family": "Student-t",
+    "file": "dataset_0005.npz"
+  },
+  {
+    "replicate": 1,
+    "family": "Trimodal",
+    "file": "dataset_0006.npz"
+  },
+  {
+    "replicate": 1,
+    "family": "Skewed Gamma",
+    "file": "dataset_0007.npz"
+  },
+  {
+    "replicate": 2,
+    "family": "Gaussian",
+    "file": "dataset_0008.npz"
+  },
+  {
+    "replicate": 2,
+    "family": "Student-t",
+    "file": "dataset_0009.npz"
+  },
+  {
+    "replicate": 2,
+    "family": "Trimodal",
+    "file": "dataset_0010.npz"
+  },
+  {
+    "replicate": 2,
+    "family": "Skewed Gamma",
+    "file": "dataset_0011.npz"
+  }
+]

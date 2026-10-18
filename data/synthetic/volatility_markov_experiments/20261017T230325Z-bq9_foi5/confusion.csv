@@ -1,0 +1,865 @@
+family,n_train,replicate,model,condition,true_state,predicted_state,count
+Gaussian,20000,0,Gaussian HMM,clean,0,0,1670
+Gaussian,20000,0,Gaussian HMM,clean,0,1,1
+Gaussian,20000,0,Gaussian HMM,clean,0,2,0
+Gaussian,20000,0,Gaussian HMM,clean,1,0,12
+Gaussian,20000,0,Gaussian HMM,clean,1,1,1523
+Gaussian,20000,0,Gaussian HMM,clean,1,2,9
+Gaussian,20000,0,Gaussian HMM,clean,2,0,12
+Gaussian,20000,0,Gaussian HMM,clean,2,1,28
+Gaussian,20000,0,Gaussian HMM,clean,2,2,1745
+Gaussian,20000,0,Gaussian HMM,noise_0.1,0,0,1670
+Gaussian,20000,0,Gaussian HMM,noise_0.1,0,1,1
+Gaussian,20000,0,Gaussian HMM,noise_0.1,0,2,0
+Gaussian,20000,0,Gaussian HMM,noise_0.1,1,0,12
+Gaussian,20000,0,Gaussian HMM,noise_0.1,1,1,1523
+Gaussian,20000,0,Gaussian HMM,noise_0.1,1,2,9
+Gaussian,20000,0,Gaussian HMM,noise_0.1,2,0,12
+Gaussian,20000,0,Gaussian HMM,noise_0.1,2,1,28
+Gaussian,20000,0,Gaussian HMM,noise_0.1,2,2,1745
+Gaussian,20000,0,Gaussian HMM,noise_0.25,0,0,1591
+Gaussian,20000,0,Gaussian HMM,noise_0.25,0,1,76
+Gaussian,20000,0,Gaussian HMM,noise_0.25,0,2,4
+Gaussian,20000,0,Gaussian HMM,noise_0.25,1,0,11
+Gaussian,20000,0,Gaussian HMM,noise_0.25,1,1,1508
+Gaussian,20000,0,Gaussian HMM,noise_0.25,1,2,25
+Gaussian,20000,0,Gaussian HMM,noise_0.25,2,0,9
+Gaussian,20000,0,Gaussian HMM,noise_0.25,2,1,32
+Gaussian,20000,0,Gaussian HMM,noise_0.25,2,2,1744
+Gaussian,20000,0,Gaussian HMM,noise_0.5,0,0,1403
+Gaussian,20000,0,Gaussian HMM,noise_0.5,0,1,261
+Gaussian,20000,0,Gaussian HMM,noise_0.5,0,2,7
+Gaussian,20000,0,Gaussian HMM,noise_0.5,1,0,7
+Gaussian,20000,0,Gaussian HMM,noise_0.5,1,1,1458
+Gaussian,20000,0,Gaussian HMM,noise_0.5,1,2,79
+Gaussian,20000,0,Gaussian HMM,noise_0.5,2,0,9
+Gaussian,20000,0,Gaussian HMM,noise_0.5,2,1,24
+Gaussian,20000,0,Gaussian HMM,noise_0.5,2,2,1752
+Gaussian,20000,0,GMM HMM,clean,0,0,1669
+Gaussian,20000,0,GMM HMM,clean,0,1,1
+Gaussian,20000,0,GMM HMM,clean,0,2,1
+Gaussian,20000,0,GMM HMM,clean,1,0,11
+Gaussian,20000,0,GMM HMM,clean,1,1,1524
+Gaussian,20000,0,GMM HMM,clean,1,2,9
+Gaussian,20000,0,GMM HMM,clean,2,0,12
+Gaussian,20000,0,GMM HMM,clean,2,1,28
+Gaussian,20000,0,GMM HMM,clean,2,2,1745
+Gaussian,20000,0,GMM HMM,noise_0.1,0,0,1668
+Gaussian,20000,0,GMM HMM,noise_0.1,0,1,3
+Gaussian,20000,0,GMM HMM,noise_0.1,0,2,0
+Gaussian,20000,0,GMM HMM,noise_0.1,1,0,11
+Gaussian,20000,0,GMM HMM,noise_0.1,1,1,1524
+Gaussian,20000,0,GMM HMM,noise_0.1,1,2,9
+Gaussian,20000,0,GMM HMM,noise_0.1,2,0,12
+Gaussian,20000,0,GMM HMM,noise_0.1,2,1,30
+Gaussian,20000,0,GMM HMM,noise_0.1,2,2,1743
+Gaussian,20000,0,GMM HMM,noise_0.25,0,0,1591
+Gaussian,20000,0,GMM HMM,noise_0.25,0,1,76
+Gaussian,20000,0,GMM HMM,noise_0.25,0,2,4
+Gaussian,20000,0,GMM HMM,noise_0.25,1,0,11
+Gaussian,20000,0,GMM HMM,noise_0.25,1,1,1508
+Gaussian,20000,0,GMM HMM,noise_0.25,1,2,25
+Gaussian,20000,0,GMM HMM,noise_0.25,2,0,9
+Gaussian,20000,0,GMM HMM,noise_0.25,2,1,32
+Gaussian,20000,0,GMM HMM,noise_0.25,2,2,1744
+Gaussian,20000,0,GMM HMM,noise_0.5,0,0,1357
+Gaussian,20000,0,GMM HMM,noise_0.5,0,1,309
+Gaussian,20000,0,GMM HMM,noise_0.5,0,2,5
+Gaussian,20000,0,GMM HMM,noise_0.5,1,0,7
+Gaussian,20000,0,GMM HMM,noise_0.5,1,1,1465
+Gaussian,20000,0,GMM HMM,noise_0.5,1,2,72
+Gaussian,20000,0,GMM HMM,noise_0.5,2,0,9
+Gaussian,20000,0,GMM HMM,noise_0.5,2,1,24
+Gaussian,20000,0,GMM HMM,noise_0.5,2,2,1752
+Gaussian,20000,1,Gaussian HMM,clean,0,0,886
+Gaussian,20000,1,Gaussian HMM,clean,0,1,18
+Gaussian,20000,1,Gaussian HMM,clean,0,2,6
+Gaussian,20000,1,Gaussian HMM,clean,1,0,35
+Gaussian,20000,1,Gaussian HMM,clean,1,1,2121
+Gaussian,20000,1,Gaussian HMM,clean,1,2,20
+Gaussian,20000,1,Gaussian HMM,clean,2,0,1
+Gaussian,20000,1,Gaussian HMM,clean,2,1,2
+Gaussian,20000,1,Gaussian HMM,clean,2,2,1911
+Gaussian,20000,1,Gaussian HMM,noise_0.1,0,0,882
+Gaussian,20000,1,Gaussian HMM,noise_0.1,0,1,22
+Gaussian,20000,1,Gaussian HMM,noise_0.1,0,2,6
+Gaussian,20000,1,Gaussian HMM,noise_0.1,1,0,52
+Gaussian,20000,1,Gaussian HMM,noise_0.1,1,1,2072
+Gaussian,20000,1,Gaussian HMM,noise_0.1,1,2,52
+Gaussian,20000,1,Gaussian HMM,noise_0.1,2,0,1
+Gaussian,20000,1,Gaussian HMM,noise_0.1,2,1,2
+Gaussian,20000,1,Gaussian HMM,noise_0.1,2,2,1911
+Gaussian,20000,1,Gaussian HMM,noise_0.25,0,0,867
+Gaussian,20000,1,Gaussian HMM,noise_0.25,0,1,37
+Gaussian,20000,1,Gaussian HMM,noise_0.25,0,2,6
+Gaussian,20000,1,Gaussian HMM,noise_0.25,1,0,31
+Gaussian,20000,1,Gaussian HMM,noise_0.25,1,1,2092
+Gaussian,20000,1,Gaussian HMM,noise_0.25,1,2,53
+Gaussian,20000,1,Gaussian HMM,noise_0.25,2,0,0
+Gaussian,20000,1,Gaussian HMM,noise_0.25,2,1,4
+Gaussian,20000,1,Gaussian HMM,noise_0.25,2,2,1910
+Gaussian,20000,1,Gaussian HMM,noise_0.5,0,0,669
+Gaussian,20000,1,Gaussian HMM,noise_0.5,0,1,235
+Gaussian,20000,1,Gaussian HMM,noise_0.5,0,2,6
+Gaussian,20000,1,Gaussian HMM,noise_0.5,1,0,3
+Gaussian,20000,1,Gaussian HMM,noise_0.5,1,1,2098
+Gaussian,20000,1,Gaussian HMM,noise_0.5,1,2,75
+Gaussian,20000,1,Gaussian HMM,noise_0.5,2,0,0
+Gaussian,20000,1,Gaussian HMM,noise_0.5,2,1,3
+Gaussian,20000,1,Gaussian HMM,noise_0.5,2,2,1911
+Gaussian,20000,1,GMM HMM,clean,0,0,886
+Gaussian,20000,1,GMM HMM,clean,0,1,18
+Gaussian,20000,1,GMM HMM,clean,0,2,6
+Gaussian,20000,1,GMM HMM,clean,1,0,35
+Gaussian,20000,1,GMM HMM,clean,1,1,2089
+Gaussian,20000,1,GMM HMM,clean,1,2,52
+Gaussian,20000,1,GMM HMM,clean,2,0,1
+Gaussian,20000,1,GMM HMM,clean,2,1,2
+Gaussian,20000,1,GMM HMM,clean,2,2,1911
+Gaussian,20000,1,GMM HMM,noise_0.1,0,0,882
+Gaussian,20000,1,GMM HMM,noise_0.1,0,1,22
+Gaussian,20000,1,GMM HMM,noise_0.1,0,2,6
+Gaussian,20000,1,GMM HMM,noise_0.1,1,0,33
+Gaussian,20000,1,GMM HMM,noise_0.1,1,1,2090
+Gaussian,20000,1,GMM HMM,noise_0.1,1,2,53
+Gaussian,20000,1,GMM HMM,noise_0.1,2,0,0
+Gaussian,20000,1,GMM HMM,noise_0.1,2,1,4
+Gaussian,20000,1,GMM HMM,noise_0.1,2,2,1910
+Gaussian,20000,1,GMM HMM,noise_0.25,0,0,867
+Gaussian,20000,1,GMM HMM,noise_0.25,0,1,37
+Gaussian,20000,1,GMM HMM,noise_0.25,0,2,6
+Gaussian,20000,1,GMM HMM,noise_0.25,1,0,31
+Gaussian,20000,1,GMM HMM,noise_0.25,1,1,2092
+Gaussian,20000,1,GMM HMM,noise_0.25,1,2,53
+Gaussian,20000,1,GMM HMM,noise_0.25,2,0,0
+Gaussian,20000,1,GMM HMM,noise_0.25,2,1,4
+Gaussian,20000,1,GMM HMM,noise_0.25,2,2,1910
+Gaussian,20000,1,GMM HMM,noise_0.5,0,0,669
+Gaussian,20000,1,GMM HMM,noise_0.5,0,1,235
+Gaussian,20000,1,GMM HMM,noise_0.5,0,2,6
+Gaussian,20000,1,GMM HMM,noise_0.5,1,0,3
+Gaussian,20000,1,GMM HMM,noise_0.5,1,1,2098
+Gaussian,20000,1,GMM HMM,noise_0.5,1,2,75
+Gaussian,20000,1,GMM HMM,noise_0.5,2,0,0
+Gaussian,20000,1,GMM HMM,noise_0.5,2,1,3
+Gaussian,20000,1,GMM HMM,noise_0.5,2,2,1911
+Gaussian,20000,2,Gaussian HMM,clean,0,0,1370
+Gaussian,20000,2,Gaussian HMM,clean,0,1,5
+Gaussian,20000,2,Gaussian HMM,clean,0,2,15
+Gaussian,20000,2,Gaussian HMM,clean,1,0,59
+Gaussian,20000,2,Gaussian HMM,clean,1,1,1598
+Gaussian,20000,2,Gaussian HMM,clean,1,2,23
+Gaussian,20000,2,Gaussian HMM,clean,2,0,22
+Gaussian,20000,2,Gaussian HMM,clean,2,1,11
+Gaussian,20000,2,Gaussian HMM,clean,2,2,1897
+Gaussian,20000,2,Gaussian HMM,noise_0.1,0,0,1370
+Gaussian,20000,2,Gaussian HMM,noise_0.1,0,1,5
+Gaussian,20000,2,Gaussian HMM,noise_0.1,0,2,15
+Gaussian,20000,2,Gaussian HMM,noise_0.1,1,0,55
+Gaussian,20000,2,Gaussian HMM,noise_0.1,1,1,1598
+Gaussian,20000,2,Gaussian HMM,noise_0.1,1,2,27
+Gaussian,20000,2,Gaussian HMM,noise_0.1,2,0,22
+Gaussian,20000,2,Gaussian HMM,noise_0.1,2,1,11
+Gaussian,20000,2,Gaussian HMM,noise_0.1,2,2,1897
+Gaussian,20000,2,Gaussian HMM,noise_0.25,0,0,1367
+Gaussian,20000,2,Gaussian HMM,noise_0.25,0,1,8
+Gaussian,20000,2,Gaussian HMM,noise_0.25,0,2,15
+Gaussian,20000,2,Gaussian HMM,noise_0.25,1,0,31
+Gaussian,20000,2,Gaussian HMM,noise_0.25,1,1,1610
+Gaussian,20000,2,Gaussian HMM,noise_0.25,1,2,39
+Gaussian,20000,2,Gaussian HMM,noise_0.25,2,0,22
+Gaussian,20000,2,Gaussian HMM,noise_0.25,2,1,11
+Gaussian,20000,2,Gaussian HMM,noise_0.25,2,2,1897
+Gaussian,20000,2,Gaussian HMM,noise_0.5,0,0,728
+Gaussian,20000,2,Gaussian HMM,noise_0.5,0,1,646
+Gaussian,20000,2,Gaussian HMM,noise_0.5,0,2,16
+Gaussian,20000,2,Gaussian HMM,noise_0.5,1,0,13
+Gaussian,20000,2,Gaussian HMM,noise_0.5,1,1,1634
+Gaussian,20000,2,Gaussian HMM,noise_0.5,1,2,33
+Gaussian,20000,2,Gaussian HMM,noise_0.5,2,0,13
+Gaussian,20000,2,Gaussian HMM,noise_0.5,2,1,34
+Gaussian,20000,2,Gaussian HMM,noise_0.5,2,2,1883
+Gaussian,20000,2,GMM HMM,clean,0,0,1370
+Gaussian,20000,2,GMM HMM,clean,0,1,5
+Gaussian,20000,2,GMM HMM,clean,0,2,15
+Gaussian,20000,2,GMM HMM,clean,1,0,59
+Gaussian,20000,2,GMM HMM,clean,1,1,1598
+Gaussian,20000,2,GMM HMM,clean,1,2,23
+Gaussian,20000,2,GMM HMM,clean,2,0,22
+Gaussian,20000,2,GMM HMM,clean,2,1,11
+Gaussian,20000,2,GMM HMM,clean,2,2,1897
+Gaussian,20000,2,GMM HMM,noise_0.1,0,0,1370
+Gaussian,20000,2,GMM HMM,noise_0.1,0,1,5
+Gaussian,20000,2,GMM HMM,noise_0.1,0,2,15
+Gaussian,20000,2,GMM HMM,noise_0.1,1,0,37
+Gaussian,20000,2,GMM HMM,noise_0.1,1,1,1616
+Gaussian,20000,2,GMM HMM,noise_0.1,1,2,27
+Gaussian,20000,2,GMM HMM,noise_0.1,2,0,22
+Gaussian,20000,2,GMM HMM,noise_0.1,2,1,11
+Gaussian,20000,2,GMM HMM,noise_0.1,2,2,1897
+Gaussian,20000,2,GMM HMM,noise_0.25,0,0,1310
+Gaussian,20000,2,GMM HMM,noise_0.25,0,1,65
+Gaussian,20000,2,GMM HMM,noise_0.25,0,2,15
+Gaussian,20000,2,GMM HMM,noise_0.25,1,0,30
+Gaussian,20000,2,GMM HMM,noise_0.25,1,1,1611
+Gaussian,20000,2,GMM HMM,noise_0.25,1,2,39
+Gaussian,20000,2,GMM HMM,noise_0.25,2,0,22
+Gaussian,20000,2,GMM HMM,noise_0.25,2,1,11
+Gaussian,20000,2,GMM HMM,noise_0.25,2,2,1897
+Gaussian,20000,2,GMM HMM,noise_0.5,0,0,728
+Gaussian,20000,2,GMM HMM,noise_0.5,0,1,646
+Gaussian,20000,2,GMM HMM,noise_0.5,0,2,16
+Gaussian,20000,2,GMM HMM,noise_0.5,1,0,13
+Gaussian,20000,2,GMM HMM,noise_0.5,1,1,1632
+Gaussian,20000,2,GMM HMM,noise_0.5,1,2,35
+Gaussian,20000,2,GMM HMM,noise_0.5,2,0,13
+Gaussian,20000,2,GMM HMM,noise_0.5,2,1,34
+Gaussian,20000,2,GMM HMM,noise_0.5,2,2,1883
+Student-t,20000,0,Gaussian HMM,clean,0,0,1561
+Student-t,20000,0,Gaussian HMM,clean,0,1,6
+Student-t,20000,0,Gaussian HMM,clean,0,2,104
+Student-t,20000,0,Gaussian HMM,clean,1,0,644
+Student-t,20000,0,Gaussian HMM,clean,1,1,21
+Student-t,20000,0,Gaussian HMM,clean,1,2,879
+Student-t,20000,0,Gaussian HMM,clean,2,0,36
+Student-t,20000,0,Gaussian HMM,clean,2,1,164
+Student-t,20000,0,Gaussian HMM,clean,2,2,1585
+Student-t,20000,0,Gaussian HMM,noise_0.1,0,0,1562
+Student-t,20000,0,Gaussian HMM,noise_0.1,0,1,6
+Student-t,20000,0,Gaussian HMM,noise_0.1,0,2,103
+Student-t,20000,0,Gaussian HMM,noise_0.1,1,0,669
+Student-t,20000,0,Gaussian HMM,noise_0.1,1,1,21
+Student-t,20000,0,Gaussian HMM,noise_0.1,1,2,854
+Student-t,20000,0,Gaussian HMM,noise_0.1,2,0,37
+Student-t,20000,0,Gaussian HMM,noise_0.1,2,1,165
+Student-t,20000,0,Gaussian HMM,noise_0.1,2,2,1583
+Student-t,20000,0,Gaussian HMM,noise_0.25,0,0,1508
+Student-t,20000,0,Gaussian HMM,noise_0.25,0,1,6
+Student-t,20000,0,Gaussian HMM,noise_0.25,0,2,157
+Student-t,20000,0,Gaussian HMM,noise_0.25,1,0,584
+Student-t,20000,0,Gaussian HMM,noise_0.25,1,1,21
+Student-t,20000,0,Gaussian HMM,noise_0.25,1,2,939
+Student-t,20000,0,Gaussian HMM,noise_0.25,2,0,23
+Student-t,20000,0,Gaussian HMM,noise_0.25,2,1,163
+Student-t,20000,0,Gaussian HMM,noise_0.25,2,2,1599
+Student-t,20000,0,Gaussian HMM,noise_0.5,0,0,1266
+Student-t,20000,0,Gaussian HMM,noise_0.5,0,1,7
+Student-t,20000,0,Gaussian HMM,noise_0.5,0,2,398
+Student-t,20000,0,Gaussian HMM,noise_0.5,1,0,438
+Student-t,20000,0,Gaussian HMM,noise_0.5,1,1,22
+Student-t,20000,0,Gaussian HMM,noise_0.5,1,2,1084
+Student-t,20000,0,Gaussian HMM,noise_0.5,2,0,30
+Student-t,20000,0,Gaussian HMM,noise_0.5,2,1,167
+Student-t,20000,0,Gaussian HMM,noise_0.5,2,2,1588
+Student-t,20000,0,GMM HMM,clean,0,0,1664
+Student-t,20000,0,GMM HMM,clean,0,1,0
+Student-t,20000,0,GMM HMM,clean,0,2,7
+Student-t,20000,0,GMM HMM,clean,1,0,98
+Student-t,20000,0,GMM HMM,clean,1,1,1367
+Student-t,20000,0,GMM HMM,clean,1,2,79
+Student-t,20000,0,GMM HMM,clean,2,0,11
+Student-t,20000,0,GMM HMM,clean,2,1,60
+Student-t,20000,0,GMM HMM,clean,2,2,1714
+Student-t,20000,0,GMM HMM,noise_0.1,0,0,1663
+Student-t,20000,0,GMM HMM,noise_0.1,0,1,0
+Student-t,20000,0,GMM HMM,noise_0.1,0,2,8
+Student-t,20000,0,GMM HMM,noise_0.1,1,0,92
+Student-t,20000,0,GMM HMM,noise_0.1,1,1,1366
+Student-t,20000,0,GMM HMM,noise_0.1,1,2,86
+Student-t,20000,0,GMM HMM,noise_0.1,2,0,11
+Student-t,20000,0,GMM HMM,noise_0.1,2,1,63
+Student-t,20000,0,GMM HMM,noise_0.1,2,2,1711
+Student-t,20000,0,GMM HMM,noise_0.25,0,0,1386
+Student-t,20000,0,GMM HMM,noise_0.25,0,1,278
+Student-t,20000,0,GMM HMM,noise_0.25,0,2,7
+Student-t,20000,0,GMM HMM,noise_0.25,1,0,91
+Student-t,20000,0,GMM HMM,noise_0.25,1,1,1373
+Student-t,20000,0,GMM HMM,noise_0.25,1,2,80
+Student-t,20000,0,GMM HMM,noise_0.25,2,0,11
+Student-t,20000,0,GMM HMM,noise_0.25,2,1,55
+Student-t,20000,0,GMM HMM,noise_0.25,2,2,1719
+Student-t,20000,0,GMM HMM,noise_0.5,0,0,732
+Student-t,20000,0,GMM HMM,noise_0.5,0,1,869
+Student-t,20000,0,GMM HMM,noise_0.5,0,2,70
+Student-t,20000,0,GMM HMM,noise_0.5,1,0,89
+Student-t,20000,0,GMM HMM,noise_0.5,1,1,1197
+Student-t,20000,0,GMM HMM,noise_0.5,1,2,258
+Student-t,20000,0,GMM HMM,noise_0.5,2,0,12
+Student-t,20000,0,GMM HMM,noise_0.5,2,1,41
+Student-t,20000,0,GMM HMM,noise_0.5,2,2,1732
+Student-t,20000,1,Gaussian HMM,clean,0,0,848
+Student-t,20000,1,Gaussian HMM,clean,0,1,2
+Student-t,20000,1,Gaussian HMM,clean,0,2,60
+Student-t,20000,1,Gaussian HMM,clean,1,0,989
+Student-t,20000,1,Gaussian HMM,clean,1,1,26
+Student-t,20000,1,Gaussian HMM,clean,1,2,1161
+Student-t,20000,1,Gaussian HMM,clean,2,0,85
+Student-t,20000,1,Gaussian HMM,clean,2,1,120
+Student-t,20000,1,Gaussian HMM,clean,2,2,1709
+Student-t,20000,1,Gaussian HMM,noise_0.1,0,0,849
+Student-t,20000,1,Gaussian HMM,noise_0.1,0,1,2
+Student-t,20000,1,Gaussian HMM,noise_0.1,0,2,59
+Student-t,20000,1,Gaussian HMM,noise_0.1,1,0,1015
+Student-t,20000,1,Gaussian HMM,noise_0.1,1,1,26
+Student-t,20000,1,Gaussian HMM,noise_0.1,1,2,1135
+Student-t,20000,1,Gaussian HMM,noise_0.1,2,0,82
+Student-t,20000,1,Gaussian HMM,noise_0.1,2,1,121
+Student-t,20000,1,Gaussian HMM,noise_0.1,2,2,1711
+Student-t,20000,1,Gaussian HMM,noise_0.25,0,0,845
+Student-t,20000,1,Gaussian HMM,noise_0.25,0,1,2
+Student-t,20000,1,Gaussian HMM,noise_0.25,0,2,63
+Student-t,20000,1,Gaussian HMM,noise_0.25,1,0,874
+Student-t,20000,1,Gaussian HMM,noise_0.25,1,1,27
+Student-t,20000,1,Gaussian HMM,noise_0.25,1,2,1275
+Student-t,20000,1,Gaussian HMM,noise_0.25,2,0,82
+Student-t,20000,1,Gaussian HMM,noise_0.25,2,1,124
+Student-t,20000,1,Gaussian HMM,noise_0.25,2,2,1708
+Student-t,20000,1,Gaussian HMM,noise_0.5,0,0,707
+Student-t,20000,1,Gaussian HMM,noise_0.5,0,1,3
+Student-t,20000,1,Gaussian HMM,noise_0.5,0,2,200
+Student-t,20000,1,Gaussian HMM,noise_0.5,1,0,574
+Student-t,20000,1,Gaussian HMM,noise_0.5,1,1,29
+Student-t,20000,1,Gaussian HMM,noise_0.5,1,2,1573
+Student-t,20000,1,Gaussian HMM,noise_0.5,2,0,55
+Student-t,20000,1,Gaussian HMM,noise_0.5,2,1,129
+Student-t,20000,1,Gaussian HMM,noise_0.5,2,2,1730
+Student-t,20000,1,GMM HMM,clean,0,0,872
+Student-t,20000,1,GMM HMM,clean,0,1,27
+Student-t,20000,1,GMM HMM,clean,0,2,11
+Student-t,20000,1,GMM HMM,clean,1,0,10
+Student-t,20000,1,GMM HMM,clean,1,1,2142
+Student-t,20000,1,GMM HMM,clean,1,2,24
+Student-t,20000,1,GMM HMM,clean,2,0,0
+Student-t,20000,1,GMM HMM,clean,2,1,75
+Student-t,20000,1,GMM HMM,clean,2,2,1839
+Student-t,20000,1,GMM HMM,noise_0.1,0,0,861
+Student-t,20000,1,GMM HMM,noise_0.1,0,1,27
+Student-t,20000,1,GMM HMM,noise_0.1,0,2,22
+Student-t,20000,1,GMM HMM,noise_0.1,1,0,10
+Student-t,20000,1,GMM HMM,noise_0.1,1,1,2140
+Student-t,20000,1,GMM HMM,noise_0.1,1,2,26
+Student-t,20000,1,GMM HMM,noise_0.1,2,0,0
+Student-t,20000,1,GMM HMM,noise_0.1,2,1,69
+Student-t,20000,1,GMM HMM,noise_0.1,2,2,1845
+Student-t,20000,1,GMM HMM,noise_0.25,0,0,750
+Student-t,20000,1,GMM HMM,noise_0.25,0,1,140
+Student-t,20000,1,GMM HMM,noise_0.25,0,2,20
+Student-t,20000,1,GMM HMM,noise_0.25,1,0,1
+Student-t,20000,1,GMM HMM,noise_0.25,1,1,2152
+Student-t,20000,1,GMM HMM,noise_0.25,1,2,23
+Student-t,20000,1,GMM HMM,noise_0.25,2,0,0
+Student-t,20000,1,GMM HMM,noise_0.25,2,1,82
+Student-t,20000,1,GMM HMM,noise_0.25,2,2,1832
+Student-t,20000,1,GMM HMM,noise_0.5,0,0,438
+Student-t,20000,1,GMM HMM,noise_0.5,0,1,464
+Student-t,20000,1,GMM HMM,noise_0.5,0,2,8
+Student-t,20000,1,GMM HMM,noise_0.5,1,0,1
+Student-t,20000,1,GMM HMM,noise_0.5,1,1,1600
+Student-t,20000,1,GMM HMM,noise_0.5,1,2,575
+Student-t,20000,1,GMM HMM,noise_0.5,2,0,0
+Student-t,20000,1,GMM HMM,noise_0.5,2,1,51
+Student-t,20000,1,GMM HMM,noise_0.5,2,2,1863
+Student-t,20000,2,Gaussian HMM,clean,0,0,1267
+Student-t,20000,2,Gaussian HMM,clean,0,1,6
+Student-t,20000,2,Gaussian HMM,clean,0,2,117
+Student-t,20000,2,Gaussian HMM,clean,1,0,634
+Student-t,20000,2,Gaussian HMM,clean,1,1,15
+Student-t,20000,2,Gaussian HMM,clean,1,2,1031
+Student-t,20000,2,Gaussian HMM,clean,2,0,28
+Student-t,20000,2,Gaussian HMM,clean,2,1,137
+Student-t,20000,2,Gaussian HMM,clean,2,2,1765
+Student-t,20000,2,Gaussian HMM,noise_0.1,0,0,1260
+Student-t,20000,2,Gaussian HMM,noise_0.1,0,1,5
+Student-t,20000,2,Gaussian HMM,noise_0.1,0,2,125
+Student-t,20000,2,Gaussian HMM,noise_0.1,1,0,606
+Student-t,20000,2,Gaussian HMM,noise_0.1,1,1,15
+Student-t,20000,2,Gaussian HMM,noise_0.1,1,2,1059
+Student-t,20000,2,Gaussian HMM,noise_0.1,2,0,28
+Student-t,20000,2,Gaussian HMM,noise_0.1,2,1,136
+Student-t,20000,2,Gaussian HMM,noise_0.1,2,2,1766
+Student-t,20000,2,Gaussian HMM,noise_0.25,0,0,1205
+Student-t,20000,2,Gaussian HMM,noise_0.25,0,1,5
+Student-t,20000,2,Gaussian HMM,noise_0.25,0,2,180
+Student-t,20000,2,Gaussian HMM,noise_0.25,1,0,568
+Student-t,20000,2,Gaussian HMM,noise_0.25,1,1,16
+Student-t,20000,2,Gaussian HMM,noise_0.25,1,2,1096
+Student-t,20000,2,Gaussian HMM,noise_0.25,2,0,29
+Student-t,20000,2,Gaussian HMM,noise_0.25,2,1,139
+Student-t,20000,2,Gaussian HMM,noise_0.25,2,2,1762
+Student-t,20000,2,Gaussian HMM,noise_0.5,0,0,757
+Student-t,20000,2,Gaussian HMM,noise_0.5,0,1,4
+Student-t,20000,2,Gaussian HMM,noise_0.5,0,2,629
+Student-t,20000,2,Gaussian HMM,noise_0.5,1,0,439
+Student-t,20000,2,Gaussian HMM,noise_0.5,1,1,20
+Student-t,20000,2,Gaussian HMM,noise_0.5,1,2,1221
+Student-t,20000,2,Gaussian HMM,noise_0.5,2,0,18
+Student-t,20000,2,Gaussian HMM,noise_0.5,2,1,144
+Student-t,20000,2,Gaussian HMM,noise_0.5,2,2,1768
+Student-t,20000,2,GMM HMM,clean,0,0,1354
+Student-t,20000,2,GMM HMM,clean,0,1,13
+Student-t,20000,2,GMM HMM,clean,0,2,23
+Student-t,20000,2,GMM HMM,clean,1,0,129
+Student-t,20000,2,GMM HMM,clean,1,1,1431
+Student-t,20000,2,GMM HMM,clean,1,2,120
+Student-t,20000,2,GMM HMM,clean,2,0,15
+Student-t,20000,2,GMM HMM,clean,2,1,17
+Student-t,20000,2,GMM HMM,clean,2,2,1898
+Student-t,20000,2,GMM HMM,noise_0.1,0,0,1354
+Student-t,20000,2,GMM HMM,noise_0.1,0,1,13
+Student-t,20000,2,GMM HMM,noise_0.1,0,2,23
+Student-t,20000,2,GMM HMM,noise_0.1,1,0,175
+Student-t,20000,2,GMM HMM,noise_0.1,1,1,1355
+Student-t,20000,2,GMM HMM,noise_0.1,1,2,150
+Student-t,20000,2,GMM HMM,noise_0.1,2,0,15
+Student-t,20000,2,GMM HMM,noise_0.1,2,1,15
+Student-t,20000,2,GMM HMM,noise_0.1,2,2,1900
+Student-t,20000,2,GMM HMM,noise_0.25,0,0,974
+Student-t,20000,2,GMM HMM,noise_0.25,0,1,396
+Student-t,20000,2,GMM HMM,noise_0.25,0,2,20
+Student-t,20000,2,GMM HMM,noise_0.25,1,0,126
+Student-t,20000,2,GMM HMM,noise_0.25,1,1,1428
+Student-t,20000,2,GMM HMM,noise_0.25,1,2,126
+Student-t,20000,2,GMM HMM,noise_0.25,2,0,10
+Student-t,20000,2,GMM HMM,noise_0.25,2,1,36
+Student-t,20000,2,GMM HMM,noise_0.25,2,2,1884
+Student-t,20000,2,GMM HMM,noise_0.5,0,0,469
+Student-t,20000,2,GMM HMM,noise_0.5,0,1,805
+Student-t,20000,2,GMM HMM,noise_0.5,0,2,116
+Student-t,20000,2,GMM HMM,noise_0.5,1,0,82
+Student-t,20000,2,GMM HMM,noise_0.5,1,1,1465
+Student-t,20000,2,GMM HMM,noise_0.5,1,2,133
+Student-t,20000,2,GMM HMM,noise_0.5,2,0,5
+Student-t,20000,2,GMM HMM,noise_0.5,2,1,39
+Student-t,20000,2,GMM HMM,noise_0.5,2,2,1886
+Trimodal,20000,0,Gaussian HMM,clean,0,0,0
+Trimodal,20000,0,Gaussian HMM,clean,0,1,1671
+Trimodal,20000,0,Gaussian HMM,clean,0,2,0
+Trimodal,20000,0,Gaussian HMM,clean,1,0,1
+Trimodal,20000,0,Gaussian HMM,clean,1,1,1543
+Trimodal,20000,0,Gaussian HMM,clean,1,2,0
+Trimodal,20000,0,Gaussian HMM,clean,2,0,557
+Trimodal,20000,0,Gaussian HMM,clean,2,1,42
+Trimodal,20000,0,Gaussian HMM,clean,2,2,1186
+Trimodal,20000,0,Gaussian HMM,noise_0.1,0,0,0
+Trimodal,20000,0,Gaussian HMM,noise_0.1,0,1,1671
+Trimodal,20000,0,Gaussian HMM,noise_0.1,0,2,0
+Trimodal,20000,0,Gaussian HMM,noise_0.1,1,0,2
+Trimodal,20000,0,Gaussian HMM,noise_0.1,1,1,1539
+Trimodal,20000,0,Gaussian HMM,noise_0.1,1,2,3
+Trimodal,20000,0,Gaussian HMM,noise_0.1,2,0,556
+Trimodal,20000,0,Gaussian HMM,noise_0.1,2,1,44
+Trimodal,20000,0,Gaussian HMM,noise_0.1,2,2,1185
+Trimodal,20000,0,Gaussian HMM,noise_0.25,0,0,0
+Trimodal,20000,0,Gaussian HMM,noise_0.25,0,1,1671
+Trimodal,20000,0,Gaussian HMM,noise_0.25,0,2,0
+Trimodal,20000,0,Gaussian HMM,noise_0.25,1,0,2
+Trimodal,20000,0,Gaussian HMM,noise_0.25,1,1,1539
+Trimodal,20000,0,Gaussian HMM,noise_0.25,1,2,3
+Trimodal,20000,0,Gaussian HMM,noise_0.25,2,0,553
+Trimodal,20000,0,Gaussian HMM,noise_0.25,2,1,48
+Trimodal,20000,0,Gaussian HMM,noise_0.25,2,2,1184
+Trimodal,20000,0,Gaussian HMM,noise_0.5,0,0,0
+Trimodal,20000,0,Gaussian HMM,noise_0.5,0,1,1671
+Trimodal,20000,0,Gaussian HMM,noise_0.5,0,2,0
+Trimodal,20000,0,Gaussian HMM,noise_0.5,1,0,11
+Trimodal,20000,0,Gaussian HMM,noise_0.5,1,1,1499
+Trimodal,20000,0,Gaussian HMM,noise_0.5,1,2,34
+Trimodal,20000,0,Gaussian HMM,noise_0.5,2,0,544
+Trimodal,20000,0,Gaussian HMM,noise_0.5,2,1,36
+Trimodal,20000,0,Gaussian HMM,noise_0.5,2,2,1205
+Trimodal,20000,0,GMM HMM,clean,0,0,1
+Trimodal,20000,0,GMM HMM,clean,0,1,1670
+Trimodal,20000,0,GMM HMM,clean,0,2,0
+Trimodal,20000,0,GMM HMM,clean,1,0,2
+Trimodal,20000,0,GMM HMM,clean,1,1,1542
+Trimodal,20000,0,GMM HMM,clean,1,2,0
+Trimodal,20000,0,GMM HMM,clean,2,0,683
+Trimodal,20000,0,GMM HMM,clean,2,1,33
+Trimodal,20000,0,GMM HMM,clean,2,2,1069
+Trimodal,20000,0,GMM HMM,noise_0.1,0,0,1
+Trimodal,20000,0,GMM HMM,noise_0.1,0,1,1670
+Trimodal,20000,0,GMM HMM,noise_0.1,0,2,0
+Trimodal,20000,0,GMM HMM,noise_0.1,1,0,2
+Trimodal,20000,0,GMM HMM,noise_0.1,1,1,1542
+Trimodal,20000,0,GMM HMM,noise_0.1,1,2,0
+Trimodal,20000,0,GMM HMM,noise_0.1,2,0,681
+Trimodal,20000,0,GMM HMM,noise_0.1,2,1,34
+Trimodal,20000,0,GMM HMM,noise_0.1,2,2,1070
+Trimodal,20000,0,GMM HMM,noise_0.25,0,0,1
+Trimodal,20000,0,GMM HMM,noise_0.25,0,1,1670
+Trimodal,20000,0,GMM HMM,noise_0.25,0,2,0
+Trimodal,20000,0,GMM HMM,noise_0.25,1,0,2
+Trimodal,20000,0,GMM HMM,noise_0.25,1,1,1542
+Trimodal,20000,0,GMM HMM,noise_0.25,1,2,0
+Trimodal,20000,0,GMM HMM,noise_0.25,2,0,685
+Trimodal,20000,0,GMM HMM,noise_0.25,2,1,39
+Trimodal,20000,0,GMM HMM,noise_0.25,2,2,1061
+Trimodal,20000,0,GMM HMM,noise_0.5,0,0,1
+Trimodal,20000,0,GMM HMM,noise_0.5,0,1,1670
+Trimodal,20000,0,GMM HMM,noise_0.5,0,2,0
+Trimodal,20000,0,GMM HMM,noise_0.5,1,0,15
+Trimodal,20000,0,GMM HMM,noise_0.5,1,1,1509
+Trimodal,20000,0,GMM HMM,noise_0.5,1,2,20
+Trimodal,20000,0,GMM HMM,noise_0.5,2,0,680
+Trimodal,20000,0,GMM HMM,noise_0.5,2,1,49
+Trimodal,20000,0,GMM HMM,noise_0.5,2,2,1056
+Trimodal,20000,1,Gaussian HMM,clean,0,0,0
+Trimodal,20000,1,Gaussian HMM,clean,0,1,904
+Trimodal,20000,1,Gaussian HMM,clean,0,2,6
+Trimodal,20000,1,Gaussian HMM,clean,1,0,8
+Trimodal,20000,1,Gaussian HMM,clean,1,1,2150
+Trimodal,20000,1,Gaussian HMM,clean,1,2,18
+Trimodal,20000,1,Gaussian HMM,clean,2,0,623
+Trimodal,20000,1,Gaussian HMM,clean,2,1,18
+Trimodal,20000,1,Gaussian HMM,clean,2,2,1273
+Trimodal,20000,1,Gaussian HMM,noise_0.1,0,0,0
+Trimodal,20000,1,Gaussian HMM,noise_0.1,0,1,904
+Trimodal,20000,1,Gaussian HMM,noise_0.1,0,2,6
+Trimodal,20000,1,Gaussian HMM,noise_0.1,1,0,8
+Trimodal,20000,1,Gaussian HMM,noise_0.1,1,1,2150
+Trimodal,20000,1,Gaussian HMM,noise_0.1,1,2,18
+Trimodal,20000,1,Gaussian HMM,noise_0.1,2,0,624
+Trimodal,20000,1,Gaussian HMM,noise_0.1,2,1,16
+Trimodal,20000,1,Gaussian HMM,noise_0.1,2,2,1274
+Trimodal,20000,1,Gaussian HMM,noise_0.25,0,0,0
+Trimodal,20000,1,Gaussian HMM,noise_0.25,0,1,904
+Trimodal,20000,1,Gaussian HMM,noise_0.25,0,2,6
+Trimodal,20000,1,Gaussian HMM,noise_0.25,1,0,10
+Trimodal,20000,1,Gaussian HMM,noise_0.25,1,1,2142
+Trimodal,20000,1,Gaussian HMM,noise_0.25,1,2,24
+Trimodal,20000,1,Gaussian HMM,noise_0.25,2,0,615
+Trimodal,20000,1,Gaussian HMM,noise_0.25,2,1,15
+Trimodal,20000,1,Gaussian HMM,noise_0.25,2,2,1284
+Trimodal,20000,1,Gaussian HMM,noise_0.5,0,0,0
+Trimodal,20000,1,Gaussian HMM,noise_0.5,0,1,904
+Trimodal,20000,1,Gaussian HMM,noise_0.5,0,2,6
+Trimodal,20000,1,Gaussian HMM,noise_0.5,1,0,13
+Trimodal,20000,1,Gaussian HMM,noise_0.5,1,1,2130
+Trimodal,20000,1,Gaussian HMM,noise_0.5,1,2,33
+Trimodal,20000,1,Gaussian HMM,noise_0.5,2,0,593
+Trimodal,20000,1,Gaussian HMM,noise_0.5,2,1,11
+Trimodal,20000,1,Gaussian HMM,noise_0.5,2,2,1310
+Trimodal,20000,1,GMM HMM,clean,0,0,441
+Trimodal,20000,1,GMM HMM,clean,0,1,463
+Trimodal,20000,1,GMM HMM,clean,0,2,6
+Trimodal,20000,1,GMM HMM,clean,1,0,841
+Trimodal,20000,1,GMM HMM,clean,1,1,1321
+Trimodal,20000,1,GMM HMM,clean,1,2,14
+Trimodal,20000,1,GMM HMM,clean,2,0,4
+Trimodal,20000,1,GMM HMM,clean,2,1,10
+Trimodal,20000,1,GMM HMM,clean,2,2,1900
+Trimodal,20000,1,GMM HMM,noise_0.1,0,0,440
+Trimodal,20000,1,GMM HMM,noise_0.1,0,1,464
+Trimodal,20000,1,GMM HMM,noise_0.1,0,2,6
+Trimodal,20000,1,GMM HMM,noise_0.1,1,0,861
+Trimodal,20000,1,GMM HMM,noise_0.1,1,1,1303
+Trimodal,20000,1,GMM HMM,noise_0.1,1,2,12
+Trimodal,20000,1,GMM HMM,noise_0.1,2,0,5
+Trimodal,20000,1,GMM HMM,noise_0.1,2,1,10
+Trimodal,20000,1,GMM HMM,noise_0.1,2,2,1899
+Trimodal,20000,1,GMM HMM,noise_0.25,0,0,436
+Trimodal,20000,1,GMM HMM,noise_0.25,0,1,468
+Trimodal,20000,1,GMM HMM,noise_0.25,0,2,6
+Trimodal,20000,1,GMM HMM,noise_0.25,1,0,909
+Trimodal,20000,1,GMM HMM,noise_0.25,1,1,1255
+Trimodal,20000,1,GMM HMM,noise_0.25,1,2,12
+Trimodal,20000,1,GMM HMM,noise_0.25,2,0,5
+Trimodal,20000,1,GMM HMM,noise_0.25,2,1,10
+Trimodal,20000,1,GMM HMM,noise_0.25,2,2,1899
+Trimodal,20000,1,GMM HMM,noise_0.5,0,0,412
+Trimodal,20000,1,GMM HMM,noise_0.5,0,1,490
+Trimodal,20000,1,GMM HMM,noise_0.5,0,2,8
+Trimodal,20000,1,GMM HMM,noise_0.5,1,0,863
+Trimodal,20000,1,GMM HMM,noise_0.5,1,1,1053
+Trimodal,20000,1,GMM HMM,noise_0.5,1,2,260
+Trimodal,20000,1,GMM HMM,noise_0.5,2,0,11
+Trimodal,20000,1,GMM HMM,noise_0.5,2,1,17
+Trimodal,20000,1,GMM HMM,noise_0.5,2,2,1886
+Trimodal,20000,2,Gaussian HMM,clean,0,0,1389
+Trimodal,20000,2,Gaussian HMM,clean,0,1,1
+Trimodal,20000,2,Gaussian HMM,clean,0,2,0
+Trimodal,20000,2,Gaussian HMM,clean,1,0,210
+Trimodal,20000,2,Gaussian HMM,clean,1,1,1365
+Trimodal,20000,2,Gaussian HMM,clean,1,2,105
+Trimodal,20000,2,Gaussian HMM,clean,2,0,2
+Trimodal,20000,2,Gaussian HMM,clean,2,1,1323
+Trimodal,20000,2,Gaussian HMM,clean,2,2,605
+Trimodal,20000,2,Gaussian HMM,noise_0.1,0,0,1388
+Trimodal,20000,2,Gaussian HMM,noise_0.1,0,1,2
+Trimodal,20000,2,Gaussian HMM,noise_0.1,0,2,0
+Trimodal,20000,2,Gaussian HMM,noise_0.1,1,0,164
+Trimodal,20000,2,Gaussian HMM,noise_0.1,1,1,1408
+Trimodal,20000,2,Gaussian HMM,noise_0.1,1,2,108
+Trimodal,20000,2,Gaussian HMM,noise_0.1,2,0,2
+Trimodal,20000,2,Gaussian HMM,noise_0.1,2,1,1326
+Trimodal,20000,2,Gaussian HMM,noise_0.1,2,2,602
+Trimodal,20000,2,Gaussian HMM,noise_0.25,0,0,1388
+Trimodal,20000,2,Gaussian HMM,noise_0.25,0,1,2
+Trimodal,20000,2,Gaussian HMM,noise_0.25,0,2,0
+Trimodal,20000,2,Gaussian HMM,noise_0.25,1,0,168
+Trimodal,20000,2,Gaussian HMM,noise_0.25,1,1,1408
+Trimodal,20000,2,Gaussian HMM,noise_0.25,1,2,104
+Trimodal,20000,2,Gaussian HMM,noise_0.25,2,0,2
+Trimodal,20000,2,Gaussian HMM,noise_0.25,2,1,1328
+Trimodal,20000,2,Gaussian HMM,noise_0.25,2,2,600
+Trimodal,20000,2,Gaussian HMM,noise_0.5,0,0,1323
+Trimodal,20000,2,Gaussian HMM,noise_0.5,0,1,66
+Trimodal,20000,2,Gaussian HMM,noise_0.5,0,2,1
+Trimodal,20000,2,Gaussian HMM,noise_0.5,1,0,76
+Trimodal,20000,2,Gaussian HMM,noise_0.5,1,1,1485
+Trimodal,20000,2,Gaussian HMM,noise_0.5,1,2,119
+Trimodal,20000,2,Gaussian HMM,noise_0.5,2,0,2
+Trimodal,20000,2,Gaussian HMM,noise_0.5,2,1,1346
+Trimodal,20000,2,Gaussian HMM,noise_0.5,2,2,582
+Trimodal,20000,2,GMM HMM,clean,0,0,1387
+Trimodal,20000,2,GMM HMM,clean,0,1,2
+Trimodal,20000,2,GMM HMM,clean,0,2,1
+Trimodal,20000,2,GMM HMM,clean,1,0,11
+Trimodal,20000,2,GMM HMM,clean,1,1,1153
+Trimodal,20000,2,GMM HMM,clean,1,2,516
+Trimodal,20000,2,GMM HMM,clean,2,0,2
+Trimodal,20000,2,GMM HMM,clean,2,1,62
+Trimodal,20000,2,GMM HMM,clean,2,2,1866
+Trimodal,20000,2,GMM HMM,noise_0.1,0,0,1387
+Trimodal,20000,2,GMM HMM,noise_0.1,0,1,1
+Trimodal,20000,2,GMM HMM,noise_0.1,0,2,2
+Trimodal,20000,2,GMM HMM,noise_0.1,1,0,9
+Trimodal,20000,2,GMM HMM,noise_0.1,1,1,1144
+Trimodal,20000,2,GMM HMM,noise_0.1,1,2,527
+Trimodal,20000,2,GMM HMM,noise_0.1,2,0,2
+Trimodal,20000,2,GMM HMM,noise_0.1,2,1,70
+Trimodal,20000,2,GMM HMM,noise_0.1,2,2,1858
+Trimodal,20000,2,GMM HMM,noise_0.25,0,0,1285
+Trimodal,20000,2,GMM HMM,noise_0.25,0,1,56
+Trimodal,20000,2,GMM HMM,noise_0.25,0,2,49
+Trimodal,20000,2,GMM HMM,noise_0.25,1,0,23
+Trimodal,20000,2,GMM HMM,noise_0.25,1,1,1069
+Trimodal,20000,2,GMM HMM,noise_0.25,1,2,588
+Trimodal,20000,2,GMM HMM,noise_0.25,2,0,2
+Trimodal,20000,2,GMM HMM,noise_0.25,2,1,103
+Trimodal,20000,2,GMM HMM,noise_0.25,2,2,1825
+Trimodal,20000,2,GMM HMM,noise_0.5,0,0,841
+Trimodal,20000,2,GMM HMM,noise_0.5,0,1,254
+Trimodal,20000,2,GMM HMM,noise_0.5,0,2,295
+Trimodal,20000,2,GMM HMM,noise_0.5,1,0,10
+Trimodal,20000,2,GMM HMM,noise_0.5,1,1,930
+Trimodal,20000,2,GMM HMM,noise_0.5,1,2,740
+Trimodal,20000,2,GMM HMM,noise_0.5,2,0,2
+Trimodal,20000,2,GMM HMM,noise_0.5,2,1,134
+Trimodal,20000,2,GMM HMM,noise_0.5,2,2,1794
+Skewed Gamma,20000,0,Gaussian HMM,clean,0,0,96
+Skewed Gamma,20000,0,Gaussian HMM,clean,0,1,1569
+Skewed Gamma,20000,0,Gaussian HMM,clean,0,2,6
+Skewed Gamma,20000,0,Gaussian HMM,clean,1,0,212
+Skewed Gamma,20000,0,Gaussian HMM,clean,1,1,1138
+Skewed Gamma,20000,0,Gaussian HMM,clean,1,2,194
+Skewed Gamma,20000,0,Gaussian HMM,clean,2,0,0
+Skewed Gamma,20000,0,Gaussian HMM,clean,2,1,13
+Skewed Gamma,20000,0,Gaussian HMM,clean,2,2,1772
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.1,0,0,97
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.1,0,1,1568
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.1,0,2,6
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.1,1,0,205
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.1,1,1,1112
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.1,1,2,227
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.1,2,0,0
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.1,2,1,12
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.1,2,2,1773
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.25,0,0,99
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.25,0,1,1566
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.25,0,2,6
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.25,1,0,194
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.25,1,1,1019
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.25,1,2,331
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.25,2,0,0
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.25,2,1,12
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.25,2,2,1773
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.5,0,0,119
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.5,0,1,1543
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.5,0,2,9
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.5,1,0,131
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.5,1,1,724
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.5,1,2,689
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.5,2,0,0
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.5,2,1,12
+Skewed Gamma,20000,0,Gaussian HMM,noise_0.5,2,2,1773
+Skewed Gamma,20000,0,GMM HMM,clean,0,0,1660
+Skewed Gamma,20000,0,GMM HMM,clean,0,1,7
+Skewed Gamma,20000,0,GMM HMM,clean,0,2,4
+Skewed Gamma,20000,0,GMM HMM,clean,1,0,17
+Skewed Gamma,20000,0,GMM HMM,clean,1,1,1524
+Skewed Gamma,20000,0,GMM HMM,clean,1,2,3
+Skewed Gamma,20000,0,GMM HMM,clean,2,0,4
+Skewed Gamma,20000,0,GMM HMM,clean,2,1,45
+Skewed Gamma,20000,0,GMM HMM,clean,2,2,1736
+Skewed Gamma,20000,0,GMM HMM,noise_0.1,0,0,1660
+Skewed Gamma,20000,0,GMM HMM,noise_0.1,0,1,7
+Skewed Gamma,20000,0,GMM HMM,noise_0.1,0,2,4
+Skewed Gamma,20000,0,GMM HMM,noise_0.1,1,0,16
+Skewed Gamma,20000,0,GMM HMM,noise_0.1,1,1,1525
+Skewed Gamma,20000,0,GMM HMM,noise_0.1,1,2,3
+Skewed Gamma,20000,0,GMM HMM,noise_0.1,2,0,4
+Skewed Gamma,20000,0,GMM HMM,noise_0.1,2,1,31
+Skewed Gamma,20000,0,GMM HMM,noise_0.1,2,2,1750
+Skewed Gamma,20000,0,GMM HMM,noise_0.25,0,0,1620
+Skewed Gamma,20000,0,GMM HMM,noise_0.25,0,1,44
+Skewed Gamma,20000,0,GMM HMM,noise_0.25,0,2,7
+Skewed Gamma,20000,0,GMM HMM,noise_0.25,1,0,13
+Skewed Gamma,20000,0,GMM HMM,noise_0.25,1,1,1524
+Skewed Gamma,20000,0,GMM HMM,noise_0.25,1,2,7
+Skewed Gamma,20000,0,GMM HMM,noise_0.25,2,0,3
+Skewed Gamma,20000,0,GMM HMM,noise_0.25,2,1,31
+Skewed Gamma,20000,0,GMM HMM,noise_0.25,2,2,1751
+Skewed Gamma,20000,0,GMM HMM,noise_0.5,0,0,1179
+Skewed Gamma,20000,0,GMM HMM,noise_0.5,0,1,480
+Skewed Gamma,20000,0,GMM HMM,noise_0.5,0,2,12
+Skewed Gamma,20000,0,GMM HMM,noise_0.5,1,0,13
+Skewed Gamma,20000,0,GMM HMM,noise_0.5,1,1,1279
+Skewed Gamma,20000,0,GMM HMM,noise_0.5,1,2,252
+Skewed Gamma,20000,0,GMM HMM,noise_0.5,2,0,8
+Skewed Gamma,20000,0,GMM HMM,noise_0.5,2,1,24
+Skewed Gamma,20000,0,GMM HMM,noise_0.5,2,2,1753
+Skewed Gamma,20000,1,Gaussian HMM,clean,0,0,843
+Skewed Gamma,20000,1,Gaussian HMM,clean,0,1,42
+Skewed Gamma,20000,1,Gaussian HMM,clean,0,2,25
+Skewed Gamma,20000,1,Gaussian HMM,clean,1,0,19
+Skewed Gamma,20000,1,Gaussian HMM,clean,1,1,2153
+Skewed Gamma,20000,1,Gaussian HMM,clean,1,2,4
+Skewed Gamma,20000,1,Gaussian HMM,clean,2,0,1
+Skewed Gamma,20000,1,Gaussian HMM,clean,2,1,56
+Skewed Gamma,20000,1,Gaussian HMM,clean,2,2,1857
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.1,0,0,825
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.1,0,1,60
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.1,0,2,25
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.1,1,0,9
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.1,1,1,2163
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.1,1,2,4
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.1,2,0,0
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.1,2,1,65
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.1,2,2,1849
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.25,0,0,823
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.25,0,1,60
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.25,0,2,27
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.25,1,0,9
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.25,1,1,2144
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.25,1,2,23
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.25,2,0,0
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.25,2,1,53
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.25,2,2,1861
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.5,0,0,726
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.5,0,1,174
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.5,0,2,10
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.5,1,0,9
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.5,1,1,2101
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.5,1,2,66
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.5,2,0,0
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.5,2,1,35
+Skewed Gamma,20000,1,Gaussian HMM,noise_0.5,2,2,1879
+Skewed Gamma,20000,1,GMM HMM,clean,0,0,900
+Skewed Gamma,20000,1,GMM HMM,clean,0,1,1
+Skewed Gamma,20000,1,GMM HMM,clean,0,2,9
+Skewed Gamma,20000,1,GMM HMM,clean,1,0,7
+Skewed Gamma,20000,1,GMM HMM,clean,1,1,2164
+Skewed Gamma,20000,1,GMM HMM,clean,1,2,5
+Skewed Gamma,20000,1,GMM HMM,clean,2,0,1
+Skewed Gamma,20000,1,GMM HMM,clean,2,1,18
+Skewed Gamma,20000,1,GMM HMM,clean,2,2,1895
+Skewed Gamma,20000,1,GMM HMM,noise_0.1,0,0,883
+Skewed Gamma,20000,1,GMM HMM,noise_0.1,0,1,18
+Skewed Gamma,20000,1,GMM HMM,noise_0.1,0,2,9
+Skewed Gamma,20000,1,GMM HMM,noise_0.1,1,0,4
+Skewed Gamma,20000,1,GMM HMM,noise_0.1,1,1,2162
+Skewed Gamma,20000,1,GMM HMM,noise_0.1,1,2,10
+Skewed Gamma,20000,1,GMM HMM,noise_0.1,2,0,0
+Skewed Gamma,20000,1,GMM HMM,noise_0.1,2,1,12
+Skewed Gamma,20000,1,GMM HMM,noise_0.1,2,2,1902
+Skewed Gamma,20000,1,GMM HMM,noise_0.25,0,0,855
+Skewed Gamma,20000,1,GMM HMM,noise_0.25,0,1,46
+Skewed Gamma,20000,1,GMM HMM,noise_0.25,0,2,9
+Skewed Gamma,20000,1,GMM HMM,noise_0.25,1,0,4
+Skewed Gamma,20000,1,GMM HMM,noise_0.25,1,1,2159
+Skewed Gamma,20000,1,GMM HMM,noise_0.25,1,2,13
+Skewed Gamma,20000,1,GMM HMM,noise_0.25,2,0,0
+Skewed Gamma,20000,1,GMM HMM,noise_0.25,2,1,9
+Skewed Gamma,20000,1,GMM HMM,noise_0.25,2,2,1905
+Skewed Gamma,20000,1,GMM HMM,noise_0.5,0,0,674
+Skewed Gamma,20000,1,GMM HMM,noise_0.5,0,1,230
+Skewed Gamma,20000,1,GMM HMM,noise_0.5,0,2,6
+Skewed Gamma,20000,1,GMM HMM,noise_0.5,1,0,4
+Skewed Gamma,20000,1,GMM HMM,noise_0.5,1,1,2154
+Skewed Gamma,20000,1,GMM HMM,noise_0.5,1,2,18
+Skewed Gamma,20000,1,GMM HMM,noise_0.5,2,0,0
+Skewed Gamma,20000,1,GMM HMM,noise_0.5,2,1,6
+Skewed Gamma,20000,1,GMM HMM,noise_0.5,2,2,1908
+Skewed Gamma,20000,2,Gaussian HMM,clean,0,0,1357
+Skewed Gamma,20000,2,Gaussian HMM,clean,0,1,14
+Skewed Gamma,20000,2,Gaussian HMM,clean,0,2,19
+Skewed Gamma,20000,2,Gaussian HMM,clean,1,0,40
+Skewed Gamma,20000,2,Gaussian HMM,clean,1,1,1605
+Skewed Gamma,20000,2,Gaussian HMM,clean,1,2,35
+Skewed Gamma,20000,2,Gaussian HMM,clean,2,0,7
+Skewed Gamma,20000,2,Gaussian HMM,clean,2,1,33
+Skewed Gamma,20000,2,Gaussian HMM,clean,2,2,1890
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.1,0,0,1336
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.1,0,1,35
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.1,0,2,19
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.1,1,0,40
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.1,1,1,1605
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.1,1,2,35
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.1,2,0,8
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.1,2,1,33
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.1,2,2,1889
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.25,0,0,1283
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.25,0,1,88
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.25,0,2,19
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.25,1,0,28
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.25,1,1,1570
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.25,1,2,82
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.25,2,0,8
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.25,2,1,33
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.25,2,2,1889
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.5,0,0,948
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.5,0,1,423
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.5,0,2,19
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.5,1,0,16
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.5,1,1,1584
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.5,1,2,80
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.5,2,0,6
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.5,2,1,39
+Skewed Gamma,20000,2,Gaussian HMM,noise_0.5,2,2,1885
+Skewed Gamma,20000,2,GMM HMM,clean,0,0,1388
+Skewed Gamma,20000,2,GMM HMM,clean,0,1,2
+Skewed Gamma,20000,2,GMM HMM,clean,0,2,0
+Skewed Gamma,20000,2,GMM HMM,clean,1,0,402
+Skewed Gamma,20000,2,GMM HMM,clean,1,1,743
+Skewed Gamma,20000,2,GMM HMM,clean,1,2,535
+Skewed Gamma,20000,2,GMM HMM,clean,2,0,11
+Skewed Gamma,20000,2,GMM HMM,clean,2,1,995
+Skewed Gamma,20000,2,GMM HMM,clean,2,2,924
+Skewed Gamma,20000,2,GMM HMM,noise_0.1,0,0,1386
+Skewed Gamma,20000,2,GMM HMM,noise_0.1,0,1,3
+Skewed Gamma,20000,2,GMM HMM,noise_0.1,0,2,1
+Skewed Gamma,20000,2,GMM HMM,noise_0.1,1,0,400
+Skewed Gamma,20000,2,GMM HMM,noise_0.1,1,1,745
+Skewed Gamma,20000,2,GMM HMM,noise_0.1,1,2,535
+Skewed Gamma,20000,2,GMM HMM,noise_0.1,2,0,10
+Skewed Gamma,20000,2,GMM HMM,noise_0.1,2,1,993
+Skewed Gamma,20000,2,GMM HMM,noise_0.1,2,2,927
+Skewed Gamma,20000,2,GMM HMM,noise_0.25,0,0,1381
+Skewed Gamma,20000,2,GMM HMM,noise_0.25,0,1,6
+Skewed Gamma,20000,2,GMM HMM,noise_0.25,0,2,3
+Skewed Gamma,20000,2,GMM HMM,noise_0.25,1,0,372
+Skewed Gamma,20000,2,GMM HMM,noise_0.25,1,1,759
+Skewed Gamma,20000,2,GMM HMM,noise_0.25,1,2,549
+Skewed Gamma,20000,2,GMM HMM,noise_0.25,2,0,11
+Skewed Gamma,20000,2,GMM HMM,noise_0.25,2,1,993
+Skewed Gamma,20000,2,GMM HMM,noise_0.25,2,2,926
+Skewed Gamma,20000,2,GMM HMM,noise_0.5,0,0,1289
+Skewed Gamma,20000,2,GMM HMM,noise_0.5,0,1,59
+Skewed Gamma,20000,2,GMM HMM,noise_0.5,0,2,42
+Skewed Gamma,20000,2,GMM HMM,noise_0.5,1,0,334
+Skewed Gamma,20000,2,GMM HMM,noise_0.5,1,1,788
+Skewed Gamma,20000,2,GMM HMM,noise_0.5,1,2,558
+Skewed Gamma,20000,2,GMM HMM,noise_0.5,2,0,7
+Skewed Gamma,20000,2,GMM HMM,noise_0.5,2,1,1012
+Skewed Gamma,20000,2,GMM HMM,noise_0.5,2,2,911
