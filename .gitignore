@@ -8,3 +8,4 @@ __pycache__/
 *.py[cod]
 data/synthetic/gaussian_synthetic_experiments
 data/synthetic/gmm_synthetic_experiments
+data/synthetic/volatility_markov_experiments

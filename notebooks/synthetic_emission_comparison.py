@@ -1,10 +1,3 @@
-"""Support code for gmm_synthetic_experiments.ipynb.
-
-Importing this module does not generate data or fit models. The notebook controls
-execution, settings, plots, and exports. Baseline parameters and seed recipes are
-copied from gaussian_synthetic_experiments.ipynb; that notebook is never executed.
-"""
-
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 import hashlib
@@ -146,7 +139,6 @@ def make_generator(family, seed, length):
 def sample_emissions(family, path, seed):
     if family != WIDE_FAMILY:
         return make_generator(family, seed, len(path)).sample_emissions(path, return_components=True)
-    # Same vectorized recipe as the extra experiment in the Gaussian notebook.
     rng = np.random.default_rng(seed)
     thresholds = np.cumsum(WIDE_WEIGHTS[path], axis=1)[:, :-1]
     components = np.sum(rng.random(len(path))[:, None] >= thresholds, axis=1)

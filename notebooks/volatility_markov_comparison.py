@@ -1,9 +1,3 @@
-"""Compare volatility-only Markov regimes on clean and noisy test sequences.
-
-Reuse the reference emission families and metrics without changing their globals.
-Importing this module does not generate observations, fit models, or write files.
-"""
-
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 import hashlib
