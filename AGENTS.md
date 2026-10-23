@@ -1,3 +1,7 @@
+# Notebook Results
+
+- Create diagnostic plots and result tables in notebook code cells and display them directly in the `.ipynb`. Do not write generated images or CSV files into `artifacts/` and then cite those files from notebook Markdown. Keep notebook results reproducible from the code cells without separate generated assets.
+
 # Notebook Markdown
 
 - In `.ipynb` Markdown cells, delimit inline LaTeX with `$...$` and display LaTeX with `$$...$$` on separate lines.

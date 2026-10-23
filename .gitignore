@@ -8,4 +8,8 @@ __pycache__/
 *.py[cod]
 data/synthetic/gaussian_synthetic_experiments
 data/synthetic/gmm_synthetic_experiments
+<<<<<<< Updated upstream
 data/synthetic/volatility_markov_experiments
+=======
+notebooks/sp500/results/
+>>>>>>> Stashed changes

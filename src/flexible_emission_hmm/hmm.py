@@ -42,6 +42,37 @@ class HMM:
         self.fitted = True
         return self
 
+    def continue_fit(self, X, max_iter=3, tol=None):
+        """Continue a fitted Baum-Welch model without reinitializing parameters.
+
+        Every update processes the entire supplied sequence; ``X`` must
+        contain the original observations plus any appended observations.
+        """
+        if not self.fitted:
+            raise ValueError("Call fit before continue_fit")
+        if not isinstance(self.trainer, BaumWelchTrainer):
+            raise TypeError("Continuation requires BaumWelchTrainer")
+        sequences = [X] if isinstance(X, np.ndarray) else list(X)
+        if not sequences:
+            raise ValueError("Provide at least one sequence")
+        sequences = [as_sequence(seq, self.emission.n_features) for seq in sequences]
+        previous_max, previous_tol = self.trainer.max_iter, self.trainer.tol
+        if not isinstance(max_iter, (int, np.integer)) or max_iter < 1:
+            raise ValueError("max_iter must be a positive integer")
+        if tol is not None and (not np.isfinite(tol) or tol < 0):
+            raise ValueError("tol must be finite and nonnegative")
+        try:
+            self.trainer.max_iter = max_iter
+            if tol is not None:
+                self.trainer.tol = tol
+            self.history = self.trainer.continue_fit(
+                self.states, self.emission, self.inference, sequences
+            )
+            self.fit_version += 1
+        finally:
+            self.trainer.max_iter, self.trainer.tol = previous_max, previous_tol
+        return self
+
     def log_emissions(self, X):
         if not self.fitted:
             raise ValueError("Call fit before inference")
