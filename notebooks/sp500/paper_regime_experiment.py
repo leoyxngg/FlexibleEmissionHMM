@@ -122,12 +122,13 @@ def label_bull(model, X, returns):
     return int(np.argmax(state_returns))
 
 
-def fit_one(X, returns, model_name, seed, max_iter=75):
+def fit_one(X, returns, model_name, seed, max_iter=75, gmm_components=2):
     """Fit one locally implemented HMM and name states using training returns."""
     if model_name == "Gaussian":
         emission = GaussianEmission(2, random_state=seed)
     elif model_name == "GMM":
-        emission = GaussianMixtureEmission(2, n_components=2, random_state=seed)
+        emission = GaussianMixtureEmission(2, n_components=gmm_components,
+                                           random_state=seed)
     elif model_name == "Student-t":
         emission = MultivariateStudentTEmission(2, random_state=seed)
     else:
