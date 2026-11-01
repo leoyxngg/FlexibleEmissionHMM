@@ -28,14 +28,21 @@ def draw_market(ax, prices, plot_start, plot_end):
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %Y"))
 
 
-def draw_figures(data, prices):
-    """Display the yearly df and location/dispersion comparison figures."""
+def draw_figures(data, prices, colors=None):
+    """Display the yearly df and location/dispersion comparison figures.
+
+    Args:
+        data: Daily replay rows from ``replay_emissions``.
+        prices: S&P 500 price-index series.
+        colors: Branch-to-color mapping; ``None`` uses ``COLORS``.
+    """
+    colors = COLORS if colors is None else colors
     plot_start, plot_end = data.date.min(), data.date.max()
     fig, (ax, market) = plt.subplots(
         2, 1, figsize=(15, 8.5), sharex=True, layout="constrained",
         gridspec_kw={"height_ratios": [2, 1]},
     )
-    for name, color in COLORS.items():
+    for name, color in colors.items():
         group = data.loc[data.branch == name]
         ax.plot(group.date, group.bull_df, color=color, lw=1.7,
                 label=f"{name} / bull (df)")
@@ -59,7 +66,7 @@ def draw_figures(data, prices):
         3, 1, figsize=(15, 10), sharex=True, layout="constrained",
         gridspec_kw={"height_ratios": [1.25, 1.25, 1]},
     )
-    for name, color in COLORS.items():
+    for name, color in colors.items():
         group = data.loc[data.branch == name]
         for state, style in (("bull", "-"), ("bear", "--")):
             label = f"{name} / {state}"
@@ -81,61 +88,76 @@ def draw_figures(data, prices):
     plt.show()
 
 
-def draw_return_marginals(marginals):
-    """Display bull and bear Student-t return marginals on two decision dates."""
+def draw_return_marginals(marginals, branch="Student-t / PCA"):
+    """Display bull and bear Student-t return marginals for one branch.
+
+    Args:
+        marginals: Return-marginal rows from ``replay_emissions``.
+        branch: Branch label to plot, e.g. ``"Student-t / PCA"``.
+
+    The single row places the early snapshot on the left and the year-end
+    snapshot on the right; each panel overlays the bull and bear marginals.
+    """
     dates = pd.to_datetime(["2008-09-02", "2008-12-31"])
-    branches = ("Student-t / no PCA", "Student-t / PCA")
-    selected = marginals.loc[marginals.date.isin(dates)]
-    if (len(selected) != 8 or selected.duplicated(
-        ["date", "branch", "state"]
-    ).any()):
-        raise ValueError("Expected bull and bear marginals for both dates/branches")
+    selected = marginals.loc[
+        marginals.branch.eq(branch) & marginals.date.isin(dates)
+    ]
+    if len(selected) != 4 or selected.duplicated(["date", "state"]).any():
+        raise ValueError("Expected bull and bear marginals for both dates")
     xs = np.linspace(-5, 5, 1300)
-    fig, axes = plt.subplots(2, 2, figsize=(14, 9), sharex=True, sharey=True)
-    for row, date in enumerate(dates):
-        for column, branch in enumerate(branches):
-            ax = axes[row, column]
-            for state, color in (("bull", "#1769aa"), ("bear", "#c15b30")):
-                item = selected.loc[
-                    selected.date.eq(date) & selected.branch.eq(branch)
-                    & selected.state.eq(state)
-                ].iloc[0]
-                density = t.pdf(xs, item.df, loc=item.location,
-                                scale=item.scale)
-                std = item.scale * np.sqrt(item.df / (item.df - 2))
-                ax.plot(xs, density, color=color, lw=2.3,
-                        label=f"{state.title()} · df={item.df:.2f} · std={std:.2f}")
-                ax.fill_between(xs, density, color=color, alpha=0.08)
-            ax.set_title(f"{date:%b %d, %Y}  |  {branch}", fontsize=12)
-            ax.set_ylabel("Marginal density")
-            ax.set_xlim(-5, 5)
-            ax.set_xticks(np.arange(-5, 6, 1))
-            ax.grid(alpha=0.2)
-            ax.legend(loc="upper right", fontsize=9)
-            if row == 1:
-                ax.set_xlabel("Standardized return feature (training scaler units)")
+    fig, axes = plt.subplots(1, 2, figsize=(14, 5), sharex=True, sharey=True)
+    for column, date in enumerate(dates):
+        ax = axes[column]
+        for state, color in (("bull", "#1769aa"), ("bear", "#c15b30")):
+            item = selected.loc[
+                selected.date.eq(date) & selected.state.eq(state)
+            ].iloc[0]
+            density = t.pdf(xs, item.df, loc=item.location, scale=item.scale)
+            std = item.scale * np.sqrt(item.df / (item.df - 2))
+            ax.plot(xs, density, color=color, lw=2.3,
+                    label=f"{state.title()} · df={item.df:.2f} · std={std:.2f}")
+            ax.fill_between(xs, density, color=color, alpha=0.08)
+        ax.set_title(f"{date:%b %d, %Y}  |  {branch}", fontsize=12)
+        ax.set_ylabel("Marginal density")
+        ax.set_xlim(-5, 5)
+        ax.set_xticks(np.arange(-5, 6, 1))
+        ax.grid(alpha=0.2)
+        ax.legend(loc="upper right", fontsize=9)
+    axes[0].set_xlabel("Standardized return feature (training scaler units)")
+    axes[1].set_xlabel("Standardized return feature (training scaler units)")
     fig.suptitle("Student-t emission marginals: start of September vs. year end\n"
-                 "Bull and bear in each panel", fontsize=16, y=0.98)
-    fig.subplots_adjust(left=0.07, right=0.98, top=0.87, bottom=0.15,
-                        hspace=0.22, wspace=0.14)
-    fig.text(0.5, 0.065,
+                 "Bull and bear in each panel", fontsize=16, y=1.02)
+    fig.subplots_adjust(left=0.07, right=0.98, top=0.83, bottom=0.16, wspace=0.12)
+    fig.text(0.5, 0.035,
              "Sep 1 was a market holiday; Sep 2 is the first September decision.",
              ha="center", fontsize=9)
-    fig.text(0.5, 0.043,
-             "PCA marginal reconstructs standardized return from retained PCs; "
-             "neither curve is a raw-return density.", ha="center", fontsize=9)
-    fig.text(0.5, 0.021,
-             "Each panel shows a one-dimensional marginal, not the full "
-             "multivariate emission density.", ha="center", fontsize=9)
+    fig.text(0.5, 0.013,
+             "PCA marginal reconstructs the standardized return from retained "
+             "PCs; neither curve is a raw-return density. Each panel is a "
+             "one-dimensional marginal, not the full multivariate emission.",
+             ha="center", fontsize=9)
     plt.show()
 
 
 def replay_emissions(saved_rows, prices, start="2004-01-02", year=2008):
-    """Reconstruct Student-t emissions from a trusted checkpoint's decision rows."""
+    """Reconstruct Student-t emissions from a trusted checkpoint's decision rows.
+
+    Args:
+        saved_rows: Saved decision rows; the replayed PCA settings come from
+            the Student-t rows, so merged PCA-only frames replay one branch.
+        prices: S&P 500 price-index series.
+        start: First experiment date, fixing the initial training window.
+        year: Calendar year to reconstruct.
+
+    Returns:
+        Daily emission summaries, per-coordinate parameters, and return
+        marginals for the snapshot dates.
+    """
     plot_start = pd.Timestamp(year=year, month=1, day=1)
     plot_end = pd.Timestamp(year=year, month=12, day=31)
     saved = saved_rows.loc[saved_rows.model.eq("Student-t")].copy()
     saved["date"] = pd.to_datetime(saved["date"])
+    pca_settings = tuple(sorted(map(bool, saved["pca"].unique()), reverse=True))
     decision_dates = pd.DatetimeIndex(saved.date.unique()).sort_values()
     refresh_dates = pd.DatetimeIndex(saved.loc[saved.refresh, "date"].unique())
     prior_refresh = refresh_dates[refresh_dates <= plot_start][-1]
@@ -165,7 +187,7 @@ def replay_emissions(saved_rows, prices, start="2004-01-02", year=2008):
             standardized = scaler.transform(features.loc[history])
             pca = PCA(n_components=0.95, svd_solver="full").fit(standardized)
             models = {}
-            for use_pca in (False, True):
+            for use_pca in pca_settings:
                 x = pca.transform(standardized) if use_pca else standardized
                 models[use_pca] = fit_one(
                     x, returns.loc[history].to_numpy(), "Student-t",
@@ -226,5 +248,5 @@ def replay_emissions(saved_rows, prices, start="2004-01-02", year=2008):
     data = pd.DataFrame(rows)
     year_dates = decision_dates[(decision_dates >= plot_start)
                                 & (decision_dates <= plot_end)]
-    assert len(data) == 2 * len(year_dates)
+    assert len(data) == len(pca_settings) * len(year_dates)
     return data, pd.DataFrame(coordinates), pd.DataFrame(return_marginals)

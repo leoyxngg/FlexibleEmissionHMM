@@ -1,5 +1,7 @@
 """Gaussian and GMM return-feature marginals for 2008 HMM diagnostics."""
 
+import re
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -12,12 +14,42 @@ from run_paper_regime import HALF_LIVES, WINDOWS
 
 
 PLOT_DATES = pd.to_datetime(["2008-09-02", "2008-12-31"])
+FAMILIES = ("Gaussian", "GMM (M=2)", "GMM (M=3)")
+
+
+def parse_family(name):
+    """Return the ``fit_one`` emission name and GMM component count for a label.
+
+    Args:
+        name: Branch label such as ``"Gaussian"`` or ``"GMM (M=3)"``.
+
+    Returns:
+        Tuple of emission name and components per state.
+    """
+    match = re.fullmatch(r"GMM \(M=(\d+)\)", name)
+    if match:
+        return "GMM", int(match.group(1))
+    return name, 1
 
 
 def replay_marginals(saved_rows, prices, start="2004-01-02"):
-    """Replay Gaussian and GMM fits and validate historical bull forecasts."""
-    saved = saved_rows.loc[saved_rows.model.isin(("Gaussian", "GMM"))].copy()
+    """Replay Gaussian/GMM fits and validate historical bull forecasts.
+
+    Args:
+        saved_rows: Decision rows; families and PCA settings come from the
+            Gaussian and ``GMM (M=k)`` rows, so merged PCA-only frames
+            replay the PCA branches only.
+        prices: S&P 500 price-index series.
+        start: First experiment date, fixing the initial training window.
+
+    Returns:
+        Component rows (date, model, pca, state, component, weight,
+        location, scale, forecast_error) for the two plot dates.
+    """
+    saved = saved_rows.loc[saved_rows.model.isin(FAMILIES)].copy()
     saved["date"] = pd.to_datetime(saved["date"])
+    families = [name for name in FAMILIES if saved.model.eq(name).any()]
+    pca_settings = tuple(sorted(map(bool, saved["pca"].unique()), reverse=True))
     expected = saved.set_index(["date", "model", "pca"])
     decision_dates = pd.DatetimeIndex(saved.date.unique()).sort_values()
     refresh_dates = pd.DatetimeIndex(saved.loc[saved.refresh, "date"].unique())
@@ -41,12 +73,13 @@ def replay_marginals(saved_rows, prices, start="2004-01-02"):
             standardized = scaler.transform(features.loc[history])
             pca = PCA(n_components=0.95, svd_solver="full").fit(standardized)
             models = {}
-            for use_pca in (False, True):
+            for use_pca in pca_settings:
                 x = pca.transform(standardized) if use_pca else standardized
-                for name in ("Gaussian", "GMM"):
+                for name in families:
+                    emission, components = parse_family(name)
                     models[name, use_pca] = fit_one(
-                        x, returns.loc[history].to_numpy(), name,
-                        seed=0, max_iter=100,
+                        x, returns.loc[history].to_numpy(), emission,
+                        seed=0, max_iter=100, gmm_components=components,
                     )[0]
         standardized = scaler.transform(features.loc[history])
         for (name, use_pca), model in models.items():
@@ -69,7 +102,7 @@ def replay_marginals(saved_rows, prices, start="2004-01-02"):
             intercept = float(pca.mean_[return_feature]) if use_pca else 0.0
             for state, index in (("bull", bull), ("bear", 1 - bull)):
                 emission = model.emission
-                # Gaussian has one component; GMM has two per state.
+                # Gaussian has one component; GMM has M components per state.
                 if name == "Gaussian":
                     means = emission.means[index][None, :]
                     covariances = emission.covariances[index][None, :, :]
@@ -94,62 +127,52 @@ def replay_marginals(saved_rows, prices, start="2004-01-02"):
     result = pd.DataFrame(rows)
     counts = result.groupby(["date", "model", "pca", "state"]).size()
     for date in PLOT_DATES:
-        for name in ("Gaussian", "GMM"):
-            for use_pca in (False, True):
+        for name in families:
+            for use_pca in pca_settings:
+                expected_parts = parse_family(name)[1]
                 for state in ("bull", "bear"):
-                    if counts.loc[date, name, use_pca, state] != (
-                        1 if name == "Gaussian" else 2
-                    ):
+                    if counts.loc[date, name, use_pca, state] != expected_parts:
                         raise ValueError("Missing marginal components")
     return result
 
 
-def draw_marginals(marginals, name):
-    """Display two-date bull/bear return marginals for one emission family."""
-    if name not in ("Gaussian", "GMM"):
-        raise ValueError("Expected Gaussian or GMM")
-    selected = marginals.loc[marginals.model.eq(name)]
+def draw_marginals(marginals, name, pca=True):
+    """Display one branch's two-date bull/bear marginals in a single row.
+
+    Args:
+        marginals: Component rows from ``replay_marginals``.
+        name: Family label, e.g. ``"GMM (M=3)"``.
+        pca: PCA setting of the branch to plot.
+    """
+    if name not in FAMILIES:
+        raise ValueError(f"Expected one of {FAMILIES}")
+    selected = marginals.loc[marginals.model.eq(name) & marginals.pca.eq(pca)]
+    if selected.empty:
+        raise ValueError(f"No marginals for {name} / PCA={pca}")
+    expected_parts = parse_family(name)[1]
     xs = np.linspace(-5, 5, 1300)
-    fig, axes = plt.subplots(2, 2, figsize=(14, 9), sharex=True, sharey=True)
-    for row, date in enumerate(PLOT_DATES):
-        for column, use_pca in enumerate((False, True)):
-            ax = axes[row, column]
-            for state, color in (("bull", "#1769aa"), ("bear", "#c15b30")):
-                parts = selected.loc[
-                    selected.date.eq(date) & selected.pca.eq(use_pca)
-                    & selected.state.eq(state)
-                ]
-                if len(parts) != (1 if name == "Gaussian" else 2):
-                    raise ValueError("Expected one Gaussian or two GMM components")
-                density = sum(
-                    part.weight * norm.pdf(xs, loc=part.location,
-                                           scale=part.scale)
-                    for part in parts.itertuples()
-                )
-                ax.plot(xs, density, color=color, lw=2.3,
-                        label=state.title())
-                ax.fill_between(xs, density, color=color, alpha=0.08)
-            branch = "PCA" if use_pca else "no PCA"
-            ax.set_title(f"{date:%b %d, %Y}  |  {name} / {branch}", fontsize=12)
-            ax.set_ylabel("Marginal density")
-            ax.set_xlim(-5, 5)
-            ax.set_xticks(np.arange(-5, 6, 1))
-            ax.grid(alpha=0.2)
-            ax.legend(loc="upper right", fontsize=9)
-            if row == 1:
-                ax.set_xlabel("Standardized return feature (training scaler units)")
-    fig.suptitle(f"{name} emission marginals: start of September vs. year end\n"
-                 "Bull and bear in each panel", fontsize=16, y=0.98)
-    fig.subplots_adjust(left=0.07, right=0.98, top=0.87, bottom=0.15,
-                        hspace=0.22, wspace=0.14)
-    fig.text(0.5, 0.065,
-             "Sep 1 was a market holiday; Sep 2 is the first September decision.",
-             ha="center", fontsize=9)
-    fig.text(0.5, 0.043,
-             "PCA marginal reconstructs standardized return from retained PCs; "
-             "neither curve is a raw-return density.", ha="center", fontsize=9)
-    note = ("Each GMM state curve combines its two Gaussian components with "
-            "fitted within-state weights." if name == "GMM" else
-            "Each curve is a one-dimensional Gaussian marginal.")
-    fig.text(0.5, 0.021, note, ha="center", fontsize=9)
+    fig, axes = plt.subplots(1, 2, figsize=(14, 5), sharex=True, sharey=True)
+    for column, date in enumerate(PLOT_DATES):
+        ax = axes[column]
+        for state, color in (("bull", "#1769aa"), ("bear", "#c15b30")):
+            parts = selected.loc[
+                selected.date.eq(date) & selected.state.eq(state)
+            ]
+            if len(parts) != expected_parts:
+                raise ValueError("Component count mismatch for one panel")
+            density = sum(
+                part.weight * norm.pdf(xs, loc=part.location, scale=part.scale)
+                for part in parts.itertuples()
+            )
+            ax.plot(xs, density, color=color, lw=2.3, label=state.title())
+            ax.fill_between(xs, density, color=color, alpha=0.08)
+        ax.set_title(f"{date:%b %d, %Y}  |  {name}"
+                        , fontsize=12)
+        ax.set_ylabel("Marginal density")
+        ax.set_xlim(-5, 5)
+        ax.set_xticks(np.arange(-5, 6, 1))
+        ax.grid(alpha=0.2)
+        ax.legend(loc="upper right", fontsize=9)
+        ax.set_xlabel("Standardized return feature")
+    fig.subplots_adjust(left=0.07, right=0.98, top=0.83, bottom=0.16, wspace=0.12)
     plt.show()

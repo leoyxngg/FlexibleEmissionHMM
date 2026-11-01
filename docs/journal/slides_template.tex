@@ -1,0 +1,49 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage{xcolor}
+\usetheme[progressbar=frametitle,numbering=counter]{metropolis}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,bm,booktabs,tikz}
+\usetikzlibrary{positioning,arrows.meta}
+\definecolor{uoftblue}{HTML}{1E3765}
+\definecolor{uoftsecondary}{HTML}{007FA3}
+\setbeamercolor{frametitle}{bg=uoftblue,fg=white}
+\setbeamercolor{progress bar}{fg=uoftsecondary,bg=white}
+\setbeamercolor{title separator}{fg=uoftsecondary}
+\setbeamercolor{alerted text}{fg=uoftsecondary}
+\setbeamertemplate{navigation symbols}{}
+\setbeamerfont{title}{size=\Large}
+\setbeamerfont{subtitle}{size=\normalsize}
+\setbeamerfont{institute}{size=\small}
+\newcommand{\source}[1]{\par\vfill{\tiny\color{gray}#1\par}}
+\newcommand{\ghmm}{GHMM}
+\newcommand{\gmmhmm}{GMM-HMM}
+\title{Midterm Presentation}
+\subtitle{Flexible Emission Models for HMMs in Finance}
+\author{Leo Yang, Benjamin Chang}
+\institute{University of Toronto Scarborough\\Department of Computer and Mathematical Sciences\\CSCD94}
+\date{Fall 2026}
+
+% Preserve the paper's Overleaf paths, with a local figure fallback.
+\graphicspath{{image/midterm_report_scratch/}}
+\makeatletter
+\let\sporiginalincludegraphics\includegraphics
+\renewcommand{\includegraphics}[2][]{%
+  \IfFileExists{#2}{\sporiginalincludegraphics[#1]{#2}}{%
+    \begingroup
+    \filename@parse{#2}%
+    \sporiginalincludegraphics[#1]{\filename@base.\filename@ext}%
+    \endgroup
+  }%
+}
+\makeatother
+\begin{document}
+
+\input{sp500_slides}
+\appendix
+\begin{frame}[allowframebreaks]{References}
+\tiny
+\bibliographystyle{unsrt}
+\bibliography{sp500_midterm_references}
+\end{frame}
+\end{document}
