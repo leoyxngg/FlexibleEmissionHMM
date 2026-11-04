@@ -11,3 +11,4 @@ data/synthetic/gmm_synthetic_experiments
 data/synthetic/volatility_markov_experiments
 data/synthetic/mean_volatility_regime_experiments
 data/synthetic/nf_spline_experiments
+data/diagnostics

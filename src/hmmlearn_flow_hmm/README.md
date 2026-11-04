@@ -31,6 +31,7 @@ model = FlowHMM(
     random_state=42,
     n_iter=1000,
     tol=len(X_train) * 1e-6,
+    convergence_patience=5,
     verbose=True,
 )
 model.fit(X_train)
@@ -122,16 +123,29 @@ model.fit(X_train)
 Match flow settings, seeds, priors, and update counts too. An integer seed produces
 repeatable initializations. sklearn-style `RandomState` objects are also supported.
 
-hmmlearn's `monitor_.history` records likelihoods before M-steps; `score()` evaluates
-the final model after its last update. `monitor_.iter` is the number of updates.
-`monitor_.converged` can mean that the iteration cap was reached, rather than that
-the likelihood met `tol`. These conventions differ from the original trainer.
+`convergence_patience=5` requires five consecutive absolute changes in full-data
+training log likelihood at most `tol`. A larger change resets the count. Check
+the likelihood after each M-step, so the stopping decision includes the final
+update. The following iteration reuses that E-step's sufficient statistics;
+training needs only one additional E-step per fit, not a second pass per update.
+`tol` is an absolute sequence likelihood tolerance; multiply a per-observation
+tolerance by the total number of training observations as in the example.
+
+`history_` includes the initial score followed by every post-update score.
+`monitor_.history` contains only the post-update scores, and `monitor_.iter` counts
+M-steps. `converged_` reports satisfaction of the patience rule;
+`iteration_limit_reached_` records the cap separately. `stop_reason_` is
+`"tolerance"` or `"max_iter"`. As in hmmlearn, `monitor_.converged` means that
+training should stop and can therefore also be true at the iteration cap.
 
 ## Attributes and persistence
 
 - `emission_`: the initialized/fitted reusable `FlowEmission` object.
 - `startprob_` and `transmat_`: hmmlearn's chain parameters.
-- `monitor_`: hmmlearn's convergence history and iteration count.
+- `monitor_`: post-update likelihood history, iteration count, and
+  `consecutive_small_changes`.
+- `history_`, `converged_`, `iteration_limit_reached_`, `stop_reason_`: actual
+  training trajectory and distinct stopping diagnostics.
 
 Standard pickle round-trips retain fitted models; the adapter excludes imported
 module handles from the emission's serialized state. Restore on a compatible
@@ -141,9 +155,38 @@ uses [nf_hmmlearn_comparison.py](../../notebooks/nf_hmmlearn_comparison.py) for
 tuning, fitting, evaluation, and versioned checkpoints. The notebook configures
 batch size through `EMISSION_BATCH_SIZE` and the update grid through
 `TUNING.m_step_steps`; selected settings carry into final fits. Checkpoints retain
-the batch generator's state. Mini-batch experiments use their own run directory
-to preserve earlier full-batch results. The original comparison helper remains
-available for earlier runs.
+the batch generator's state. Version-3 checkpoints preserve patient-stopping
+diagnostics; version-2 checkpoints remain readable for evaluation and retain
+their original convergence flag. The notebook exposes `CONVERGENCE_PATIENCE`,
+reuses the completed sweep via `TUNING_RUN_NAME`, and writes final fits to a new
+run directory. Saved validation scores retain the earlier stopping rule. To run
+a new sweep with patience, change `TUNING_RUN_NAME` and enable `RUN_TUNING`.
+
+## Independent CPU fits
+
+The comparison notebook exposes `N_JOBS` (independent processes) and
+`TORCH_THREADS` (PyTorch/BLAS threads per process). Its CPU configuration uses
+eight workers with one thread each, based on the saved 1D toy benchmark. This
+does not make a single `FlowHMM.fit()` run on eight processes. The helper APIs
+`tune_flows`, `run_comparison`, and `fit_starts` accept `n_jobs=1` and
+`torch_threads=1` as keyword arguments; use `n_jobs=1` for sequential execution
+or a GPU device. Worker and thread counts must be positive integers.
+
+Tuning assigns complete validation folds to workers and keeps each fold's
+restarts sequential. Final fitting assigns independent restarts to workers.
+Each stage reuses one spawn pool, avoiding nested pools and repeated startup.
+Seeds, training-only selection, first-start tie breaking, and checkpoint identities
+are independent of scheduling. Workers write separate start/fold artifacts; the
+parent combines tables and generates reports. Module-level worker functions
+support macOS spawn and notebook callers.
+
+Each stage records runtime settings in its request and writes
+`execution_timing.json` with elapsed time for that invocation. Existing
+`total_fit_seconds` metrics sum per-start durations, which overlap under parallel
+execution and differ from elapsed time. Resumed invocations include previous
+saved fit timings in result tables. Use a new run name after changing execution
+settings, and restart the kernel after updating the helper. The toy benchmark
+does not establish full-experiment or multivariate speedups.
 
 The extension follows the custom-emission hooks documented in the
 [hmmlearn tutorial](https://hmmlearn.readthedocs.io/en/stable/tutorial.html#implementing-hmms-with-custom-emission-probabilities)

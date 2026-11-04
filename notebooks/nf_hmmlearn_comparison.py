@@ -1,13 +1,17 @@
 """Compare hmmlearn spline HMMs with saved persistent Gaussian/GMM experiments."""
 
-from collections import deque
+from concurrent.futures import ProcessPoolExecutor
+from contextlib import contextmanager, nullcontext
 from dataclasses import asdict, dataclass, replace
 from datetime import datetime, timezone
 import hashlib
 from importlib.metadata import version
 import itertools
 import json
+import multiprocessing as mp
+from numbers import Integral
 from pathlib import Path
+from tempfile import TemporaryDirectory
 import time
 from types import SimpleNamespace
 import warnings
@@ -19,9 +23,9 @@ from scipy import integrate, stats
 from scipy.special import logsumexp
 from sklearn.metrics import adjusted_rand_score, normalized_mutual_info_score
 import torch
+from threadpoolctl import threadpool_limits
 
 from flexible_emission_hmm import (
-    FlowEmission,
     GaussianMixtureEmission,
     HMM,
     StateParameters,
@@ -37,6 +41,7 @@ FLOW_BASES = dict(zip(MODELS[2:], ("normal", "student_t")))
 COLORS = dict(zip(MODELS, ("#4477AA", "#CC7722", "#228833", "#AA3377")))
 STYLES = dict(zip(MODELS, ("--", "-.", "-", ":")))
 KEYS = ["regime", "family", "n_train", "replicate"]
+_WORKER_THREAD_LIMITS = None
 SOURCES = {
     "mean": "data/synthetic/gmm_synthetic_experiments/20261024T212804Z-4r1by0vo",
     "volatility": "data/synthetic/volatility_markov_experiments/20261020T110835Z-8lz5ptfh",
@@ -69,6 +74,7 @@ class FlowSettings:
     dtype: str = "float64"
     base_distribution: str = "normal"
     base_df: float = 5.0
+    convergence_patience: int = 5
 
 @dataclass(frozen=True)
 class TuningSettings:
@@ -90,6 +96,8 @@ class TuningSettings:
             raise ValueError("train_fraction must be between zero and one")
         if self.n_starts < 1 or self.max_iter < 1 or not self.replicates:
             raise ValueError("Provide tuning replicates and positive fitting budgets")
+        if len(set(self.replicates)) != len(self.replicates):
+            raise ValueError("Tuning replicates must be unique")
 
 def read_json(path):
     """Read a JSON artifact."""
@@ -282,77 +290,180 @@ def chain_parameters(model):
         return StateParameters(model.startprob_, model.transmat_)
     return model.states
 
-def fit_starts(
-    train, settings, n_starts, max_iter, tolerance, seed_parts, checkpoint_dir=None
-):
-    """Select the highest finite training likelihood without using test labels."""
-    attempts, best = [], None
-    if checkpoint_dir is not None:
-        checkpoint_dir = Path(checkpoint_dir)
-        checkpoint_dir.mkdir(parents=True, exist_ok=True)
-    for start in range(n_starts):
-        seed = int.from_bytes(
-            hashlib.sha256(json.dumps([*seed_parts, start]).encode()).digest()[:4],
-            "little",
-        )
-        row = dict(start=start, seed=seed, status="failed", selected=False)
-        saved = (
-            None if checkpoint_dir is None else checkpoint_dir / f"start_{start}.json"
-        )
-        if saved is not None and saved.exists():
-            row = read_json(saved)
-            row["selected"] = False
-            if row["status"] == "ok":
-                model = restore_flow(saved.with_suffix(".pt"), train)
-                if best is None or row["train_ll"] > best[0]:
-                    best = row["train_ll"], model, row
-            attempts.append(row)
-            continue
-        began = time.perf_counter()
-        try:
-            model = FlowHMM(
-                3, random_state=seed, n_iter=max_iter, tol=tolerance,
-                init_params="e", **asdict(settings),
-            )
-            # Preserve the previous experiment's uniform chain initialization.
-            model.startprob_ = np.full(3, 1 / 3)
-            model.transmat_ = np.full((3, 3), 1 / 3)
-            model.fit(train)
-            # hmmlearn monitors pre-update likelihoods; append the actual final
-            # score for restart selection and comparable post-update diagnostics.
-            history = np.r_[list(model.monitor_.history), model.score(train)]
-            model.history_ = history.tolist()
-            model.converged_ = bool(abs(history[-1] - history[-2]) <= tolerance)
-            if not np.isfinite(history).all():
-                raise FloatingPointError("Nonfinite likelihood history")
-            row.update(
-                status="ok",
-                train_ll=float(history[-1]),
-                iterations=model.monitor_.iter,
-                converged=model.converged_,
-                iteration_limit_reached=model.monitor_.iter == max_iter,
-                monitor_converged=bool(model.monitor_.converged),
-                history=history.tolist(),
-                likelihood_decreases=int(np.sum(np.diff(history) < -1e-6)),
-                final_gain_per_observation=float(np.diff(history)[-1] / len(train)),
-            )
-            if saved is not None:
-                save_flow(saved.with_suffix(".pt"), model, settings)
-            if best is None or row["train_ll"] > best[0]:
-                best = row["train_ll"], model, row
-        except Exception as exc:
-            row["status"] = "failed"
-            row["error"] = f"{type(exc).__name__}: {exc}"
-        row["fit_seconds"] = time.perf_counter() - began
-        attempts.append(row)
-        if saved is not None:
-            write_json(saved, row)
-    if best is None:
-        return None, attempts
-    best[2]["selected"] = True
-    return best[1], attempts
+def _validate_execution(n_jobs, torch_threads):
+    for name, value in (("n_jobs", n_jobs), ("torch_threads", torch_threads)):
+        if isinstance(value, bool) or not isinstance(value, Integral) or value < 1:
+            raise ValueError(f"{name} must be a positive integer")
 
-def _tune_base(sources, output, base, tuning):
+def _initialize_cpu_worker(torch_threads):
+    global _WORKER_THREAD_LIMITS
+    torch.set_num_threads(torch_threads)
+    torch.set_num_interop_threads(1)
+    _WORKER_THREAD_LIMITS = threadpool_limits(limits=torch_threads)
+
+@contextmanager
+def _cpu_executor(n_jobs, torch_threads):
+    _validate_execution(n_jobs, torch_threads)
+    previous = torch.get_num_threads()
+    if previous != torch_threads:
+        torch.set_num_threads(torch_threads)
+    try:
+        with threadpool_limits(limits=torch_threads):
+            if n_jobs == 1:
+                yield None
+            else:
+                executor = ProcessPoolExecutor(
+                    max_workers=n_jobs,
+                    mp_context=mp.get_context("spawn"),
+                    initializer=_initialize_cpu_worker,
+                    initargs=(torch_threads,),
+                )
+                try:
+                    yield executor
+                except BaseException:
+                    # Python 3.10 has no public terminate_workers API. Stop
+                    # active fits on interruption instead of waiting for every
+                    # queued fold. Completed atomic checkpoints remain usable.
+                    processes = list(executor._processes.values())
+                    executor.shutdown(wait=False, cancel_futures=True)
+                    for process in processes:
+                        if process.is_alive():
+                            process.terminate()
+                    for process in processes:
+                        process.join(timeout=1)
+                    raise
+                else:
+                    executor.shutdown(wait=True)
+    finally:
+        if previous != torch_threads:
+            torch.set_num_threads(previous)
+
+def _fit_single_start(job):
+    train, settings, start, max_iter, tolerance, seed_parts, checkpoint_dir = job
+    checkpoint_dir = Path(checkpoint_dir)
+    checkpoint_dir.mkdir(parents=True, exist_ok=True)
+    seed = int.from_bytes(
+        hashlib.sha256(json.dumps([*seed_parts, start]).encode()).digest()[:4],
+        "little",
+    )
+    row = dict(start=start, seed=seed, status="failed", selected=False)
+    saved = checkpoint_dir / f"start_{start}.json"
+    if saved.exists():
+        row = read_json(saved)
+        row["selected"] = False
+        return row
+    began = time.perf_counter()
+    try:
+        model = FlowHMM(
+            3, random_state=seed, n_iter=max_iter, tol=tolerance,
+            init_params="e", **asdict(settings),
+        )
+        model.startprob_ = np.full(3, 1 / 3)
+        model.transmat_ = np.full((3, 3), 1 / 3)
+        model.fit(train)
+        # Fit records the initial score and every actual post-update score.
+        history = np.asarray(model.history_)
+        if not np.isfinite(history).all():
+            raise FloatingPointError("Nonfinite likelihood history")
+        row.update(
+            status="ok",
+            train_ll=float(history[-1]),
+            iterations=model.monitor_.iter,
+            converged=model.converged_,
+            iteration_limit_reached=model.monitor_.iter == max_iter,
+            monitor_converged=bool(model.monitor_.converged),
+            convergence_patience=model.convergence_patience,
+            consecutive_small_changes=model.monitor_.consecutive_small_changes,
+            stop_reason=model.stop_reason_,
+            history=history.tolist(),
+            likelihood_decreases=int(np.sum(np.diff(history) < -1e-6)),
+            final_gain_per_observation=float(np.diff(history)[-1] / len(train)),
+        )
+        save_flow(saved.with_suffix(".pt"), model, settings)
+    except Exception as exc:
+        row["status"] = "failed"
+        row["error"] = f"{type(exc).__name__}: {exc}"
+    row["fit_seconds"] = time.perf_counter() - began
+    write_json(saved, row)
+    return row
+
+def fit_starts(
+    train, settings, n_starts, max_iter, tolerance, seed_parts, checkpoint_dir=None,
+    *, n_jobs=1, torch_threads=1, _executor=None,
+):
+    """Select starts by training likelihood using optional independent CPU workers.
+
+    Preserve start order, seeds, and first-start tie breaking across schedules.
+    Use spawn workers only for CPU settings. Reuse an internal executor during
+    whole experiment stages; otherwise create a bounded pool for this call.
+    Each start owns a checkpoint, and only the selected model is restored in
+    the parent process. Keep temporary checkpoints when no directory is given
+    only until the selected model is loaded. Count fit_seconds per attempt.
+    """
+    _validate_execution(n_jobs, torch_threads)
+    if isinstance(n_starts, bool) or not isinstance(n_starts, Integral) or n_starts < 1:
+        raise ValueError("n_starts must be a positive integer")
+    if n_jobs > 1 and torch.device(settings.device).type != "cpu":
+        raise ValueError("Parallel starts require device='cpu'")
+    directory = (TemporaryDirectory() if checkpoint_dir is None
+                 else nullcontext(str(checkpoint_dir)))
+    context = (_cpu_executor(n_jobs, torch_threads) if _executor is None
+               else nullcontext(_executor))
+    with directory as directory_name, context as executor:
+        jobs = [
+            (train, settings, start, max_iter, tolerance, seed_parts, directory_name)
+            for start in range(n_starts)
+        ]
+        iterator = (map(_fit_single_start, jobs) if executor is None
+                    else executor.map(_fit_single_start, jobs))
+        attempts = list(iterator)
+        valid = [row for row in attempts if row["status"] == "ok"]
+        if not valid:
+            return None, attempts
+        best = max(valid, key=lambda row: row["train_ll"])
+        best["selected"] = True
+        model = restore_flow(
+            Path(directory_name) / f"start_{best['start']}.pt", train
+        )
+        return model, attempts
+
+def _fit_tuning_fold(job):
+    (source, regime, family, candidate, replicate, settings,
+     tuning, output, threads) = job
+    output = Path(output)
+    checkpoint = output / f"tune_{regime}_{family}_{candidate}_{replicate}.json"
+    if checkpoint.exists():
+        return read_json(checkpoint)
+    frame = source.data(replicate, family, ("train",))["train"]
+    n_train = max(source.settings["train_sizes"])
+    x = frame[["x"]].to_numpy()[:n_train]
+    cut = int(len(x) * tuning.train_fraction)
+    row = dict(
+        regime=regime, family=family, candidate=candidate, replicate=replicate,
+        settings=asdict(settings), status="failed", prefix_length=cut,
+        validation_length=len(x) - cut,
+    )
+    # A worker owns the entire fold; its restarts stay sequential. Do not nest pools.
+    model, attempts = fit_starts(
+        x[:cut], settings, tuning.n_starts, tuning.max_iter,
+        cut * source.settings["tol_per_observation"],
+        [source.settings["master_seed"], "tuning", regime, family, replicate],
+        checkpoint_dir=output / (checkpoint.stem + "_starts"),
+        torch_threads=threads,
+    )
+    row["attempts"] = attempts
+    if model is not None:
+        try:
+            _, filtered, _ = model.filter(x[:cut])
+            prior = filtered[-1] @ chain_parameters(model).transitions
+            _, _, scores = model.filter(x[cut:], initial_prior=prior)
+            row.update(status="ok", validation_nll=float(-scores.mean()))
+        except Exception as exc:
+            row["error"] = f"{type(exc).__name__}: {exc}"
+    write_json(checkpoint, row)
+    return row
+
+def _tune_base(sources, output, base, tuning, n_jobs, torch_threads, executor):
     """Choose per-regime/family settings using training-only temporal holdouts.
 
     Select each restart by prefix training likelihood, then score its suffix
@@ -364,6 +475,7 @@ def _tune_base(sources, output, base, tuning):
     request = dict(
         base=asdict(base),
         tuning=asdict(tuning),
+        execution=dict(n_jobs=n_jobs, torch_threads=torch_threads),
         sources={
             k: {
                 "manifest": digest(s.path / "manifest.json"),
@@ -401,111 +513,83 @@ def _tune_base(sources, output, base, tuning):
             ),
         )
     )
+    jobs = []
+    for regime, source in sources.items():
+        for family in source.families:
+            for candidate, (bins, layers, steps, rate, df) in enumerate(grid):
+                settings = replace(
+                    base, count_bins=bins, num_layers=layers, m_step_steps=steps,
+                    learning_rate=rate, base_df=df,
+                )
+                for replicate in tuning.replicates:
+                    jobs.append((
+                        source, regime, family, candidate, replicate, settings,
+                        tuning, output, torch_threads,
+                    ))
+    iterator = (map(_fit_tuning_fold, jobs) if executor is None
+                else executor.map(_fit_tuning_fold, jobs))
+    for row in iterator:
+        rows.append(row)
+        print(f"Validation {row['regime']} / {row['family']} / "
+              f"candidate {row['candidate']} / replicate {row['replicate']}: "
+              f"{row['status']}", flush=True)
     for regime, source in sources.items():
         for family in source.families:
             candidates = []
-            for candidate, (bins, layers, steps, rate, df) in enumerate(grid):
-                settings = replace(
-                    base,
-                    count_bins=bins,
-                    num_layers=layers,
-                    m_step_steps=steps,
-                    learning_rate=rate,
-                    base_df=df,
-                )
-                for replicate in tuning.replicates:
-                    checkpoint = (
-                        output / f"tune_{regime}_{family}_{candidate}_{replicate}.json"
-                    )
-                    if checkpoint.exists():
-                        row = read_json(checkpoint)
-                    else:
-                        frame = source.data(replicate, family, ("train",))["train"]
-                        n_train = max(source.settings["train_sizes"])
-                        x = frame[["x"]].to_numpy()[:n_train]
-                        cut = int(len(x) * tuning.train_fraction)
-                        row = dict(
-                            regime=regime,
-                            family=family,
-                            candidate=candidate,
-                            replicate=replicate,
-                            settings=asdict(settings),
-                            status="failed",
-                            prefix_length=cut,
-                            validation_length=len(x) - cut,
-                        )
-                        model, attempts = fit_starts(
-                            x[:cut],
-                            settings,
-                            tuning.n_starts,
-                            tuning.max_iter,
-                            cut * source.settings["tol_per_observation"],
-                            [
-                                source.settings["master_seed"],
-                                "tuning",
-                                regime,
-                                family,
-                                replicate,
-                            ],
-                            checkpoint_dir=output / (checkpoint.stem + "_starts"),
-                        )
-                        row["attempts"] = attempts
-                        if model is not None:
-                            try:
-                                _, filtered, _ = model.filter(x[:cut])
-                                prior = filtered[-1] @ chain_parameters(model).transitions
-                                _, _, scores = model.filter(
-                                    x[cut:], initial_prior=prior
-                                )
-                                row.update(
-                                    status="ok", validation_nll=float(-scores.mean())
-                                )
-                            except Exception as exc:
-                                row["error"] = f"{type(exc).__name__}: {exc}"
-                        write_json(checkpoint, row)
-                    rows.append(row)
-                folds = rows[-len(tuning.replicates) :]
-                if all(r["status"] == "ok" for r in folds):
-                    # Equal-length independent replicate suffixes have equal weight.
-                    candidates.append(
-                        (
-                            np.mean([r["validation_nll"] for r in folds]),
-                            candidate,
-                            settings,
-                        )
-                    )
+            for candidate in range(len(grid)):
+                folds = [r for r in rows if (r["regime"], r["family"], r["candidate"])
+                         == (regime, family, candidate)]
+                if len(folds) == len(tuning.replicates) and all(
+                    r["status"] == "ok" for r in folds
+                ):
+                    candidates.append((
+                        np.mean([r["validation_nll"] for r in folds]),
+                        candidate, folds[0]["settings"],
+                    ))
             if not candidates:
                 raise RuntimeError(f"No complete tuning candidate: {regime}, {family}")
             score, candidate, settings = min(candidates, key=lambda c: (c[0], c[1]))
-            selections.append(
-                dict(
-                    regime=regime,
-                    family=family,
-                    candidate=candidate,
-                    validation_nll=score,
-                    settings=asdict(settings),
-                )
-            )
+            selections.append(dict(
+                regime=regime, family=family, candidate=candidate,
+                validation_nll=score, settings=settings,
+            ))
             write_json(output / "selected_settings.json", selections)
-            print(f"Tuned {regime} / {family}: {asdict(settings)}", flush=True)
+            print(f"Tuned {regime} / {family}: {settings}", flush=True)
     write_json(output / "tuning_results.json", rows)
     return selections, rows
 
-def tune_flows(sources, output, base=FlowSettings(), tuning=TuningSettings()):
-    """Tune Gaussian-base and Student-t-base flows independently without test data."""
+def tune_flows(
+    sources, output, base=FlowSettings(), tuning=TuningSettings(),
+    *, n_jobs=1, torch_threads=1,
+):
+    """Tune both bases using optional parallel CPU validation folds.
+
+    Reuse one spawn pool across both bases, with one fold per worker and
+    sequential restarts inside each fold. Preserve training-only selection,
+    seeds, grid order, and fold coverage independently of completion order.
+    """
+    began = time.perf_counter()
+    _validate_execution(n_jobs, torch_threads)
+    if n_jobs > 1 and torch.device(base.device).type != "cpu":
+        raise ValueError("Parallel tuning requires device='cpu'")
     output = Path(output)
     selections, rows = [], []
-    for distribution in FLOW_BASES.values():
-        chosen, scores = _tune_base(
-            sources,
-            output / distribution,
-            replace(base, base_distribution=distribution),
-            tuning,
-        )
-        selections.extend(chosen)
-        rows.extend(scores)
+    with _cpu_executor(n_jobs, torch_threads) as executor:
+        for distribution in FLOW_BASES.values():
+            chosen, scores = _tune_base(
+                sources, output / distribution,
+                replace(base, base_distribution=distribution), tuning,
+                n_jobs, torch_threads, executor,
+            )
+            selections.extend(chosen)
+            rows.extend(scores)
     write_json(output / "selected_settings.json", selections)
     write_json(output / "tuning_results.json", rows)
+    write_json(output / "execution_timing.json", dict(
+        n_jobs=n_jobs, torch_threads=torch_threads,
+        invocation_wall_seconds=time.perf_counter() - began,
+        note="Elapsed time for this call, including startup and any resumed work",
+    ))
     return selections, rows
 
 def evaluate(model, frame, transitions, mapping=None):
@@ -625,7 +709,7 @@ def save_flow(path, model, settings):
     torch.save(
         dict(
             backend="hmmlearn",
-            format_version=2,
+            format_version=3,
             settings=asdict(settings),
             flows={
                 k: v.detach().cpu()
@@ -647,9 +731,12 @@ def save_flow(path, model, settings):
 def restore_flow(path, train, device=None, dtype=None):
     """Restore a hmmlearn checkpoint without refitting or using old-backend states."""
     checkpoint = torch.load(path, map_location="cpu", weights_only=True)
-    if checkpoint.get("backend") != "hmmlearn" or checkpoint.get("format_version") != 2:
-        raise ValueError("Expected a version-2 hmmlearn checkpoint; use a new run directory")
+    checkpoint_version = checkpoint.get("format_version")
+    if checkpoint.get("backend") != "hmmlearn" or checkpoint_version not in (2, 3):
+        raise ValueError("Expected a version-2 or version-3 hmmlearn checkpoint")
     settings = dict(checkpoint["settings"])
+    if checkpoint_version == 2:
+        settings.setdefault("convergence_patience", 1)
     if device is not None:
         settings["device"] = device
     if dtype is not None:
@@ -662,7 +749,7 @@ def restore_flow(path, train, device=None, dtype=None):
         init_params="",
         **settings,
     )
-    model.emission_ = FlowEmission(3, random_state=0, **settings)
+    model.emission_ = model._make_emission(0)
     model.emission_.initialize(train)
     model.emission_.flows.load_state_dict(checkpoint["flows"])
     if "batch_rng_state" in checkpoint:
@@ -672,8 +759,13 @@ def restore_flow(path, train, device=None, dtype=None):
     model.transmat_ = checkpoint["transitions"].numpy()
     model.history_ = checkpoint["history"]
     model.converged_ = checkpoint["converged"]
-    model.monitor_.history = deque(checkpoint["history"][:-1])
-    model.monitor_.iter = checkpoint["iterations"]
+    model.monitor_.initial_log_prob = checkpoint["history"][0]
+    for log_prob in checkpoint["history"][1:]:
+        model.monitor_.report(log_prob)
+    model.iteration_limit_reached_ = model.monitor_.iter >= model.n_iter
+    model.stop_reason_ = "tolerance" if model.converged_ else "max_iter"
+    if checkpoint_version == 2:
+        model.stop_reason_ = "legacy"
     model._check()
     return model
 
@@ -701,6 +793,46 @@ def run_comparison(
     families=None,
     n_starts=None,
     max_iter=None,
+    n_jobs=1,
+    torch_threads=1,
+):
+    """Fit comparison models with optional persistent CPU restart workers.
+
+    Keep metrics and reports in the parent process. Dispatch only independent
+    flow starts to workers, with distinct seeds and checkpoint files. Preserve
+    the source experiment's data, starts, and stopping budgets.
+    """
+    began = time.perf_counter()
+    _validate_execution(n_jobs, torch_threads)
+    if n_jobs > 1 and any(
+        torch.device(row["settings"]["device"]).type != "cpu" for row in selections
+    ):
+        raise ValueError("Parallel final fitting requires device='cpu'")
+    with _cpu_executor(n_jobs, torch_threads) as executor:
+        result = _run_comparison(
+            sources, output, selections, replicates=replicates, families=families,
+            n_starts=n_starts, max_iter=max_iter, n_jobs=n_jobs,
+            torch_threads=torch_threads, executor=executor,
+        )
+    write_json(Path(output) / "execution_timing.json", dict(
+        n_jobs=n_jobs, torch_threads=torch_threads,
+        invocation_wall_seconds=time.perf_counter() - began,
+        note="Elapsed time for this call, including startup and any resumed work",
+    ))
+    return result
+
+def _run_comparison(
+    sources,
+    output,
+    selections,
+    *,
+    replicates=None,
+    families=None,
+    n_starts=None,
+    max_iter=None,
+    n_jobs=1,
+    torch_threads=1,
+    executor=None,
 ):
     """Fit flows on saved data and replay all baselines without refitting them.
 
@@ -735,6 +867,7 @@ def run_comparison(
         sources={k: str(s.path.relative_to(s.root)) for k, s in sources.items()},
         fingerprints=fingerprints,
         selections=selections,
+        execution=dict(n_jobs=n_jobs, torch_threads=torch_threads),
         overrides=dict(
             replicates=replicates,
             families=families,
@@ -883,6 +1016,9 @@ def run_comparison(
                                         n_train,
                                     ],
                                     checkpoint_dir=group_dir / f"starts_{distribution}",
+                                    n_jobs=n_jobs,
+                                    torch_threads=torch_threads,
+                                    _executor=executor,
                                 )
                                 write_json(attempts_path, attempts)
                                 if flow is not None:

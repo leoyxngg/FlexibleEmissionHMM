@@ -3,13 +3,48 @@
 from numbers import Integral
 
 from hmmlearn import _hmmc
-from hmmlearn.base import BaseHMM
+from hmmlearn.base import BaseHMM, ConvergenceMonitor
 import numpy as np
 from scipy.special import logsumexp
 from sklearn.utils import check_random_state
 from sklearn.utils.validation import check_array, check_is_fitted
 
 from flexible_emission_hmm import FlowEmission
+
+class _PatienceConvergenceMonitor(ConvergenceMonitor):
+    """Require consecutive small changes in post-update training likelihood."""
+
+    def __init__(self, tol, n_iter, verbose, patience):
+        super().__init__(tol, n_iter, verbose)
+        self.patience = patience
+        self.initial_log_prob = None
+        self.consecutive_small_changes = 0
+
+    def _reset(self):
+        super()._reset()
+        self.initial_log_prob = None
+        self.consecutive_small_changes = 0
+
+    def report(self, log_prob):
+        """Record a post-update score and count consecutive small changes."""
+        previous = self.history[-1] if self.history else self.initial_log_prob
+        if not np.isfinite(log_prob):
+            raise FloatingPointError("Nonfinite training log likelihood")
+        if previous is not None and abs(log_prob - previous) <= self.tol:
+            self.consecutive_small_changes += 1
+        else:
+            self.consecutive_small_changes = 0
+        super().report(log_prob)
+
+    @property
+    def tolerance_reached(self):
+        """Return whether the likelihood satisfied the patience requirement."""
+        return self.consecutive_small_changes >= self.patience
+
+    @property
+    def converged(self):
+        """Return whether tolerance or the iteration cap requires stopping."""
+        return self.iter >= self.n_iter or self.tolerance_reached
 
 class FlowHMM(BaseHMM):
     """Fit state-specific spline emissions with generalized Baum–Welch.
@@ -44,6 +79,7 @@ class FlowHMM(BaseHMM):
         random_state=None,
         n_iter=100,
         tol=1e-4,
+        convergence_patience=5,
         verbose=False,
         params="ste",
         init_params="ste",
@@ -76,6 +112,44 @@ class FlowHMM(BaseHMM):
         self.base_df = base_df
         self.device = device
         self.dtype = dtype
+        self.convergence_patience = convergence_patience
+        self.monitor_ = _PatienceConvergenceMonitor(
+            tol, n_iter, verbose, convergence_patience
+        )
+
+    def fit(self, X, lengths=None):
+        """Fit until consecutive post-update likelihood changes are small.
+
+        Require ``convergence_patience`` absolute full-data likelihood changes
+        at most ``tol``, or stop at ``n_iter`` updates. Reuse each post-update
+        E-step's sufficient statistics in the next M-step. Record the initial
+        score and every post-update score in ``history_``. Distinguish tolerance
+        convergence from reaching the cap using ``converged_`` and
+        ``iteration_limit_reached_``.
+        """
+        X = check_array(X)
+        if lengths is None:
+            lengths = np.asarray([len(X)])
+        self._init(X, lengths)
+        self._check()
+        self.monitor_ = _PatienceConvergenceMonitor(
+            self.tol, self.n_iter, self.verbose, self.convergence_patience
+        )
+        stats, initial_log_prob = self._do_estep(X, lengths)
+        if not np.isfinite(initial_log_prob):
+            raise FloatingPointError("Nonfinite initial training log likelihood")
+        self.monitor_.initial_log_prob = float(initial_log_prob)
+        for _ in range(self.n_iter):
+            self._do_mstep(stats)
+            stats, log_prob = self._do_estep(X, lengths)
+            self.monitor_.report(float(log_prob))
+            if self.monitor_.converged:
+                break
+        self.history_ = [float(initial_log_prob), *self.monitor_.history]
+        self.converged_ = self.monitor_.tolerance_reached
+        self.iteration_limit_reached_ = self.monitor_.iter >= self.n_iter
+        self.stop_reason_ = "tolerance" if self.converged_ else "max_iter"
+        return self
 
     def _make_emission(self, seed):
         return FlowEmission(
@@ -97,7 +171,8 @@ class FlowHMM(BaseHMM):
 
     def _init(self, X, lengths=None):
         for name, value in (("n_components", self.n_components),
-                            ("n_iter", self.n_iter)):
+                            ("n_iter", self.n_iter),
+                            ("convergence_patience", self.convergence_patience)):
             if isinstance(value, bool) or not isinstance(value, Integral) or value < 1:
                 raise ValueError(f"{name} must be a positive integer")
         if not np.isfinite(self.tol) or self.tol < 0:
