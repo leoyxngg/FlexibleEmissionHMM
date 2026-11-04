@@ -23,12 +23,22 @@ dependencies = [
 [project.scripts]
 flexibleemissionhmm = "flexibleemissionhmm:main"
 
+[project.optional-dependencies]
+flows = [
+    "pyro-ppl>=1.9.1,<2",
+]
+
 [build-system]
 requires = ["uv_build>=0.12.17,<0.13.0"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
-module-name = ["flexible_emission_hmm", "synthetic_data_generation", "model_evaluation"]
+module-name = [
+    "flexible_emission_hmm",
+    "hmmlearn_flow_hmm",
+    "synthetic_data_generation",
+    "model_evaluation",
+]
 
 [dependency-groups]
 dev = [
