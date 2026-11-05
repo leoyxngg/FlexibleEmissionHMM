@@ -1,6 +1,7 @@
 """Daily return features for price series ordered from oldest to newest."""
 
 from numbers import Integral
+from collections.abc import Sequence
 
 import numpy as np
 import pandas as pd
@@ -65,3 +66,70 @@ def compute_features(
         ],
         axis=1,
     )
+
+
+## Paper-inspired regime features
+
+
+def regime_price_features(
+    prices: pd.Series,
+    windows: Sequence[int] = (5, 10, 60),
+    half_lives: Sequence[int] = (5, 10, 60),
+    downside_target: float = 0.0,
+    downside_floor: float = 1e-6,
+) -> pd.DataFrame:
+    """Build causal return, downside, and Sortino-style features from prices.
+
+    This is a documented approximation of King et al. (2025), which does not
+    specify its final horizons or feature list. Each EWMA has a full rolling
+    warm-up; a row uses prices no later than its own date. The downside
+    deviation is the population standard deviation of negative
+    target-relative returns after setting nonnegative values to zero, as
+    described in the paper. Sortino uses the
+    trailing mean excess return over this downside deviation.
+
+    Args:
+        prices: Chronologically ordered positive daily index prices.
+        windows: Trailing trading-day windows for downside and Sortino.
+        half_lives: EWMA half-lives applied to every base feature.
+        downside_target: Daily target simple return (zero by default).
+        downside_floor: Denominator floor to keep Sortino finite.
+
+    Returns:
+        Features with warm-up NaNs and the original index preserved.
+
+    Raises:
+        ValueError: Horizons, target, floor, or price index is invalid.
+    """
+    for values in (windows, half_lives):
+        if not values or len(set(values)) != len(values):
+            raise ValueError("Horizons must be nonempty and unique")
+        for value in values:
+            _validate_window(value, minimum=2)
+    if not np.isfinite(downside_target):
+        raise ValueError("downside_target must be finite")
+    if not np.isfinite(downside_floor) or downside_floor <= 0:
+        raise ValueError("downside_floor must be positive and finite")
+    if not prices.index.is_unique or not prices.index.is_monotonic_increasing:
+        raise ValueError("Price index must be unique and chronologically ordered")
+
+    daily_log_return(prices)  # Validate all observed prices before division.
+    simple_return = prices.astype(float).pct_change(fill_method=None)
+    excess = simple_return - downside_target
+    negative = excess.clip(upper=0)
+    base = {"return": simple_return}
+    for window in windows:
+        # Keep nonnegative observations as zero before computing deviation.
+        downside = negative.rolling(window, min_periods=window).std(ddof=0)
+        average = excess.rolling(window, min_periods=window).mean()
+        base[f"downside_{window}"] = downside
+        base[f"sortino_{window}"] = average / downside.clip(lower=downside_floor)
+    features = pd.DataFrame(base, index=prices.index)
+    # A full EWMA warm-up excludes the first poorly supported observations.
+    for name, series in base.items():
+        for half_life in half_lives:
+            features[f"{name}_ewm_{half_life}"] = series.ewm(
+                halflife=half_life, adjust=False, min_periods=half_life,
+            ).mean()
+    features.attrs["return_definition"] = "simple price return"
+    return features

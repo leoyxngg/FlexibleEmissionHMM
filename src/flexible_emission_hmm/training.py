@@ -38,11 +38,20 @@ class BaumWelchTrainer(Trainer):
         self.n_iter = 0
 
     def fit(self, states, emission, inference, sequences):
+        """Fit sequences after resetting the state and emission parameters."""
+        return self._run(states, emission, inference, sequences, reset=True)
+
+    def continue_fit(self, states, emission, inference, sequences):
+        """Continue EM on expanded sequences without resetting parameters."""
+        return self._run(states, emission, inference, sequences, reset=False)
+
+    def _run(self, states, emission, inference, sequences, reset):
         X = np.concatenate(sequences, axis=0)
-        K = emission.n_states
-        states.start = np.full(K, 1 / K)
-        states.transitions = np.full((K, K), 1 / K)
-        emission.initialize(X)
+        if reset:
+            K = emission.n_states
+            states.start = np.full(K, 1 / K)
+            states.transitions = np.full((K, K), 1 / K)
+            emission.initialize(X)
         self.converged = False
         self.n_iter = 0
 
