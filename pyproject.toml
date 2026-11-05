@@ -28,6 +28,12 @@ flexibleemissionhmm = "flexibleemissionhmm:main"
 flows = [
     "pyro-ppl>=1.9.1,<2",
 ]
+# Optional torch builds for Linux (pick at most one, combine with --extra flows).
+# Without either extra, uv resolves the default PyPI torch (unchanged behavior).
+#   AMD GPU (ROCm 7.1):  uv sync --extra flows --extra rocm
+#   CPU only (small):    uv sync --extra flows --extra cpu
+cpu = ["torch>=2.13"]
+rocm = ["torch>=2.13", "triton-rocm; sys_platform == 'linux'"]
 
 [build-system]
 requires = ["uv_build>=0.12.17,<0.13.0"]
@@ -45,3 +51,23 @@ module-name = [
 dev = [
     "hmmlearn==0.3.3",
 ]
+
+[tool.uv]
+conflicts = [[{ extra = "cpu" }, { extra = "rocm" }]]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-rocm"
+url = "https://download.pytorch.org/whl/rocm7.1"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu", extra = "cpu", marker = "sys_platform == 'linux'" },
+    { index = "pytorch-rocm", extra = "rocm", marker = "sys_platform == 'linux'" },
+]
+triton-rocm = { index = "pytorch-rocm", extra = "rocm", marker = "sys_platform == 'linux'" }
