@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 
 from flexible_emission_hmm import GaussianEmission, HMM, BaumWelchTrainer
-from notebooks.sp500.run_paper_regime import run
+from notebooks.sp500.run_backtest import run
 
 
 class ContinuationTests(unittest.TestCase):
@@ -41,17 +41,17 @@ class ContinuationTests(unittest.TestCase):
             arguments = dict(years=1, seed=0, max_iter=2,
                              update_iter=1, refresh_days=2)
             first = run(prices, output / "resume", start, middle,
-                        command="python run_paper_regime.py --end 2001-12-04\n",
+                        command="python run_backtest.py --end 2001-12-04\n",
                         **arguments)
             self.assertEqual(len(first), 12)
             command_path = output / "resume" / "command.txt"
             self.assertEqual(command_path.read_text(),
-                             "python run_paper_regime.py --end 2001-12-04\n")
+                             "python run_backtest.py --end 2001-12-04\n")
             resumed = run(prices, output / "resume", start, end,
-                          command="python run_paper_regime.py --end 2001-12-06\n",
+                          command="python run_backtest.py --end 2001-12-06\n",
                           **arguments)
             self.assertEqual(command_path.read_text(),
-                             "python run_paper_regime.py --end 2001-12-06\n")
+                             "python run_backtest.py --end 2001-12-06\n")
             full = run(prices, output / "full", start, end, **arguments)
             pd.testing.assert_frame_equal(resumed, full)
             with (output / "resume" / "checkpoint.pkl").open("rb") as handle:

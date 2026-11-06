@@ -1,5 +1,8 @@
 """Historical Student-t emission summaries for notebook diagnostics."""
 
+import sys
+from pathlib import Path
+
 import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 import numpy as np
@@ -8,8 +11,10 @@ from scipy.stats import t
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 
-from paper_regime_experiment import build_observations, fit_one, label_bull
-from run_paper_regime import HALF_LIVES, WINDOWS
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from backtest_experiment import build_observations, fit_one, label_bull  # noqa: E402
+from run_backtest import HALF_LIVES, WINDOWS  # noqa: E402
 
 
 COLORS = {"Student-t / no PCA": "#c15b30", "Student-t / PCA": "#1769aa"}

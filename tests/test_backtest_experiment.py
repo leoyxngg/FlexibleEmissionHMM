@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import multivariate_t
 
-from notebooks.sp500.paper_regime_experiment import (
+from notebooks.sp500.backtest_experiment import (
     MultivariateStudentTEmission,
     evaluate_signals,
     fit_day,

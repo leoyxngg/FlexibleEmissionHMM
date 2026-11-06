@@ -1,5 +1,6 @@
 """Causal two-regime emission and PCA experiment on S&P index prices."""
 
+import sys
 from dataclasses import dataclass
 
 import numpy as np
@@ -18,6 +19,9 @@ from flexible_emission_hmm import (
 from flexible_emission_hmm.emissions import EmissionModel
 from flexible_emission_hmm.feature import regime_price_features
 from flexible_emission_hmm.validation import as_sequence
+
+# Checkpoints saved before the rename pickled classes under the old module name.
+sys.modules.setdefault("paper_regime_experiment", sys.modules[__name__])
 
 
 class MultivariateStudentTEmission(EmissionModel):
@@ -53,44 +57,105 @@ class MultivariateStudentTEmission(EmissionModel):
         centered = np.linalg.solve(factor, (X - self.means[state]).T)
         return (centered**2).sum(axis=0), 2 * np.log(np.diag(factor)).sum()
 
+    def _student_t_log_prob(self, X, state):
+        nu = self.dof[state]
+        D = self.n_features
+        delta, logdet = self._distance_and_logdet(X, state)
+        return (gammaln((nu + D) / 2) - gammaln(nu / 2)
+                - 0.5 * (D * np.log(nu * np.pi) + logdet)
+                - 0.5 * (nu + D) * np.log1p(delta / nu))
+
+    def _student_t_update(self, X, w, state):
+        mass = w.sum()
+        nu = self.dof[state]
+        D = self.n_features
+        delta, _ = self._distance_and_logdet(X, state)
+        u = (nu + D) / (nu + delta)
+        log_u = digamma((nu + D) / 2) - np.log((nu + delta) / 2)
+        self.means[state] = (w * u) @ X / (w * u).sum()
+        centered = X - self.means[state]
+        self.covariances[state] = self._regularize(
+            (centered.T * (w * u)) @ centered / mass)
+        average = w @ (log_u - u) / mass
+
+        def score(candidate):
+            return (np.log(candidate / 2) + 1
+                    - digamma(candidate / 2) + average)
+
+        self.dof[state] = (2.1 if score(2.1) <= 0 else
+                           200.0 if score(200.0) >= 0 else
+                           brentq(score, 2.1, 200.0))
+
     def log_prob(self, X):
         """Compute per-state log densities for each multivariate observation."""
         X = as_sequence(X, self.n_features)
-        D = self.n_features
-        result = np.empty((len(X), self.n_states))
-        for k in range(self.n_states):
-            nu = self.dof[k]
-            delta, logdet = self._distance_and_logdet(X, k)
-            result[:, k] = (gammaln((nu + D) / 2) - gammaln(nu / 2)
-                            - 0.5 * (D * np.log(nu * np.pi) + logdet)
-                            - 0.5 * (nu + D) * np.log1p(delta / nu))
-        return result
+        return np.column_stack([self._student_t_log_prob(X, k)
+                                for k in range(self.n_states)])
 
     def m_step(self, X, responsibilities):
         """Update locations, scatter, and df with latent Gamma precision weights."""
         X = as_sequence(X, self.n_features)
         weights = np.asarray(responsibilities)
-        D = self.n_features
         for k in range(self.n_states):
+            if weights[:, k].sum() > np.finfo(float).eps:
+                self._student_t_update(X, weights[:, k], k)
+
+
+class GaussianStudentTEmission(MultivariateStudentTEmission):
+    """Give each state a Gaussian or Student-t density with its own M-step.
+
+    ``families`` names one family per state. Initialization matches the
+    single-family models. Gaussian states use the closed-form weighted mean and
+    covariance update and store ``dof = inf``.
+    """
+
+    FAMILIES = ("gaussian", "student_t")
+
+    def __init__(self, families=("gaussian", "student_t"), random_state=None,
+                 min_variance=1e-5):
+        if any(family not in self.FAMILIES for family in families):
+            raise ValueError(f"families must be drawn from {self.FAMILIES}")
+        super().__init__(len(families), random_state, min_variance)
+        self.families = tuple(families)
+
+    def initialize(self, X):
+        """Initialize like the single-family models; mark Gaussian states."""
+        super().initialize(X)
+        for k, family in enumerate(self.families):
+            if family == "gaussian":
+                self.dof[k] = np.inf
+
+    def _gaussian_log_prob(self, X, state):
+        delta, logdet = self._distance_and_logdet(X, state)
+        return -0.5 * (self.n_features * np.log(2 * np.pi) + logdet + delta)
+
+    def _gaussian_update(self, X, w, state):
+        mass = w.sum()
+        self.means[state] = w @ X / mass
+        centered = X - self.means[state]
+        self.covariances[state] = self._regularize(
+            (centered.T * w) @ centered / mass)
+
+    def log_prob(self, X):
+        """Compute each state's log density under its own family."""
+        X = as_sequence(X, self.n_features)
+        return np.column_stack([
+            self._gaussian_log_prob(X, k) if family == "gaussian"
+            else self._student_t_log_prob(X, k)
+            for k, family in enumerate(self.families)])
+
+    def m_step(self, X, responsibilities):
+        """Update each state with its own family's M-step."""
+        X = as_sequence(X, self.n_features)
+        weights = np.asarray(responsibilities)
+        for k, family in enumerate(self.families):
             w = weights[:, k]
-            mass = w.sum()
-            if mass <= np.finfo(float).eps:
+            if w.sum() <= np.finfo(float).eps:
                 continue
-            nu = self.dof[k]
-            delta, _ = self._distance_and_logdet(X, k)
-            u = (nu + D) / (nu + delta)
-            log_u = digamma((nu + D) / 2) - np.log((nu + delta) / 2)
-            self.means[k] = (w * u) @ X / (w * u).sum()
-            centered = X - self.means[k]
-            self.covariances[k] = self._regularize(
-                (centered.T * (w * u)) @ centered / mass)
-            average = w @ (log_u - u) / mass
-            def score(candidate):
-                return (np.log(candidate / 2) + 1
-                        - digamma(candidate / 2) + average)
-            self.dof[k] = (2.1 if score(2.1) <= 0 else
-                           200.0 if score(200.0) >= 0 else
-                           brentq(score, 2.1, 200.0))
+            if family == "gaussian":
+                self._gaussian_update(X, w, k)
+            else:
+                self._student_t_update(X, w, k)
 
 
 @dataclass
@@ -131,6 +196,9 @@ def fit_one(X, returns, model_name, seed, max_iter=75, gmm_components=2):
                                            random_state=seed)
     elif model_name == "Student-t":
         emission = MultivariateStudentTEmission(2, random_state=seed)
+    elif model_name == "Mixed t-Gaussian":
+        emission = GaussianStudentTEmission(("gaussian", "student_t"),
+                                            random_state=seed)
     else:
         raise ValueError(f"Unknown emission: {model_name}")
     model = HMM(emission, trainer=BaumWelchTrainer(
