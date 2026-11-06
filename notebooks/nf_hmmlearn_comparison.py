@@ -1,5 +1,3 @@
-"""Compare hmmlearn spline HMMs with saved persistent Gaussian/GMM experiments."""
-
 from concurrent.futures import ProcessPoolExecutor
 from contextlib import contextmanager, nullcontext
 from dataclasses import asdict, dataclass, replace
@@ -1395,9 +1393,9 @@ def example_models(source, output, family, replicate=0):
         )
     return data, models
 
-def plot_emissions(source, output, family):
-    """Overlay true and four fitted densities at replicate zero, without selection."""
-    _, models = example_models(source, output, family)
+def plot_emissions(source, output, family, *, flow_only=False, replicate=0):
+    """Overlay true and fitted densities for the requested saved replicate."""
+    _, models = example_models(source, output, family, replicate=replicate)
     means, variances = source.true_moments()
     fig, axes = plt.subplots(1, 3, figsize=(14, 3.5), layout="constrained")
     for state, ax in enumerate(axes):
@@ -1409,7 +1407,8 @@ def plot_emissions(source, output, family):
             color="black",
             label="True density",
         )
-        for name, (model, order) in models.items():
+        for name in FLOW_BASES if flow_only else MODELS:
+            model, order = models[name]
             log_density = emission_model(model).log_prob(grid[:, None])[:, order[state]]
             density = np.exp(log_density)
             ax.plot(
@@ -1418,16 +1417,19 @@ def plot_emissions(source, output, family):
         ax.set(title=f"State {state}", xlabel="Observation", ylabel="Density")
     axes[0].legend(fontsize=8)
     fig.suptitle(
-        f"{source.regime.capitalize()} · {family} · replicate 0 · fitted emissions"
+        f"{source.regime.capitalize()} · {family} · replicate {replicate} · "
+        "fitted emissions"
     )
     return fig
 
-def plot_decoding(source, output, family="Trimodal", condition="clean", points=5000):
+def plot_decoding(
+    source, output, family="Trimodal", condition="clean", points=5000, *, replicate=0,
+):
     """Show observations, truth, and each model's decoded path on identical rows."""
-    data, models = example_models(source, output, family)
+    data = source.data(replicate, family)
     n_train = max(source.settings["train_sizes"])
     frame = source.variants(
-        data["train"].iloc[:n_train], data["test"], 0, family, n_train
+        data["train"].iloc[:n_train], data["test"], replicate, family, n_train
     )[condition].iloc[:points]
     fig, axes = plt.subplots(
         len(MODELS) + 2, 1, figsize=(14, 10), sharex=True, layout="constrained"
@@ -1447,7 +1449,10 @@ def plot_decoding(source, output, family="Trimodal", condition="clean", points=5
     axes[1].step(positions, frame.state, where="mid", color="black")
     axes[1].set_ylabel("True state")
     for ax, name in zip(axes[2:], MODELS):
-        group = Path(output) / f"{source.regime}_{family.replace(' ', '_')}_{n_train}_0"
+        group = (
+            Path(output)
+            / f"{source.regime}_{family.replace(' ', '_')}_{n_train}_{replicate}"
+        )
         with np.load(group / f"{name.replace(' ', '_')}_{condition}.npz") as archive:
             predicted = archive["predicted"][: len(frame)]
         ax.step(positions, predicted, where="mid", color=COLORS[name])
@@ -1457,7 +1462,9 @@ def plot_decoding(source, output, family="Trimodal", condition="clean", points=5
     for ax in axes[1:]:
         ax.set(yticks=range(3), ylim=(-0.3, 2.3))
     axes[-1].set_xlabel("Test observation index")
-    fig.suptitle(f"{source.regime.capitalize()} · {family} · {condition} · replicate 0")
+    fig.suptitle(
+        f"{source.regime.capitalize()} · {family} · {condition} · replicate {replicate}"
+    )
     return fig
 
 def metric_groups(results, metrics):
