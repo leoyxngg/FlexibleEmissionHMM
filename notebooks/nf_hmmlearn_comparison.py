@@ -336,14 +336,36 @@ def _cpu_executor(n_jobs, torch_threads):
         if previous != torch_threads:
             torch.set_num_threads(previous)
 
+def initialization_seed(seed_parts, start):
+    """Derive a schedule-independent seed for one flow initialization."""
+    return int.from_bytes(
+        hashlib.sha256(json.dumps([*seed_parts, start]).encode()).digest()[:4],
+        "little",
+    )
+
+def _cached_start(job):
+    """Load a completed start and refuse missing or inconsistent artifacts."""
+    _, _, start, _, _, seed_parts, checkpoint_dir = job
+    saved = Path(checkpoint_dir) / f"start_{start}.json"
+    if not saved.is_file():
+        raise FileNotFoundError(f"Missing initialization record: {saved}")
+    row = read_json(saved)
+    if (row.get("start") != start
+            or row.get("seed") != initialization_seed(seed_parts, start)
+            or row.get("status") not in ("ok", "failed")):
+        raise ValueError(f"Invalid initialization record: {saved}")
+    if row["status"] == "ok":
+        if not np.isfinite(row.get("train_ll", np.nan)):
+            raise ValueError(f"Nonfinite training likelihood: {saved}")
+        if not saved.with_suffix(".pt").is_file():
+            raise FileNotFoundError(f"Missing checkpoint: {saved.with_suffix('.pt')}")
+    return {**row, "selected": False}
+
 def _fit_single_start(job):
     train, settings, start, max_iter, tolerance, seed_parts, checkpoint_dir = job
     checkpoint_dir = Path(checkpoint_dir)
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
-    seed = int.from_bytes(
-        hashlib.sha256(json.dumps([*seed_parts, start]).encode()).digest()[:4],
-        "little",
-    )
+    seed = initialization_seed(seed_parts, start)
     row = dict(start=start, seed=seed, status="failed", selected=False)
     saved = checkpoint_dir / f"start_{start}.json"
     if saved.exists():
@@ -387,7 +409,7 @@ def _fit_single_start(job):
 
 def fit_starts(
     train, settings, n_starts, max_iter, tolerance, seed_parts, checkpoint_dir=None,
-    *, n_jobs=1, torch_threads=1, _executor=None,
+    *, n_jobs=1, torch_threads=1, _executor=None, cached_only=False,
 ):
     """Select starts by training likelihood using optional independent CPU workers.
 
@@ -395,14 +417,15 @@ def fit_starts(
     Use spawn workers only for CPU settings. Reuse an internal executor during
     whole experiment stages; otherwise create a bounded pool for this call.
     Each start owns a checkpoint, and only the selected model is restored in
-    the parent process. Keep temporary checkpoints when no directory is given
-    only until the selected model is loaded. Count fit_seconds per attempt.
+    the parent process. Set cached_only to refuse training missing starts.
     """
     _validate_execution(n_jobs, torch_threads)
     if isinstance(n_starts, bool) or not isinstance(n_starts, Integral) or n_starts < 1:
         raise ValueError("n_starts must be a positive integer")
     if n_jobs > 1 and torch.device(settings.device).type != "cpu":
         raise ValueError("Parallel starts require device='cpu'")
+    if cached_only and checkpoint_dir is None:
+        raise ValueError("cached_only requires a checkpoint directory")
     directory = (TemporaryDirectory() if checkpoint_dir is None
                  else nullcontext(str(checkpoint_dir)))
     context = (_cpu_executor(n_jobs, torch_threads) if _executor is None
@@ -412,8 +435,11 @@ def fit_starts(
             (train, settings, start, max_iter, tolerance, seed_parts, directory_name)
             for start in range(n_starts)
         ]
-        iterator = (map(_fit_single_start, jobs) if executor is None
-                    else executor.map(_fit_single_start, jobs))
+        if cached_only:
+            iterator = map(_cached_start, jobs)
+        else:
+            iterator = (map(_fit_single_start, jobs) if executor is None
+                        else executor.map(_fit_single_start, jobs))
         attempts = list(iterator)
         valid = [row for row in attempts if row["status"] == "ok"]
         if not valid:
@@ -793,12 +819,14 @@ def run_comparison(
     max_iter=None,
     n_jobs=1,
     torch_threads=1,
+    cached_only=False,
 ):
     """Fit comparison models with optional persistent CPU restart workers.
 
     Keep metrics and reports in the parent process. Dispatch only independent
     flow starts to workers, with distinct seeds and checkpoint files. Preserve
-    the source experiment's data, starts, and stopping budgets.
+    the source experiment's data, starts, and stopping budgets. Set cached_only
+    to evaluate collected initializations without training missing starts.
     """
     began = time.perf_counter()
     _validate_execution(n_jobs, torch_threads)
@@ -811,6 +839,7 @@ def run_comparison(
             sources, output, selections, replicates=replicates, families=families,
             n_starts=n_starts, max_iter=max_iter, n_jobs=n_jobs,
             torch_threads=torch_threads, executor=executor,
+            cached_only=cached_only,
         )
     write_json(Path(output) / "execution_timing.json", dict(
         n_jobs=n_jobs, torch_threads=torch_threads,
@@ -831,6 +860,7 @@ def _run_comparison(
     n_jobs=1,
     torch_threads=1,
     executor=None,
+    cached_only=False,
 ):
     """Fit flows on saved data and replay all baselines without refitting them.
 
@@ -890,6 +920,8 @@ def _run_comparison(
         runtime_caveat="Baseline timings are historical; do not infer hardware speedups",
         created=datetime.now(timezone.utc).isoformat(),
     )
+    if cached_only:
+        request["execution"]["cached_only"] = True
     manifest_path = output / "manifest.json"
     if manifest_path.exists():
         previous = read_json(manifest_path)
@@ -1017,6 +1049,7 @@ def _run_comparison(
                                     n_jobs=n_jobs,
                                     torch_threads=torch_threads,
                                     _executor=executor,
+                                    cached_only=cached_only,
                                 )
                                 write_json(attempts_path, attempts)
                                 if flow is not None:
